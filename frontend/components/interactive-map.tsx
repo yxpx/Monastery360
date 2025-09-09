@@ -27,6 +27,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
   const [archiveData, setArchiveData] = useState<any[]>([])
   const [servicesData, setServicesData] = useState<any[]>([])
   const dataProcessedRef = useRef(false) // Track if data has been processed
+  const [interiorIds, setInteriorIds] = useState<number[]>([])
 
   // Cleanup function
   const cleanupMap = () => {
@@ -84,7 +85,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       }
     }
 
-    fetchMonasteryData()
+  fetchMonasteryData()
     // fetch archives.json
     ;(async () => {
       try {
@@ -106,6 +107,39 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       }
     })()
   }, [])
+
+  // Detect monasteries that have interior content (explicit IDs with embeds from user, or images named id_x.(png|jpg))
+  useEffect(() => {
+  const knownInteriorWithEmbeds = new Set<number>([9, 53, 57, 171, 176, 195, 202])
+    // Probe for _x images by attempting to fetch the asset heads
+    const controller = new AbortController()
+    const collect = async () => {
+      const ids = new Set<number>([...knownInteriorWithEmbeds])
+      // Try reasonable range from loaded monastery data
+      const candidates = monasteryData.map(m => Number(m.id)).filter(n => !Number.isNaN(n))
+      // helper to check one
+      const checkId = async (id: number) => {
+        const png = `/data/monastery/${id}_x.png`
+        const jpg = `/data/monastery/${id}_x.jpg`
+        try {
+          const res = await fetch(png, { method: 'HEAD', signal: controller.signal })
+          if (res.ok) return true
+        } catch {}
+        try {
+          const res2 = await fetch(jpg, { method: 'HEAD', signal: controller.signal })
+          if (res2.ok) return true
+        } catch {}
+        return false
+      }
+      await Promise.allSettled(candidates.map(async (id) => {
+        const ok = await checkId(id)
+        if (ok) ids.add(id)
+      }))
+      setInteriorIds(Array.from(ids))
+    }
+    if (monasteryData.length > 0) collect()
+    return () => controller.abort()
+  }, [monasteryData])
 
   useEffect(() => {
     console.log('InteractiveMap: useEffect triggered', {
@@ -265,6 +299,17 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           iconAnchor: [8, 8],
         })
 
+        const interiorIcon = L.divIcon({
+          html: `<div class="w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                   <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                     <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                   </svg>
+                 </div>`,
+          className: "interior-marker",
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+        })
+
         // Function to clean monastery name (remove location suffixes)
         const cleanMonasteryName = (name: string) => {
           // Remove common location suffixes
@@ -274,16 +319,18 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         }
 
         // Add monastery markers
-        monasteryData.forEach((monastery) => {
+    monasteryData.forEach((monastery) => {
           const [lat, lng] = monastery.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
           if (!isNaN(lat) && !isNaN(lng)) {
             const cleanName = cleanMonasteryName(monastery.name)
-            const marker = L.marker([lat, lng], { icon: monasteryIcon })
+      const isInterior = interiorIds.includes(Number(monastery.id))
+      const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
               .addTo(map)
               .bindPopup(`
                 <div class="p-2 min-w-[200px]">
                   <h3 class="font-semibold text-sm mb-1">${cleanName}</h3>
                   <p class="text-xs text-gray-600 mb-2">${monastery.s_desc}</p>
+          ${isInterior ? '<span class="text-[10px] text-red-600 font-semibold">(Interior)</span>' : ''}
                 </div>
               `)
               .bindTooltip(cleanName, {
@@ -346,6 +393,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           }
         })
 
+        // Invalidate size to ensure Leaflet recalculates container dimensions
+        map.invalidateSize()
         setMapInstance(map)
         isMapInitializedRef.current = true
         dataProcessedRef.current = true
@@ -616,6 +665,10 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-orange-600 rounded-full border border-white shadow-sm"></div>
               <span className="text-xs text-foreground">Monasteries</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-black rounded-full border border-white shadow-sm"></div>
+              <span className="text-xs text-foreground">Monasteries (Interior)</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-blue-600 rounded-full border border-white shadow-sm"></div>

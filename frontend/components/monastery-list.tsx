@@ -17,19 +17,24 @@ interface Monastery {
 }
 
 interface MonasteryListProps {
-  onMonasterySelect: (monastery: Monastery) => void
+  // Controlled category from parent
+  activeCategory: 'Monastery' | 'Archive' | 'Services'
+  onCategoryChange: (category: 'Monastery' | 'Archive' | 'Services') => void
+  // Generic item select callback
+  onItemSelect: (item: any, category: 'Monastery' | 'Archive' | 'Services') => void
   onMonasteryZoom: (monastery: Monastery) => void
   onLocationClick: () => void
   onAudioClick: (monastery: Monastery) => void
 }
 
 export function MonasteryList({
-  onMonasterySelect,
+  activeCategory,
+  onCategoryChange,
+  onItemSelect,
   onMonasteryZoom,
   onLocationClick,
   onAudioClick,
 }: MonasteryListProps) {
-  const [activeCategory, setActiveCategory] = useState("Monastery")
   const [monasteryData, setMonasteryData] = useState<Monastery[]>([])
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("")
@@ -153,16 +158,13 @@ export function MonasteryList({
     >
       {/* Category Tabs */}
       <div className="flex gap-1 mb-2" role="tablist" aria-label="Content categories">
-        {["Monastery", "Archive", "Services"].map((tab) => (
+        {['Monastery', 'Archive', 'Services'].map((tab) => (
           <Button
             key={tab}
-            variant={tab === activeCategory ? "default" : "outline"}
+            variant={tab === activeCategory ? 'default' : 'outline'}
             size="sm"
             className="flex-1 text-xs h-8"
-            onClick={() => {
-              setActiveCategory(tab)
-              setSearchTerm("") // Reset search when switching categories
-            }}
+            onClick={() => onCategoryChange(tab as any)}
             role="tab"
             aria-selected={tab === activeCategory}
             aria-controls={`${tab.toLowerCase()}-panel`}
@@ -211,7 +213,13 @@ export function MonasteryList({
               <div className="flex items-center justify-between">
                 <div
                   className="flex-1 cursor-pointer"
-                  onClick={() => onMonasteryZoom(item)}
+                  onClick={() => {
+                    if (activeCategory === 'Monastery') {
+                      onMonasteryZoom(item)
+                    } else {
+                      onItemSelect(item, activeCategory)
+                    }
+                  }}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault()
@@ -227,7 +235,7 @@ export function MonasteryList({
                   className="p-1 h-8 w-8 opacity-60 group-hover:opacity-100 transition-opacity"
                   onClick={(e) => {
                     e.stopPropagation()
-                    onMonasterySelect(item)
+                    onItemSelect(item, activeCategory)
                   }}
                   aria-label={`Open 360 view of ${item.name}`}
                 >
