@@ -37,7 +37,7 @@ export function LanguageSelector({ currentLanguage, onLanguageChange }: Language
       </Button>
 
       {isOpen && (
-        <Card className="absolute top-full mt-1 right-0 z-50 min-w-32 p-1 border border-border">
+        <Card className="absolute top-full mt-1 left-1/2 -translate-x-1/2 z-50 min-w-32 p-1 border border-border">
           <div role="listbox" aria-label="Available languages">
             {languages.map((language) => (
               <Button

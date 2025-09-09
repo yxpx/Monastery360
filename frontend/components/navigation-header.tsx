@@ -38,7 +38,7 @@ export function NavigationHeader({
 
   return (
     <header
-      className="w-full bg-card border-b border-border p-6 flex-shrink-0"
+      className="w-full bg-card border-b border-border p-4 sm:p-6 flex-shrink-0"
       role="banner"
       aria-label="Main navigation"
     >
@@ -64,7 +64,7 @@ export function NavigationHeader({
             className="rounded-lg shrink-0 scale-225"
             priority
           />
-          <h1 className="text-2xl leading-none font-semibold text-foreground heading-luxe">Monastery360</h1>
+          <h1 className="text-xl sm:text-2xl leading-none font-semibold text-foreground heading-luxe">Monastery360</h1>
         </div>
 
         <nav className="flex items-center gap-2 relative" role="navigation" aria-label="Main navigation menu">
@@ -131,7 +131,7 @@ export function NavigationHeader({
 
       {/* Mobile Navigation */}
       <nav
-        className="sm:hidden mt-6 flex gap-3 overflow-x-auto pb-2"
+        className="sm:hidden mt-4 flex gap-3 overflow-x-auto pb-2"
         role="navigation"
         aria-label="Mobile navigation menu"
       >

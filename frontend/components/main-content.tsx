@@ -76,7 +76,7 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
         }
 
         return (
-          <div className="flex gap-3 h-full p-2">
+          <div className="flex flex-col sm:flex-row gap-3 h-full p-2">
             <div className="flex-1 min-w-0">
               <Card className="h-full p-3 bg-card border border-border rounded-lg">
                 <InteractiveMap
@@ -90,7 +90,7 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
               </Card>
             </div>
 
-            <div className="w-80 flex-shrink-0">
+            <div className="w-full sm:w-80 flex-shrink-0 mt-3 sm:mt-0">
               <MonasteryList
                 onMonasterySelect={handleMonasterySelect}
                 onMonasteryZoom={handleMonasteryZoom}
@@ -105,7 +105,7 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
 
       case "planner":
         return (
-          <div className="flex gap-2 h-full">
+          <div className="flex gap-2 h-full p-2">
             <div className="flex-1 min-w-0">
               <Card className="h-full p-4 bg-card border border-border rounded-lg">
                 <TripPlanner />
@@ -116,13 +116,13 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
 
       case "calendar":
         return (
-          <div className="flex gap-2 h-full">
+          <div className="flex flex-col sm:flex-row gap-2 h-full p-2">
             <div className="flex-1 min-w-0">
               <Card className="h-full p-4 bg-card border border-border rounded-lg overflow-hidden">
                 <FestivalCalendar />
               </Card>
             </div>
-            <div className="w-80 flex-shrink-0">
+            <div className="w-full sm:w-80 flex-shrink-0 mt-2 sm:mt-0">
               <HolidayInfoPanel />
             </div>
           </div>
@@ -130,13 +130,13 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
 
       case "qna":
         return (
-          <div className="flex gap-2 h-full">
+          <div className="flex flex-col sm:flex-row gap-2 h-full p-2">
             <div className="flex-1 min-w-0">
               <Card className="h-full p-4 bg-card border border-border rounded-lg overflow-hidden">
                 <BasicQNA />
               </Card>
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 mt-2 sm:mt-0">
               <Card className="h-full p-4 bg-card border border-border rounded-lg overflow-hidden">
                 <AITripGuide />
               </Card>

@@ -43,8 +43,8 @@ export function MonasteryList({
         const data = await response.json()
         console.log('Raw data loaded:', data.length, 'items')
         // Filter out entries with empty names or descriptions
-        const filteredData = data.filter((monastery: Monastery) => 
-          monastery.name && monastery.name.trim() !== "" && 
+        const filteredData = data.filter((monastery: Monastery) =>
+          monastery.name && monastery.name.trim() !== "" &&
           monastery.s_desc && monastery.s_desc.trim() !== ""
         )
         console.log('Filtered data:', filteredData.length, 'items')
@@ -91,7 +91,7 @@ export function MonasteryList({
     
     // Filter by search term
     if (searchTerm.trim() !== "") {
-      items = items.filter(item => 
+      items = items.filter(item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (item.s_desc && item.s_desc.toLowerCase().includes(searchTerm.toLowerCase())) ||
         (item.desc && item.desc.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -119,8 +119,8 @@ export function MonasteryList({
   const cleanMonasteryName = (name: string) => {
     // Remove common location suffixes
     return name.replace(/\s+(North|South|East|West)\s+Sikkim$/, '')
-                 .replace(/\s+Sikkim$/, '')
-                 .trim()
+               .replace(/\s+Sikkim$/, '')
+               .trim()
   }
 
   return (
@@ -220,21 +220,21 @@ export function MonasteryList({
       </div>
 
       {/* Bottom Controls */}
-      <div className="flex gap-2 mt-auto">
+      <div className="flex flex-col sm:flex-row gap-2 mt-auto">
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 bg-transparent"
+          className="flex items-center justify-center sm:justify-start gap-2 bg-transparent"
           onClick={onLocationClick}
           aria-label="Show current location on map"
         >
           <MapPin className="w-4 h-4" aria-hidden="true" />
-          Location
+          <span className="hidden sm:inline">Location</span>
         </Button>
         <Button
           variant="default"
           size="sm"
-          className="flex-1 flex items-center gap-2"
+          className="flex-1 flex items-center justify-center gap-2"
           onClick={() => {
             const currentItems = getCurrentItems()
             if (currentItems.length > 0) {
@@ -244,7 +244,7 @@ export function MonasteryList({
           aria-label="Play audio guide for selected content"
         >
           <Volume2 className="w-4 h-4" aria-hidden="true" />
-          AUDIO STREAM
+          <span className="hidden sm:inline">AUDIO STREAM</span>
         </Button>
       </div>
     </Card>

@@ -3,8 +3,6 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { RotateCcw, ZoomIn, ZoomOut, Maximize2, Info, Play, Pause } from "lucide-react"
 
 interface VirtualTour360Props {
@@ -151,60 +149,63 @@ export function VirtualTour360({ monasteryId = 1, onInfoToggle }: VirtualTour360
       {/* Control Overlay */}
       <div className={`absolute inset-0 transition-opacity duration-300 ${showControls ? "opacity-100" : "opacity-0"}`}>
         {/* Top Controls */}
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-          <Card className="p-2 bg-black/70 backdrop-blur-sm border-white/20">
+        <div className="absolute top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 flex justify-between items-start">
+          <div className="p-2 sm:p-3 bg-black/70 backdrop-blur-sm border border-white/20 rounded-lg">
             <p className="text-white text-sm font-medium">360° Virtual Tour</p>
             <p className="text-white/70 text-xs">Drag to explore • Scroll to zoom</p>
-          </Card>
+          </div>
 
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant="secondary"
-              className="bg-black/70 backdrop-blur-sm border-white/20 text-white hover:bg-black/80"
+          <div className="flex gap-1 sm:gap-2">
+            <button
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0 bg-black/70 backdrop-blur-sm border-white/20 text-white hover:bg-black/80"
               onClick={onInfoToggle}
             >
               <Info className="w-4 h-4" />
-            </Button>
-            <Button
-              size="sm"
-              variant="secondary"
-              className="bg-black/70 backdrop-blur-sm border-white/20 text-white hover:bg-black/80"
+            </button>
+            <button
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0 bg-black/70 backdrop-blur-sm border-white/20 text-white hover:bg-black/80"
               onClick={toggleFullscreen}
             >
               <Maximize2 className="w-4 h-4" />
-            </Button>
+            </button>
           </div>
         </div>
 
         {/* Bottom Controls */}
-        <div className="absolute bottom-4 left-4 right-4">
-          <Card className="p-3 bg-black/70 backdrop-blur-sm border-white/20">
+        <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4">
+          <div className="p-2 sm:p-3 bg-black/70 backdrop-blur-sm border border-white/20 rounded-lg">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="text-white hover:bg-white/20"
+                <button
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 px-3 text-white hover:bg-white/20"
                   onClick={() => setAutoRotate(!autoRotate)}
                 >
                   {autoRotate ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                  <span className="ml-2 text-xs">Auto Rotate</span>
-                </Button>
-                <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={resetView}>
+                  <span className="ml-2 text-xs hidden sm:inline">Auto Rotate</span>
+                </button>
+                <button
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 px-3 text-white hover:bg-white/20"
+                  onClick={resetView}
+                >
                   <RotateCcw className="w-4 h-4" />
-                  <span className="ml-2 text-xs">Reset</span>
-                </Button>
+                  <span className="ml-2 text-xs hidden sm:inline">Reset</span>
+                </button>
               </div>
 
               <div className="flex items-center gap-2">
-                <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={handleZoomOut}>
+                <button
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 px-3 text-white hover:bg-white/20"
+                  onClick={handleZoomOut}
+                >
                   <ZoomOut className="w-4 h-4" />
-                </Button>
+                </button>
                 <div className="text-white text-xs px-2">{Math.round(zoom * 100)}%</div>
-                <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={handleZoomIn}>
+                <button
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 px-3 text-white hover:bg-white/20"
+                  onClick={handleZoomIn}
+                >
                   <ZoomIn className="w-4 h-4" />
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -217,30 +218,28 @@ export function VirtualTour360({ monasteryId = 1, onInfoToggle }: VirtualTour360
                 />
               </div>
             )}
-          </Card>
+          </div>
         </div>
 
         {/* Hotspots for Interactive Elements */}
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
-          <Button
-            size="sm"
-            className="bg-primary/80 backdrop-blur-sm hover:bg-primary animate-pulse"
+          <button
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow-sm h-9 px-4 py-2 text-xs sm:text-sm bg-primary/80 backdrop-blur-sm hover:bg-primary animate-pulse"
             onClick={() => console.log("Hotspot clicked")}
           >
-            <Info className="w-4 h-4 mr-1" />
-            Learn More
-          </Button>
+            <Info className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+            <span className="hidden sm:inline">Learn More</span>
+          </button>
         </div>
 
         <div className="absolute top-1/3 right-1/3 transform translate-x-1/2 -translate-y-1/2">
-          <Button
-            size="sm"
-            className="bg-primary/80 backdrop-blur-sm hover:bg-primary animate-pulse"
+          <button
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow-sm h-9 px-4 py-2 text-xs sm:text-sm bg-primary/80 backdrop-blur-sm hover:bg-primary animate-pulse"
             onClick={() => console.log("Audio guide started")}
           >
-            <Play className="w-4 h-4 mr-1" />
-            Audio Guide
-          </Button>
+            <Play className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+            <span className="hidden sm:inline">Audio Guide</span>
+          </button>
         </div>
       </div>
     </div>
