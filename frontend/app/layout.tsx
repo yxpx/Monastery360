@@ -1,27 +1,29 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import "./globals.css"
-
-<meta name="apple-mobile-web-app-title" content="Monastery360" />
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import "./globals.css";
+import Translate from "./translate"; // Import the new component
+// import TextToSpeech from "../components/TextToSpeech";
+// Import AudioGuideTTS for section-based TTS
+import AudioGuideTTS from "../components/AudioGuideTTS";
 
 export const metadata: Metadata = {
   title: "Monastery360",
   description: "Interactive PWA for exploring Sikkim monasteries with 360° tours and cultural insights",
+};
+
+interface RootLayoutProps {
+  children: ReactNode;
 }
 
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
+        {/* Your head content remains the same */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&display=swap" rel="stylesheet" />
@@ -38,6 +40,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        {/* Google Translate widget container */}
+        <div id="google_translate_element" style={{ position: "fixed", top: 0, right: 0, zIndex: 9999 }} />
+        {/* Render the new client component */}
+        <Translate />
+        {/* Example usage of AudioGuideTTS: place this in your audio guide section, not globally */}
+        {/* <AudioGuideTTS text="This is the audio guide text to be read aloud." /> */}
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
         <script
@@ -47,5 +55,5 @@ export default function RootLayout({
         />
       </body>
     </html>
-  )
+  );
 }

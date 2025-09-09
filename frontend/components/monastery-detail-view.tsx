@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, MapPin, ExternalLink, Image as ImageIcon, Map, Volume2 } from "lucide-react"
+import AudioGuideTTS from "./AudioGuideTTS"
 import Image from "next/image"
 
 interface Monastery {
@@ -188,17 +189,7 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
           {/* Audio Stream Section */}
           <Card className="p-4 bg-card border border-border rounded-lg flex-shrink-0">
             <div className="space-y-3">
-              <Button
-                variant="default"
-                size="lg"
-                className="w-full flex items-center justify-center gap-2"
-                onClick={() => {
-                  console.log("Audio stream started for", monastery.name)
-                }}
-              >
-                <Volume2 className="w-5 h-5" />
-                Play Audio Guide
-              </Button>
+              <AudioGuideTTS text={monastery.l_desc || "No description available for this monastery."} />
             </div>
           </Card>
         </div>
