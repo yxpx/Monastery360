@@ -1,0 +1,97 @@
+{
+  "monasteries": [
+    {
+      "id": 1,
+      "name": "Rumtek Monastery",
+      "location": {
+        "lat": 27.3389,
+        "lng": 88.5583
+      },
+      "description": "The largest monastery in Sikkim, also known as the Dharmachakra Centre",
+      "established": 1966,
+      "tradition": "Kagyu",
+      "image": "/placeholder.svg?height=200&width=300",
+      "virtualTour": "/tours/rumtek-360.jpg",
+      "audioGuide": "/audio/rumtek-guide.mp3"
+    },
+    {
+      "id": 2,
+      "name": "Pemayangtse Monastery",
+      "location": {
+        "lat": 27.2051,
+        "lng": 88.2121
+      },
+      "description": "One of the oldest and premier monasteries of Sikkim",
+      "established": 1705,
+      "tradition": "Nyingma",
+      "image": "/placeholder.svg?height=200&width=300",
+      "virtualTour": "/tours/pemayangtse-360.jpg",
+      "audioGuide": "/audio/pemayangtse-guide.mp3"
+    },
+    {
+      "id": 3,
+      "name": "Tashiding Monastery",
+      "location": {
+        "lat": 27.2833,
+        "lng": 88.2167
+      },
+      "description": "Sacred monastery located on a hilltop between Gyalshing and Yuksom",
+      "established": 1641,
+      "tradition": "Nyingma",
+      "image": "/placeholder.svg?height=200&width=300",
+      "virtualTour": "/tours/tashiding-360.jpg",
+      "audioGuide": "/audio/tashiding-guide.mp3"
+    },
+    {
+      "id": 4,
+      "name": "Enchey Monastery",
+      "location": {
+        "lat": 27.3314,
+        "lng": 88.6138
+      },
+      "description": "Beautiful monastery located on a hilltop in Gangtok",
+      "established": 1909,
+      "tradition": "Nyingma",
+      "image": "/placeholder.svg?height=200&width=300",
+      "virtualTour": "/tours/enchey-360.jpg",
+      "audioGuide": "/audio/enchey-guide.mp3"
+    },
+    {
+      "id": 5,
+      "name": "Dubdi Monastery",
+      "location": {
+        "lat": 27.3667,
+        "lng": 88.2167
+      },
+      "description": "The oldest monastery in Sikkim, built in 1701",
+      "established": 1701,
+      "tradition": "Nyingma",
+      "image": "/placeholder.svg?height=200&width=300",
+      "virtualTour": "/tours/dubdi-360.jpg",
+      "audioGuide": "/audio/dubdi-guide.mp3"
+    }
+  ],
+  "festivals": [
+    {
+      "id": 1,
+      "name": "Losar",
+      "date": "2024-02-10",
+      "description": "Tibetan New Year celebration",
+      "monastery": "All monasteries"
+    },
+    {
+      "id": 2,
+      "name": "Saga Dawa",
+      "date": "2024-05-23",
+      "description": "Buddha's birth, enlightenment and death anniversary",
+      "monastery": "All monasteries"
+    },
+    {
+      "id": 3,
+      "name": "Pang Lhabsol",
+      "date": "2024-08-15",
+      "description": "Guardian deity of Sikkim celebration",
+      "monastery": "Tashiding, Pemayangtse"
+    }
+  ]
+}

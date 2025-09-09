@@ -1,0 +1,57 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What are the visiting hours for monasteries in Sikkim?",
+      "answer": "Most monasteries in Sikkim are open from 6:00 AM to 6:00 PM. However, specific timings may vary. Rumtek Monastery is open 6:00 AM - 6:00 PM, Pemayangtse is open 7:00 AM - 5:00 PM. It's recommended to visit during morning hours for the best experience and to witness morning prayers.",
+      "category": "visiting",
+      "tags": ["hours", "timing", "schedule"],
+      "popularity": 95
+    },
+    {
+      "id": 2,
+      "question": "What should I wear when visiting monasteries?",
+      "answer": "Dress modestly and respectfully. Wear long pants or skirts that cover your knees, and shirts that cover your shoulders. Remove shoes before entering prayer halls. Avoid bright colors and revealing clothing. Many monasteries provide shoe storage areas at the entrance.",
+      "category": "culture",
+      "tags": ["dress code", "etiquette", "respect"],
+      "popularity": 88
+    },
+    {
+      "id": 3,
+      "question": "Can I take photographs inside the monasteries?",
+      "answer": "Photography rules vary by monastery. Generally, photography is allowed in courtyards and exterior areas, but may be restricted inside prayer halls and near sacred artifacts. Always ask for permission before taking photos, especially of monks or during ceremonies. Some monasteries charge a small fee for photography.",
+      "category": "visiting",
+      "tags": ["photography", "rules", "restrictions"],
+      "popularity": 82
+    }
+  ],
+  "ai_prompts": [
+    {
+      "category": "itinerary",
+      "prompts": [
+        "Plan a 3-day spiritual journey",
+        "Create a week-long monastery tour",
+        "Design a family-friendly monastery visit",
+        "Suggest a budget-friendly monastery tour"
+      ]
+    },
+    {
+      "category": "experience",
+      "prompts": [
+        "Best monasteries for photography",
+        "Most peaceful meditation spots",
+        "Monasteries with the best mountain views",
+        "Where to experience traditional ceremonies"
+      ]
+    },
+    {
+      "category": "practical",
+      "prompts": [
+        "Transportation options to monasteries",
+        "Accommodation near major monasteries",
+        "What to pack for monastery visits",
+        "Local customs and etiquette guide"
+      ]
+    }
+  ]
+}
