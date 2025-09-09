@@ -12,6 +12,7 @@ interface Monastery {
   coords: string
   map_url: string
   embed_link: string
+  booking?: string
   s_desc: string
   l_desc: string
 }
@@ -41,9 +42,9 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
 
   const hasEmbedLink = monastery.embed_link && 
     monastery.embed_link.trim() !== "" && 
-    monastery.embed_link !== "-" && 
-    monastery.embed_link !== "--" &&
     monastery.embed_link.includes("iframe")
+  const isService = hasEmbedLink
+  const isArchive = !hasEmbedLink
 
   return (
     <div className="h-full flex flex-col min-h-0 max-h-full">
@@ -80,31 +81,85 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
         {/* Image/360 View Section */}
         <div className="flex-1 min-w-0 flex flex-col">
           <Card className="flex-1 p-4 bg-card border border-border rounded-lg flex flex-col min-h-0">
-            {/* Toggle Buttons */}
+            {/* Toggle Buttons: show only relevant for type */}
             <div className="flex gap-2 mb-2 flex-shrink-0">
-              <Button
-                variant={activeView === 'image' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setActiveView('image')}
-                className="flex items-center gap-2"
-              >
-                <ImageIcon className="w-4 h-4" />
-                Image
-              </Button>
-              <Button
-                variant={activeView === '360' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setActiveView('360')}
-                className="flex items-center gap-2"
-              >
-                <Map className="w-4 h-4" />
-                360° View
-              </Button>
+              {isArchive && (
+                <Button
+                  variant='default'
+                  size="sm"
+                  className="flex items-center gap-2 cursor-default"
+                  disabled
+                >
+                  <ImageIcon className="w-4 h-4" />
+                  Image
+                </Button>
+              )}
+              {isService && (
+                <Button
+                  variant='default'
+                  size="sm"
+                  className="flex items-center gap-2 cursor-default"
+                  disabled
+                >
+                  <Map className="w-4 h-4" />
+                  360° View
+                </Button>
+              )}
+              {!isService && !isArchive && (
+                <>
+                  <Button
+                    variant={activeView === 'image' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setActiveView('image')}
+                    className="flex items-center gap-2"
+                  >
+                    <ImageIcon className="w-4 h-4" />
+                    Image
+                  </Button>
+                  <Button
+                    variant={activeView === '360' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setActiveView('360')}
+                    className="flex items-center gap-2"
+                  >
+                    <Map className="w-4 h-4" />
+                    360° View
+                  </Button>
+                </>
+              )}
             </div>
 
             {/* Content Area */}
             <div className="flex-1 flex items-center justify-center bg-muted/20 rounded-lg border-2 border-dashed border-muted-foreground/20 p-4 overflow-hidden">
-              {activeView === 'image' ? (
+              {/* Service items: always show 360 embed and booking */}
+              {isService ? (
+                <div className="flex-1 flex flex-col overflow-hidden">
+                  <div className="flex-1 w-full h-full flex items-center justify-center">
+                    <div
+                      className="w-full h-full max-w-[95%] max-h-[95%] rounded-lg overflow-hidden border"
+                      dangerouslySetInnerHTML={{
+                        __html: monastery.embed_link.replace(
+                          'width="600" height="450"',
+                          'width="100%" height="100%" style="min-height:400px;"'
+                        ),
+                      }}
+                    />
+                  </div>
+                  {monastery.booking && (
+                    <div className="mt-4 flex-shrink-0">
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        className="w-full"
+                        onClick={() => window.open(monastery.booking, '_blank')}
+                      >
+                        Book Now
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              ) : activeView === 'image' ? (
+                // Archive and image-only view
                 imageError ? (
                   <div className="text-center">
                     <ImageIcon className="w-16 h-16 text-muted-foreground mx-auto mb-2" />
@@ -116,8 +171,8 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
                 ) : (
                   <div className="relative w-full h-full flex items-center justify-center">
                     <div className="relative max-w-full max-h-full aspect-auto">
-                      <Image
-                        src={`/data/monastery/${monastery.id}.png`}
+          <Image
+            src={isArchive ? `/data/archive/${monastery.id}.png` : `/data/monastery/${monastery.id}.png`}
                         alt={`${monastery.name} monastery`}
                         width={800}
                         height={600}

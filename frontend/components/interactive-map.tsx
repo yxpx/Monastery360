@@ -24,6 +24,9 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
   const sikkimBoundsRef = useRef<any>(null) // Store Sikkim bounds for reset
   const [userLocation, setUserLocation] = useState<any>(null)
   const [nearbyCircle, setNearbyCircle] = useState<any>(null)
+  const [archiveData, setArchiveData] = useState<any[]>([])
+  const [servicesData, setServicesData] = useState<any[]>([])
+  const dataProcessedRef = useRef(false) // Track if data has been processed
 
   // Cleanup function
   const cleanupMap = () => {
@@ -51,6 +54,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
     }
     
     isMapInitializedRef.current = false
+    dataProcessedRef.current = false
   }
 
   // Force map recreation if needed
@@ -70,7 +74,6 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         // Filter out entries with empty names, descriptions, or coordinates
         const filteredData = data.filter((monastery: any) => 
           monastery.name && monastery.name.trim() !== "" && 
-          monastery.s_desc && monastery.s_desc.trim() !== "" &&
           monastery.coords && monastery.coords.trim() !== ""
         )
         console.log('InteractiveMap: Filtered data:', filteredData.length, 'items')
@@ -82,13 +85,34 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
     }
 
     fetchMonasteryData()
+    // fetch archives.json
+    ;(async () => {
+      try {
+        const res = await fetch('/data/archives.json')
+        const data = await res.json()
+        setArchiveData(data)
+      } catch (e) {
+        console.error('InteractiveMap: Error loading archives.json', e)
+      }
+    })()
+    // fetch services.json
+    ;(async () => {
+      try {
+        const res = await fetch('/data/services.json')
+        const data = await res.json()
+        setServicesData(data)
+      } catch (e) {
+        console.error('InteractiveMap: Error loading services.json', e)
+      }
+    })()
   }, [])
 
   useEffect(() => {
     console.log('InteractiveMap: useEffect triggered', {
       window: typeof window !== "undefined",
       mapRef: !!mapRef.current,
-      monasteryDataLength: monasteryData.length
+      monasteryDataLength: monasteryData.length,
+      dataProcessed: dataProcessedRef.current
     })
     
     if (typeof window === "undefined" || !mapRef.current || monasteryData.length === 0) {
@@ -97,7 +121,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
     }
 
     // Prevent multiple initializations
-    if (isMapInitializedRef.current) {
+    if (isMapInitializedRef.current && dataProcessedRef.current) {
       console.log('InteractiveMap: Map already initialized, skipping')
       return
     }
@@ -276,22 +300,17 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           }
         })
 
-        // Add archive markers (static locations for demo)
-        const archiveData = [
-          { name: "Buddhist Manuscripts", coords: "27.35, 88.45", desc: "Digital archive of ancient Buddhist manuscripts" },
-          { name: "Historical Artifacts", coords: "27.30, 88.40", desc: "Collection of historical Buddhist artifacts" },
-          { name: "Traditional Paintings", coords: "27.40, 88.50", desc: "Traditional Buddhist art and paintings" }
-        ]
-
-        archiveData.forEach((archive) => {
-          const [lat, lng] = archive.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
+        // Add archive markers from JSON
+        archiveData.forEach((archive: any) => {
+          if (!archive.coords) return
+          const [lat, lng] = archive.coords.split(',').map((c: string) => parseFloat(c.trim()))
           if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng], { icon: archiveIcon })
+            L.marker([lat, lng], { icon: archiveIcon })
               .addTo(map)
               .bindPopup(`
                 <div class="p-2 min-w-[200px]">
                   <h3 class="font-semibold text-sm mb-1">${archive.name}</h3>
-                  <p class="text-xs text-gray-600 mb-2">${archive.desc}</p>
+                  <p class="text-xs text-gray-600 mb-2">${archive.l_desc || ''}</p>
                   <span class="text-xs text-blue-600 font-medium">Archive</span>
                 </div>
               `)
@@ -304,36 +323,32 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           }
         })
 
-        // Add other markers (static locations for demo)
-        const othersData = [
-          { name: "Meditation Center", coords: "27.32, 88.42", desc: "Community meditation and wellness center" },
-          { name: "Pilgrimage Route", coords: "27.38, 88.48", desc: "Traditional pilgrimage pathway" },
-          { name: "Cultural Site", coords: "27.36, 88.46", desc: "Important cultural heritage site" }
-        ]
-
-        othersData.forEach((other) => {
-          const [lat, lng] = other.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
+        // Add service markers from JSON
+        servicesData.forEach((service: any) => {
+          if (!service.coords) return
+          const [lat, lng] = service.coords.split(',').map((c: string) => parseFloat(c.trim()))
           if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng], { icon: othersIcon })
+            L.marker([lat, lng], { icon: othersIcon })
               .addTo(map)
               .bindPopup(`
                 <div class="p-2 min-w-[200px]">
-                  <h3 class="font-semibold text-sm mb-1">${other.name}</h3>
-                  <p class="text-xs text-gray-600 mb-2">${other.desc}</p>
-                  <span class="text-xs text-green-600 font-medium">Cultural Site</span>
+                  <h3 class="font-semibold text-sm mb-1">${service.name}</h3>
+                  <p class="text-xs text-gray-600 mb-2">${service.l_desc || ''}</p>
+                  <span class="text-xs text-green-600 font-medium">Service</span>
                 </div>
               `)
-              .bindTooltip(other.name, {
+              .bindTooltip(service.name, {
                 permanent: false,
                 direction: 'top',
                 offset: [0, -8],
-                className: 'others-tooltip'
+                className: 'service-tooltip'
               })
           }
         })
 
         setMapInstance(map)
         isMapInitializedRef.current = true
+        dataProcessedRef.current = true
         onMapReady?.(map)
 
       } catch (error) {
@@ -357,7 +372,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       console.log('InteractiveMap: Cleanup function called')
       cleanupMap()
     }
-  }, [monasteryData]) // Remove mapInstance from dependencies to avoid recreation loops
+  }, [monasteryData, archiveData, servicesData]) // Add all data dependencies
 
   // Expose the location function after map is ready
   useEffect(() => {
@@ -398,8 +413,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       })
 
       const { latitude, longitude } = position.coords
-      setUserLocation({ lat: latitude, lng: longitude })
-
+      
       // Import Leaflet dynamically
       const L = (await import("leaflet")).default
 
@@ -413,7 +427,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
 
       // Add user location marker
       const userIcon = L.divIcon({
-        html: `<div class="w-5 h-5 bg-red-500 rounded-full border-3 border-white shadow-lg animate-pulse flex items-center justify-center">
+        html: `<div class="w-5 h-5 bg-purple-600 rounded-full border-3 border-white shadow-lg flex items-center justify-center">
                  <div class="w-2 h-2 bg-white rounded-full"></div>
                </div>`,
         className: "user-location-marker",
@@ -573,8 +587,9 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           className="w-full h-full min-h-[500px]" 
         />
 
-        {/* Map Controls */}
-        <div className="absolute top-4 right-4 space-y-2 z-[1000] pointer-events-none">
+
+        {/* Map Controls - move to top right */}
+        <div className="absolute top-4 right-4 z-[1000] pointer-events-none">
           <Button
             size="sm"
             variant="secondary"
@@ -582,10 +597,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
             onClick={() => {
               if (mapInstance) {
                 if (sikkimBoundsRef.current) {
-                  // Reset to Sikkim bounds (fits within the relaxed zoom limits)
                   mapInstance.fitBounds(sikkimBoundsRef.current, { padding: [20, 20] })
                 } else {
-                  // Fallback to center coordinates at zoom 10
                   mapInstance.setView([27.3389, 88.4167], 10)
                 }
               }
@@ -596,8 +609,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           </Button>
         </div>
 
-        {/* Marker Legend */}
-        <Card className="absolute top-4 left-4 p-2 bg-card/95 backdrop-blur-sm shadow-lg z-[1001] pointer-events-none border border-border">
+        {/* Marker Legend - move to bottom left */}
+        <Card className="absolute bottom-4 left-4 p-2 bg-card/95 backdrop-blur-sm shadow-lg z-[1001] pointer-events-none border border-border">
           <div className="space-y-1.5">
             <div className="text-xs font-semibold text-foreground mb-1.5">Map Legend</div>
             <div className="flex items-center gap-2">
@@ -610,10 +623,10 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-green-600 rounded-full border border-white shadow-sm"></div>
-              <span className="text-xs text-foreground">Cultural Sites</span>
+              <span className="text-xs text-foreground">Services</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full border border-white shadow-sm animate-pulse"></div>
+              <div className="w-3 h-3 bg-purple-600 rounded-full border border-white shadow-sm"></div>
               <span className="text-xs text-foreground">Your Location</span>
             </div>
           </div>

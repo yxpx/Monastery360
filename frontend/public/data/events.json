@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Maghe Sankranti (Makar Sankranti)",
+    "date": "January 14, 2026",
+    "l_desc": "This is a major Hindu festival celebrated by the Nepali community to mark the end of winter. It signifies the sun's transition into the zodiac sign of Capricorn. Devotees take a holy dip at the confluence of the Teesta and Rangeet rivers. A large fair, the Jorethang Maghey Mela, is held as part of the celebrations, featuring cultural programs, food carnivals, sports competitions, and adventurous activities like paragliding and river rafting."
+  },
+  {
+    "id": 2,
+    "name": "Sonam Lhochhar",
+    "date": "January 19, 2026",
+    "l_desc": "This is the New Year festival of the Tamang community. It is a time for feasting, family gatherings, and visiting monasteries. The celebrations involve traditional dances, music played on the *damphu* (a small round drum), and special Tamang cuisine. The festival is a joyous occasion to celebrate the change of seasons and the beginning of a new year."
+  },
+  {
+    "id": 3,
+    "name": "Losar",
+    "date": "February 18, 2026",
+    "l_desc": "The Tibetan New Year, Losar is a major festival for the Bhutia and Tibetan communities. It is a time for spiritual renewal, feasting, and cultural festivities, with families cleaning and decorating their homes. The highlight is the **Chaam** or masked dance performed by monks at monasteries like Rumtek and Pemayangtse to ward off evil spirits and welcome a prosperous new year."
+  },
+  {
+    "id": 4,
+    "name": "Bumchu",
+    "date": "March 3, 2026",
+    "l_desc": "One of the most sacred festivals in Sikkim, Bumchu is celebrated at the Tashiding Monastery. The name means 'sacred pot of water'. The pot is opened by lamas once a year, and the water level is examined to predict the future of the state. If the water level is high, a prosperous year is predicted; if low, a year of famine; and if muddy, a year of conflict. A portion of the holy water is distributed to devotees for its healing properties."
+  },
+  {
+    "id": 5,
+    "name": "Dentam Rhododendron Festival",
+    "date": "March 2026 (Dates vary)",
+    "l_desc": "Held in the scenic village of Dentam, this festival celebrates Sikkim's floral diversity. It attracts tourists and nature enthusiasts to witness a breathtaking display of rhododendrons, orchids, and other exotic flowers. The festival also features a music concert, folk dances, food carnivals, and adventurous activities like mountain biking and bird watching."
+  },
+  {
+    "id": 6,
+    "name": "Holi",
+    "date": "March 13, 2026",
+    "l_desc": "A Hindu festival of colors, Holi symbolizes the victory of good over evil and marks the advent of spring. It is celebrated joyously across Sikkim with a splash of color, music, and feasting."
+  },
+  {
+    "id": 7,
+    "name": "Ram Navami (Chaite Dasain)",
+    "date": "March 27, 2026",
+    "l_desc": "A Hindu festival dedicated to Lord Rama, celebrating his birth. It occurs on the ninth day of the Chaitra month of the Hindu calendar. The festival is marked by prayers, fasting, and devotional songs."
+  },
+  {
+    "id": 8,
+    "name": "Paryatan Mahotsav (Lampokhari Tourism Festival)",
+    "date": "April 2026",
+    "l_desc": "An annual tourism festival held at Lampokhari lake. The event is a tribute to the state's social heritage and aims to promote tourism. It features cultural shows, traditional performances, and a variety of local food stalls."
+  },
+  {
+    "id": 9,
+    "name": "Sakewa",
+    "date": "May 1, 2026",
+    "l_desc": "A religious festival of the Kirat Khambu Rai community of Sikkim. It is also known as the Bhoomi puja (worship of Mother Earth). The festival, which begins on the full moon day of the Hindu month of Baisakh, is a vibrant nine-day event that includes traditional dances depicting the cycle of farming."
+  },
+  {
+    "id": 10,
+    "name": "Saga Dawa",
+    "date": "May 31, 2026",
+    "l_desc": "This is the most important religious day for Mahayana Buddhists. It commemorates the birth, enlightenment, and attainment of *parinirvana* of Lord Buddha. Devotees visit monasteries to offer prayers, light butter lamps, and participate in a procession in Gangtok."
+  },
+  {
+    "id": 11,
+    "name": "Drukpa Tshechi",
+    "date": "July 18, 2026",
+    "l_desc": "This festival commemorates the day when Lord Buddha gave his first teachings of the Four Noble Truths to his five disciples at Sarnath. It is celebrated with prayers and rituals in monasteries across Sikkim, with mass prayers and cultural events."
+  },
+  {
+    "id": 12,
+    "name": "Tendong Lho Rum Faat",
+    "date": "August 8, 2026",
+    "l_desc": "This is one of the oldest and most important festivals of the indigenous Lepcha community. It is a thanksgiving celebration to Mount Tendong, which, according to legend, saved the Lepcha people during a great deluge. The three-day festival involves prayers and rituals to honor the mountain."
+  },
+  {
+    "id": 13,
+    "name": "Janmashtami",
+    "date": "August 15, 2026",
+    "l_desc": "A Hindu festival that celebrates the birth anniversary of Lord Krishna. It is celebrated with great devotion, and temples are decorated with flowers and lights. Devotees observe fasts and sing devotional songs to honor Lord Krishna."
+  },
+  {
+    "id": 14,
+    "name": "Pang Lhabsol",
+    "date": "August 28, 2026",
+    "l_desc": "A festival unique to Sikkim, it honors Mount Khangchendzonga, the state's guardian deity. It also commemorates the ancient blood-brotherhood treaty between the Lepcha and Bhutia communities. The highlight is the unique warrior dance, known as *Pangtoed Chaam*, performed by masked lamas."
+  },
+  {
+    "id": 15,
+    "name": "Indrajatra",
+    "date": "September 26, 2026",
+    "l_desc": "Celebrated by the Newar community, this festival is a tribute to Lord Indra and his mother for providing rain and a good harvest. It is a colorful and lively festival with processions, music, and special feasts."
+  },
+  {
+    "id": 16,
+    "name": "Dasain (Durga Puja)",
+    "date": "October 2026 (Dates vary)",
+    "l_desc": "This Hindu festival marks the victory of Goddess Durga over the buffalo demon Mahishasura. It is celebrated by the Nepali community with great fervor, with rituals and a festive atmosphere."
+  },
+  {
+    "id": 17,
+    "name": "Tihar (Deepawali)",
+    "date": "November 2026 (Dates vary)",
+    "l_desc": "A five-day Hindu festival of lights, celebrated by the Nepali community, which coincides with Diwali. Each day is dedicated to a different animal or deity, with a focus on family and light."
+  },
+  {
+    "id": 18,
+    "name": "Lhabab Duchen",
+    "date": "November 2026 (Dates vary)",
+    "l_desc": "A Buddhist festival that marks the descent of Lord Buddha from the Trayastrimsa Heaven to Earth. It is celebrated by visiting monasteries, lighting butter lamps, and making offerings."
+  },
+  {
+    "id": 19,
+    "name": "Losoong / Namsoong",
+    "date": "December 9, 2026 (Starts)",
+    "l_desc": "Losoong (Bhutia) and Namsoong (Lepcha) mark the end of the harvest season and the beginning of the Sikkimese New Year. It is a time for farmers to celebrate their hard work. The festival includes religious masked dances performed in monasteries and local sports like archery."
+  },
+  {
+    "id": 20,
+    "name": "Mangan Music Festival",
+    "date": "December 2026 (Dates vary)",
+    "l_desc": "An annual music festival held in the town of Mangan, North Sikkim. The festival brings together local and national artists and showcases a variety of music genres, from folk to contemporary. It also promotes local arts and crafts."
+  },
+  {
+    "id": 21,
+    "name": "Kagyed Dance",
+    "date": "December 2026 (Dates vary)",
+    "l_desc": "A customary Buddhist dance festival that is performed two days prior to the start of the Losoong festival. The dance, known as *Chaam*, depicts narrativized tales from Buddhist mythology, particularly the chronicles of Guru Padmasambhava."
+  },
+  {
+    "id": 22,
+    "name": "Rumtek Chaam",
+    "date": "June 2026 (Dates vary)",
+    "l_desc": "A significant masked dance performed at the Rumtek Monastery on the 10th day of the fifth month of the Tibetan calendar. The dance presents the eight signs of Guru Rinpoche and is a colorful, spiritual spectacle that attracts pilgrims and visitors."
+  },
+  {
+    "id": 23,
+    "name": "Gouthor Chaam",
+    "date": "February 2026 (Dates vary)",
+    "l_desc": "A masked dance performed by lamas two days prior to the Losar festival. It is a joyful and spiritual event that is believed to purify the land and ward off negative energies before the start of the new year."
+  },
+  {
+    "id": 24,
+    "name": "Enchey Chaam",
+    "date": "December 2026 (Dates vary)",
+    "l_desc": "Performed by lamas in the courtyard of the Enchey Monastery, this masked dance celebrates religious occasions. It showcases the monks' flawless footwork and is accompanied by drums, trumpets, and chanting. The dancers wear brightly colored masks and costumes."
+  },
+  {
+    "id": 25,
+    "name": "Guru Rinpoche's Thrungkar Tshechu",
+    "date": "June 2026 (Dates vary)",
+    "l_desc": "This festival commemorates the birth anniversary of Guru Padmasambhava, the patron saint of Sikkim. It is celebrated with great devotion in monasteries, with special prayer sessions and rituals."
+  },
+  {
+    "id": 26,
+    "name": "Tamu Lochar",
+    "date": "December 2026 (Dates vary)",
+    "l_desc": "The New Year festival of the Gurung community. It is a vibrant celebration that marks the end of the agricultural season and is filled with traditional dances, music, communal feasts, and cultural performances."
+  },
+  {
+    "id": 27,
+    "name": "Hee Bermiok Tourism Festival",
+    "date": "May 2026 (Dates vary)",
+    "l_desc": "A popular tourism festival held in the charming village of Hee Bermiok in West Sikkim. It attracts tourists and showcases the local culture and traditions of the region through various events and performances."
+  },
+  {
+    "id": 29,
+    "name": "Gangtok Winter Carnival",
+    "date": "December 2026",
+    "l_desc": "An annual carnival in Gangtok that features a wide range of cultural and entertainment activities, including traditional food stalls, art exhibitions, and music performances. The carnival brings together people from all walks of life to celebrate the festive season."
+  }
+]

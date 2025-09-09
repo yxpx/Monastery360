@@ -7,7 +7,6 @@ import { MonasteryDetailView } from "./monastery-detail-view"
 import { MonasteryList } from "./monastery-list"
 import { TripPlanner } from "./trip-planner"
 import { FestivalCalendar } from "./festival-calendar"
-import { HolidayInfoPanel } from "./holiday-info-panel"
 import { BasicQNA } from "./basic-qna"
 import { AITripGuide } from "./ai-trip-guide"
 import { WebsiteInfo } from "./website-info"
@@ -52,7 +51,6 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
     setShowMonasteryDetail(false)
     setSelectedMonastery(null)
   }
-
   const handleLocationClick = () => {
     // Trigger location functionality in the InteractiveMap
     if (locationFunction && typeof locationFunction === 'function') {
@@ -80,12 +78,10 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
             <div className="flex-1 min-w-0">
               <Card className="h-full p-3 bg-card border border-border rounded-lg">
                 <InteractiveMap
-                  onMonasterySelect={(monastery) => {
-                    handleMonasterySelect(monastery)
-                  }}
+                  onMonasterySelect={handleMonasterySelect}
                   onMapReady={setMapInstance}
                   onLocationRequest={() => console.log("Location requested from map")}
-                  onLocationFunctionReady={setLocationFunction}
+                  onLocationFunctionReady={(fn) => setLocationFunction(() => fn)}
                 />
               </Card>
             </div>
@@ -116,16 +112,9 @@ export function MainContent({ activeView, onViewChange }: MainContentProps) {
 
       case "calendar":
         return (
-          <div className="flex gap-2 h-full">
-            <div className="flex-1 min-w-0">
-              <Card className="h-full p-4 bg-card border border-border rounded-lg overflow-hidden">
-                <FestivalCalendar />
-              </Card>
-            </div>
-            <div className="w-80 flex-shrink-0">
-              <HolidayInfoPanel />
-            </div>
-          </div>
+          <Card className="w-full h-full p-4 bg-card border border-border rounded-lg overflow-hidden">
+            <FestivalCalendar />
+          </Card>
         )
 
       case "qna":

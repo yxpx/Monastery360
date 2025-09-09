@@ -184,3 +184,73 @@
 .user-location-tooltip:before {
   border-top-color: #ef4444 !important;
 }
+
+/* Markdown content styling for trip planner */
+.trip-markdown {
+  line-height: 1.7;
+}
+
+.trip-markdown h1 {
+  @apply text-2xl font-bold text-primary mb-6 border-b border-border pb-3;
+}
+
+.trip-markdown h2 {
+  @apply text-xl font-semibold text-foreground mb-4 mt-8 border-l-4 border-primary pl-4 bg-primary/5 py-2;
+}
+
+.trip-markdown h3 {
+  @apply text-lg font-medium text-foreground mb-3 mt-6;
+}
+
+.trip-markdown p {
+  @apply text-muted-foreground mb-4 leading-relaxed;
+}
+
+.trip-markdown strong {
+  @apply font-semibold text-foreground;
+}
+
+.trip-markdown em {
+  @apply italic text-primary font-medium;
+}
+
+.trip-markdown ul {
+  @apply space-y-2 mb-6 pl-6;
+}
+
+.trip-markdown ol {
+  @apply space-y-2 mb-6 pl-6 list-decimal;
+}
+
+.trip-markdown li {
+  @apply text-muted-foreground relative;
+}
+
+.trip-markdown ul li::before {
+  @apply content-['•'] text-primary font-bold absolute -left-4 top-0;
+}
+
+.trip-markdown blockquote {
+  @apply border-l-4 border-primary/30 pl-4 py-2 bg-primary/5 rounded-r-md my-6 italic;
+}
+
+.trip-markdown code {
+  @apply bg-muted px-2 py-1 rounded text-sm font-mono text-foreground;
+}
+
+.trip-markdown hr {
+  @apply border-border my-8;
+}
+
+.trip-markdown table {
+  @apply w-full border-collapse border border-border rounded-lg my-6;
+}
+
+.trip-markdown th,
+.trip-markdown td {
+  @apply border border-border px-4 py-2 text-left;
+}
+
+.trip-markdown th {
+  @apply bg-muted font-semibold;
+}

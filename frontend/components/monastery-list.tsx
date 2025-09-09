@@ -33,6 +33,10 @@ export function MonasteryList({
   const [monasteryData, setMonasteryData] = useState<Monastery[]>([])
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("")
+  const [archivesData, setArchivesData] = useState<any[]>([])
+  const [servicesData, setServicesData] = useState<any[]>([])
+  const [loadingArchives, setLoadingArchives] = useState(true)
+  const [loadingServices, setLoadingServices] = useState(true)
 
   useEffect(() => {
     const fetchMonasteryData = async () => {
@@ -44,8 +48,7 @@ export function MonasteryList({
         console.log('Raw data loaded:', data.length, 'items')
         // Filter out entries with empty names or descriptions
         const filteredData = data.filter((monastery: Monastery) => 
-          monastery.name && monastery.name.trim() !== "" && 
-          monastery.s_desc && monastery.s_desc.trim() !== ""
+          monastery.name && monastery.name.trim() !== ""
         )
         console.log('Filtered data:', filteredData.length, 'items')
         setMonasteryData(filteredData)
@@ -60,17 +63,37 @@ export function MonasteryList({
     fetchMonasteryData()
   }, [])
 
-  const archives = [
-    { id: 6, name: "Buddhist Manuscripts", location: "Digital Archive", type: "Archive" },
-    { id: 7, name: "Historical Artifacts", location: "Digital Archive", type: "Archive" },
-    { id: 8, name: "Traditional Paintings", location: "Digital Archive", type: "Archive" },
-  ]
+  // Load archives.json
+  useEffect(() => {
+    const fetchArchives = async () => {
+      try {
+        const res = await fetch('/data/archives.json')
+        const data = await res.json()
+        setArchivesData(data)
+      } catch (e) {
+        console.error('Error loading archives:', e)
+      } finally {
+        setLoadingArchives(false)
+      }
+    }
+    fetchArchives()
+  }, [])
 
-  const others = [
-    { id: 9, name: "Meditation Centers", location: "Various", type: "Others" },
-    { id: 10, name: "Pilgrimage Routes", location: "Sikkim", type: "Others" },
-    { id: 11, name: "Cultural Sites", location: "Various", type: "Others" },
-  ]
+  // Load services.json
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const res = await fetch('/data/services.json')
+        const data = await res.json()
+        setServicesData(data)
+      } catch (e) {
+        console.error('Error loading services:', e)
+      } finally {
+        setLoadingServices(false)
+      }
+    }
+    fetchServices()
+  }, [])
 
   const getCurrentItems = () => {
     let items: any[] = []
@@ -79,25 +102,24 @@ export function MonasteryList({
         items = monasteryData
         break
       case "Archive":
-        items = archives
+        items = archivesData
         break
-      case "Others":
-        items = others
+      case "Services":
+        items = servicesData
         break
       default:
         items = monasteryData
-        break
     }
-    
-    // Filter by search term
+    // Filter by search term across name and description fields
     if (searchTerm.trim() !== "") {
-      items = items.filter(item => 
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (item.s_desc && item.s_desc.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (item.desc && item.desc.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
+      const term = searchTerm.toLowerCase()
+      items = items.filter(item => {
+        const text = [item.name, item.s_desc, item.l_desc, item.desc]
+          .filter(Boolean)
+          .join(' ')  .toLowerCase()
+        return text.includes(term)
+      })
     }
-    
     return items
   }
 
@@ -131,7 +153,7 @@ export function MonasteryList({
     >
       {/* Category Tabs */}
       <div className="flex gap-1 mb-2" role="tablist" aria-label="Content categories">
-        {["Monastery", "Archive", "Others"].map((tab) => (
+        {["Monastery", "Archive", "Services"].map((tab) => (
           <Button
             key={tab}
             variant={tab === activeCategory ? "default" : "outline"}
@@ -150,15 +172,15 @@ export function MonasteryList({
         ))}
       </div>
 
-      {/* Search Input */}
-      <div className="relative mb-2">
+      {/* Search Input - compact spacing */}
+      <div className="relative mb-1">
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 w-3 h-3 text-muted-foreground" />
         <Input
           type="text"
           placeholder={`Search ${activeCategory.toLowerCase()}...`}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-7 h-7 text-xs bg-secondary/50 border-secondary-foreground/20 focus:border-primary/50 focus:bg-background py-1"
+          className="pl-7 h-7 text-xs bg-secondary/50 border-secondary-foreground/20 focus:border-primary/50 focus:bg-background py-0"
         />
       </div>
 
@@ -166,11 +188,12 @@ export function MonasteryList({
         className="flex-1 overflow-y-auto mb-3 space-y-2 pr-2 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40"
         role="tabpanel"
         id={`${activeCategory.toLowerCase()}-panel`}
-        aria-label={`${activeCategory} listings`}
       >
-        {loading ? (
+        {(activeCategory === 'Monastery' && loading) ||
+         (activeCategory === 'Archive' && loadingArchives) ||
+         (activeCategory === 'Services' && loadingServices) ? (
           <div className="flex items-center justify-center h-32">
-            <div className="text-sm text-muted-foreground">Loading monasteries...</div>
+            <div className="text-sm text-muted-foreground">Loading {activeCategory.toLowerCase()}...</div>
           </div>
         ) : getCurrentItems().length === 0 ? (
           <div className="flex items-center justify-center h-32">
@@ -183,7 +206,7 @@ export function MonasteryList({
               className="p-3 bg-secondary border border-border rounded-lg hover:bg-secondary/80 transition-colors group"
               role="button"
               tabIndex={0}
-              aria-label={`${activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name} in ${activeCategory === "Monastery" ? getLocationFromCoords((item as Monastery).coords) : (item as any).location}`}
+              aria-label={`${activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}`}
             >
               <div className="flex items-center justify-between">
                 <div
@@ -197,9 +220,6 @@ export function MonasteryList({
                   }}
                 >
                   <p className="text-sm font-medium text-foreground">{activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {activeCategory === "Monastery" ? getLocationFromCoords((item as Monastery).coords) : (item as any).location}
-                  </p>
                 </div>
                 <Button
                   variant="ghost"
@@ -224,9 +244,10 @@ export function MonasteryList({
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 bg-transparent"
+          className="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-700 border-none"
           onClick={onLocationClick}
           aria-label="Show current location on map"
+          disabled={loading}
         >
           <MapPin className="w-4 h-4" aria-hidden="true" />
           Location

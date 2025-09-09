@@ -1,128 +1,802 @@
 [
-    {
-      "id": 1,
-      "name": "Aden Wolung Monastery",
-      "coords": "",
-      "map_url": "",
-      "embed_link": "",
-      "s_desc": "",
-      "l_desc": ""
-    },
-    {
-      "id": 2,
-      "name": "Amba Mamring Monastery",
-      "coords": "27.277416350683502, 88.31048949965877",
-      "map_url": "https://maps.app.goo.gl/qtDqjbyWidzgarpx9",
-      "embed_link": "-",
-      "s_desc": "A historical monastery in East Sikkim, built in 1929 by a Lepcha Buddhist.",
-      "l_desc": "The Mamring Monastery, located in the East Sikkim district, is a historically significant monastic site. Established in 1929 by a Lepcha Buddhist, it belongs to the Nyingmapa sect, one of the oldest and most important schools of Tibetan Buddhism. The monastery serves as a spiritual center where periodic pujas and rituals are performed throughout the year, maintaining the rich religious traditions of the region. While specific details about its architecture and unique features are not widely documented, its enduring presence in the community highlights its role in preserving and propagating Buddhist teachings. Situated in a region known for its natural beauty, the monastery offers a serene and contemplative environment for both monks and visitors. Its history as one of the monasteries built in the early 20th century makes it a noteworthy part of Sikkim's rich Buddhist heritage."
-    },
-    {
-      "id": 5,
-      "name": "Baba Harbhajan Temple",
-      "coords": "27.366009726931924, 88.83877750292646",
-      "map_url": "https://maps.app.goo.gl/1SAQ6JNMADVzyRtQ9",
-      "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757326656401!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0V2OUxRX2dF!2m2!1d27.36582363623283!2d88.83826352261067!3f304.0193658630398!4f11.755677138330697!5f0.4000000000000002\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-      "s_desc": "A shrine dedicated to an Indian Army soldier, Baba Harbhajan Singh, revered as a guardian spirit.",
-      "l_desc": "The Baba Harbhajan Temple, or Baba Mandir, is a unique and revered shrine in East Sikkim, located between the Nathu La and Jelep La passes. It is a memorial dedicated to Sepoy Harbhajan Singh of the Indian Army, who tragically died in 1968. According to legend, his spirit continues to serve the army and protect the soldiers in the treacherous, high-altitude terrain. The temple has become a pilgrimage site for both soldiers and civilians who believe in his spiritual presence. The Indian Army maintains the temple, treating him as a living soldier—his uniform is pressed daily, and his boots are polished, which are said to be found muddy by morning. His personal room is kept ready with his belongings, and a special seat is reserved for him during flag meetings with the Chinese army. The temple's mystique and the unwavering faith of the soldiers make it a poignant and spiritually significant destination, blending patriotism and folklore in the stunning Himalayan landscape."
-    },
-    {
-      "id": 8,
-      "name": "Barphog Monastery",
-      "coords": "27.304512663674654, 88.5292669818578",
-      "map_url": "https://maps.app.goo.gl/aNNyQ1gbUcBRMmbn9",
-      "embed_link": "-",
-      "s_desc": "A Nyingmapa monastery in North Sikkim, built by local lamas in 1957.",
-      "l_desc": "The Barphog Monastery, also known as Chhodub Dargyeling Monastery, is a serene and historically significant site in the Dzongu area of North Sikkim. Founded in 1957, it was built by local lamas with the support of the community to serve the religious needs of the people. Belonging to the Nyingmapa sect, which is the oldest school of Tibetan Buddhism, the monastery is a vital center for spiritual and cultural activities in the region. It is a place of continuous religious ceremonies and practices, catering to the faithful throughout the year. Nestled in the Himalayan foothills, the monastery offers a peaceful retreat with beautiful natural surroundings. It is accessible by a steep climb from the village of Lingdong and serves as a testament to the enduring faith and community effort in preserving Sikkim's rich Buddhist heritage."
-    },
-    {
-      "id": 10,
-      "name": "Bermiok Monastery",
-      "coords": "27.22651035956667, 88.45892621456308",
-      "map_url": "https://maps.app.goo.gl/WiLEmWwG6BchFS7Q8",
-      "embed_link": "--",
-      "s_desc": "A Karma Kagyu monastery in South Sikkim, rebuilt after earthquakes.",
-      "l_desc": "The Bermiok Monastery, also known as Bermiok Wosel Choling Gonpa, is a significant Karma Kagyu monastery in South Sikkim. Originally established in 1873 by local lamas and laymen, the monastery has a history of resilience, having been twice damaged by earthquakes. It was reconstructed in 1954 and subsequently replaced with a new structure with government aid, making it one of the major monasteries in the region. The monastery is a vital center for religious life, where major ceremonies and Buddhist rituals are performed throughout the year. Within its premises lies the Thangshing Bermiok Manilakhang, a prayer wheel hall featuring statues of deities like Buddha Amitabha and the thousand-armed form of Avalokiteśvara. The monastery's serene location amidst the lush landscapes of South Sikkim provides a peaceful environment for meditation and spiritual contemplation."
-    },
-    {
-      "id": 12,
-      "name": "Bon Monastery",
-      "coords": "27.27879554691801, 88.33487392250461",
-      "map_url": "Bon Monastery",
-      "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757324303183!6m8!1m7!1s1FGPbSPCAWZ5-7jC1xVR7g!2m2!1d27.27881578728124!2d88.33455893614709!3f247.93008015382364!4f-2.960877688178442!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-      "s_desc": "A quiet Bon monastery preserving Tibet's ancient pre-Buddhist traditions in Sikkim.",
-      "l_desc": "The Bon Monastery, officially known as Bon Yung Dung Monastery, is a unique and serene spiritual site located in the village of Kewzing, near Ravangla in South Sikkim. It stands as the sole monastery in the state dedicated to the Bon faith, Tibet's indigenous pre-Buddhist religion. Established in the late 1980s, it serves as a crucial center for the Bonpo community, providing a space for followers to practice their traditions and offering education and shelter to young, underprivileged monks."
-    },
-    {
-      "id": 13,
-      "name": "Bongyong Ani Gonpa",
-      "coords": "",
-      "map_url": "",
-      "embed_link": "",
-      "s_desc": "",
-      "l_desc": ""
-    },
-    {
-      "id": 14,
-      "name": "Borong Monastery",
-      "coords": "27.357457996518338, 88.34555492250735",
-      "map_url": "https://maps.app.goo.gl/CDNEmxDddDeXXZjs8",
-      "embed_link": "--",
-      "s_desc": "A peaceful monastery in South Sikkim, known for its scenic views.",
-      "l_desc": "Pema Chholing Gumba, located near Borong in South Sikkim, is a significant and serene spiritual center. It is a vital part of the region's cultural and religious landscape, attracting both pilgrims and tourists who come to appreciate its tranquil atmosphere and the stunning views it offers of the surrounding Himalayan landscape. The monastery, affiliated with the Nyingmapa sect of Tibetan Buddhism, is a place where monks live, study, and conduct regular rituals. It is renowned for its serene environment, which is perfect for meditation and spiritual contemplation. The gumba's architecture, featuring vibrant colors and traditional designs, stands in harmony with the lush greenery and panoramic mountain vistas. Its presence in Borong, a beautiful village known for its hot springs and natural beauty, further adds to its appeal as a destination for those seeking peace and a deeper connection with nature and spirituality."
-    },
-    {
-      "id": 15,
-      "name": "Bumtar Namdroling Monastery",
-      "coords": "",
-      "map_url": "",
-      "embed_link": "",
-      "s_desc": "",
-      "l_desc": ""
-    },
-    {
-      "id": 17,
-      "name": "Burtuk Urgen Pemacholing Monastery",
-      "coords": "27.367585501964246, 88.6368569873551",
-      "map_url": "https://maps.app.goo.gl/FhmED62pmpHirEug7",
-      "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757349326466!6m8!1m7!1sup0d15Vjb5nTgsw8mFWwLw!2m2!1d27.35299468818453!2d88.61440172049717!3f263.52694706872984!4f3.0363736403544124!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-      "s_desc": "A Nyingmapa monastery in East Sikkim, built by the Gurung community.",
-      "l_desc": "The Burtuk Urgen Pemacholing Monastery, located near Gangtok in East Sikkim, is a modern and significant spiritual center. Established in the year 2000 by the All Sikkim Gurung Tamu Buddhist Association, the monastery serves as a crucial hub for the Gurung community, a major ethnic group in Sikkim. Following the Nyingmapa sect, the oldest school of Tibetan Buddhism, it provides a place for monks to study and practice their faith. The monastery was built with contributions and donations from devotees, and its foundation stone was laid by the esteemed Gurung Rinpoche, Venerable Karma Wangchuk. The monastery's serene environment, combined with its cultural importance to the Gurung community, makes it a peaceful and significant site in the region.dhist heritage."
-    },
-    {
-      "id": 25,
-      "name": "Chorten Monastery",
-      "coords": "27.312965392479505, 88.60570563996176",
-      "map_url": "https://maps.app.goo.gl/kzkvrnSoUACWVETg7",
-      "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757349681746!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREpwTkQ3emdF!2m2!1d27.31284146711967!2d88.60483660425811!3f4.613090015320381!4f-18.24006517329741!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-      "s_desc": "A significant stupa in Gangtok, a beacon of peace for Buddhists.",
-      "l_desc": "The Do Drul Chorten is a prominent Buddhist stupa in Gangtok, known for its religious and historical significance. Built in 1945 by the head of the Nyingmapa sect, Trulshik Rinpoche, it was constructed to drive away evil spirits that were believed to haunt the area. The stupa is marked by a distinctive golden dome, which can be seen from various parts of Gangtok. The complex is a sacred pilgrimage site, with 108 Mani Lhakor, or prayer wheels, surrounding the main stupa. Devotees circumambulate the stupa, spinning the wheels while chanting \"Om Mani Padme Hum.\" Inside, a complete set of holy books, mantras, and other religious objects are enshrined. The Do Drul Chorten is an active center of learning and worship, with a monastery and a dharma preaching center that accommodates a large number of monks. Located near the Namgyal Institute of Tibetology, it is a serene and beautiful place that offers a glimpse into the rich traditions of Tibetan Buddhism and provides a tranquil space for contemplation."
-    },
-    {
-      "id": 29,
-      "name": "Dechen Cheling Monastery",
-      "coords": "28.127445630448, 94.13227513914656",
-      "map_url": "https://maps.app.goo.gl/dQuZPRqP5A9ir1sDA",
-      "embed_link": "--",
-      "s_desc": "A Nyingmapa monastery in Gangtok, blessed by the Dalai Lama.",
-      "l_desc": "Dechen Choling Monastery, also known as Tamang Dechen Choling Gonpa, is a significant spiritual center in the Sichey area of Gangtok, East Sikkim. Established in 1987, it was founded by and for the Tamang Buddhist community, a major ethnic group in the state. The monastery follows the Nyingmapa sect, the oldest school of Tibetan Buddhism. It serves as a vital hub for religious ceremonies and regular Buddhist programs. A notable event in its history was the blessing of the monastery by His Holiness the Dalai Lama in April 2005. The monastery's serene environment and its affiliation with the Tamang community make it a culturally and spiritually important site in the state capital."
-    },
-    {
-      "id": 31,
-      "name": "Deorali Monastery",
-      "coords": "27.314978451435586, 88.60488686130468",
-      "map_url": "https://maps.app.goo.gl/V6CrJ4jZAEz9iyG68",
-      "embed_link": "--",
-      "s_desc": "A prominent stupa in Gangtok, a serene symbol of peace with 108 prayer wheels.",
-      "l_desc": "The Deoarali Monastery, located in the Deorali area of Gangtok, is one of the most significant and popular Buddhist stupas in Sikkim. Built in 1945 by Trulshik Rinpoche, the head of the Nyingmapa sect, it was constructed to ward off the evil spirits believed to be haunting the area. The stupa is distinguished by its golden dome and is encircled by 108 Mani Lhakor, or prayer wheels, which devotees spin while chanting \"Om Mani Padme Hum.\" Inside, the stupa houses a complete set of holy books, mantras, and other religious objects. Adjacent to the chorten is a monastery where young lamas are trained, and a dharma preaching center."
-    },
-    {
-      "id": 32,
-      "name": "Arithang Gyaltsen Tshogpo's Mani Lhakhang",
-      "coords": "27.331474336762227, 88.61067073393366",
-      "map_url": "https://maps.app.goo.gl/1VNyBSX2yVzYgGkz8",
-      "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757395346837!6m8!1m7!1saTESCKeOh3YHAiGM8drbsQ!2m2!1d27.33137683723895!2d88.61013998129197!3f58.54922283518873!4f20.996333153316456!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-      "s_desc": "A prayer hall in Sikkim, likely in the Arithang area, maintained by a local Buddhist association.",
-      "l_desc": "Arithang Gyaltsen Tshogpo's Mani Lhakhang is a Buddhist prayer hall located in Sikkim, likely situated in the Arithang locality of Gangtok. The term \"Mani Lhakhang\" signifies a building specifically dedicated to prayer and spiritual practices, often housing prayer wheels (Mani Lhakor) and statues of deities. The \"Gyaltsen Tshogpo\" portion of the name suggests it is maintained and managed by a Buddhist association or community group, likely to be called \"Arithang Gyaltsen Tshogpo.\" This type of community-run prayer hall serves as a vital spiritual hub for local devotees, providing a place for daily rituals, a venue for gatherings, and a center for preserving Buddhist traditions at a grassroots level. The lhakhang's existence underscores the deep-rooted faith of the local population and their commitment to preserving their cultural and religious heritage."
-    }
-  ]
+  {
+    "id": "",
+    "name": "",
+    "coords": "",
+    "map_url": "",
+    "embed_link": "",
+    "l_desc": ""
+  },
+  {
+    "id": 2,
+    "name": "Amba Mamring Monastery",
+    "coords": "27.277416350683502, 88.31048949965877",
+    "map_url": "https://maps.app.goo.gl/qtDqjbyWidzgarpx9",
+    "embed_link": "-",
+    "l_desc": "The Mamring Monastery, located in the East Sikkim district, is a historically significant monastic site. Established in 1929 by a Lepcha Buddhist, it belongs to the Nyingmapa sect, one of the oldest and most important schools of Tibetan Buddhism. The monastery serves as a spiritual center where periodic pujas and rituals are performed throughout the year, maintaining the rich religious traditions of the region. While specific details about its architecture and unique features are not widely documented, its enduring presence in the community highlights its role in preserving and propagating Buddhist teachings. Situated in a region known for its natural beauty, the monastery offers a serene and contemplative environment for both monks and visitors. Its history as one of the monasteries built in the early 20th century makes it a noteworthy part of Sikkim's rich Buddhist heritage."
+  },
+  {
+    "id": 5,
+    "name": "Baba Harbhajan Temple",
+    "coords": "27.366009726931924, 88.83877750292646",
+    "map_url": "https://maps.app.goo.gl/1SAQ6JNMADVzyRtQ9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757326656401!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0V2OUxRX2dF!2m2!1d27.36582363623283!2d88.83826352261067!3f304.0193658630398!4f11.755677138330697!5f0.4000000000000002\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Baba Harbhajan Temple, or Baba Mandir, is a unique and revered shrine in East Sikkim, located between the Nathu La and Jelep La passes. It is a memorial dedicated to Sepoy Harbhajan Singh of the Indian Army, who tragically died in 1968. According to legend, his spirit continues to serve the army and protect the soldiers in the treacherous, high-altitude terrain. The temple has become a pilgrimage site for both soldiers and civilians who believe in his spiritual presence. The Indian Army maintains the temple, treating him as a living soldier—his uniform is pressed daily, and his boots are polished, which are said to be found muddy by morning. His personal room is kept ready with his belongings, and a special seat is reserved for him during flag meetings with the Chinese army. The temple's mystique and the unwavering faith of the soldiers make it a poignant and spiritually significant destination, blending patriotism and folklore in the stunning Himalayan landscape."
+  },
+  {
+    "id": 8,
+    "name": "Barphog Monastery",
+    "coords": "27.304512663674654, 88.5292669818578",
+    "map_url": "https://maps.app.goo.gl/aNNyQ1gbUcBRMmbn9",
+    "embed_link": "-",
+    "l_desc": "The Barphog Monastery, also known as Chhodub Dargyeling Monastery, is a serene and historically significant site in the Dzongu area of North Sikkim. Founded in 1957, it was built by local lamas with the support of the community to serve the religious needs of the people. Belonging to the Nyingmapa sect, which is the oldest school of Tibetan Buddhism, the monastery is a vital center for spiritual and cultural activities in the region. It is a place of continuous religious ceremonies and practices, catering to the faithful throughout the year. Nestled in the Himalayan foothills, the monastery offers a peaceful retreat with beautiful natural surroundings. It is accessible by a steep climb from the village of Lingdong and serves as a testament to the enduring faith and community effort in preserving Sikkim's rich Buddhist heritage."
+  },
+  {
+    "id": 10,
+    "name": "Bermiok Monastery",
+    "coords": "27.22651035956667, 88.45892621456308",
+    "map_url": "https://maps.app.goo.gl/WiLEmWwG6BchFS7Q8",
+    "embed_link": "--",
+    "l_desc": "The Bermiok Monastery, also known as Bermiok Wosel Choling Gonpa, is a significant Karma Kagyu monastery in South Sikkim. Originally established in 1873 by local lamas and laymen, the monastery has a history of resilience, having been twice damaged by earthquakes. It was reconstructed in 1954 and subsequently replaced with a new structure with government aid, making it one of the major monasteries in the region. The monastery is a vital center for religious life, where major ceremonies and Buddhist rituals are performed throughout the year. Within its premises lies the Thangshing Bermiok Manilakhang, a prayer wheel hall featuring statues of deities like Buddha Amitabha and the thousand-armed form of Avalokiteśvara. The monastery's serene location amidst the lush landscapes of South Sikkim provides a peaceful environment for meditation and spiritual contemplation."
+  },
+  {
+    "id": 12,
+    "name": "Bon Monastery",
+    "coords": "27.27879554691801, 88.33487392250461",
+    "map_url": "Bon Monastery",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757324303183!6m8!1m7!1s1FGPbSPCAWZ5-7jC1xVR7g!2m2!1d27.27881578728124!2d88.33455893614709!3f247.93008015382364!4f-2.960877688178442!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Bon Monastery, officially known as Bon Yung Dung Monastery, is a unique and serene spiritual site located in the village of Kewzing, near Ravangla in South Sikkim. It stands as the sole monastery in the state dedicated to the Bon faith, Tibet's indigenous pre-Buddhist religion. Established in the late 1980s, it serves as a crucial center for the Bonpo community, providing a space for followers to practice their traditions and offering education and shelter to young, underprivileged monks."
+  },
+  {
+    "id": 14,
+    "name": "Borong Monastery",
+    "coords": "27.357457996518338, 88.34555492250735",
+    "map_url": "https://maps.app.goo.gl/CDNEmxDddDeXXZjs8",
+    "embed_link": "--",
+    "l_desc": "Pema Chholing Gumba, located near Borong in South Sikkim, is a significant and serene spiritual center. It is a vital part of the region's cultural and religious landscape, attracting both pilgrims and tourists who come to appreciate its tranquil atmosphere and the stunning views it offers of the surrounding Himalayan landscape. The monastery, affiliated with the Nyingmapa sect of Tibetan Buddhism, is a place where monks live, study, and conduct regular rituals. It is renowned for its serene environment, which is perfect for meditation and spiritual contemplation. The gumba's architecture, featuring vibrant colors and traditional designs, stands in harmony with the lush greenery and panoramic mountain vistas. Its presence in Borong, a beautiful village known for its hot springs and natural beauty, further adds to its appeal as a destination for those seeking peace and a deeper connection with nature and spirituality."
+  },
+  {
+    "id": 17,
+    "name": "Burtuk Urgen Pemacholing Monastery",
+    "coords": "27.367585501964246, 88.6368569873551",
+    "map_url": "https://maps.app.goo.gl/FhmED62pmpHirEug7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757349326466!6m8!1m7!1sup0d15Vjb5nTgsw8mFWwLw!2m2!1d27.35299468818453!2d88.61440172049717!3f263.52694706872984!4f3.0363736403544124!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Burtuk Urgen Pemacholing Monastery, located near Gangtok in East Sikkim, is a modern and significant spiritual center. Established in the year 2000 by the All Sikkim Gurung Tamu Buddhist Association, the monastery serves as a crucial hub for the Gurung community, a major ethnic group in Sikkim. Following the Nyingmapa sect, the oldest school of Tibetan Buddhism, it provides a place for monks to study and practice their faith. The monastery was built with contributions and donations from devotees, and its foundation stone was laid by the esteemed Gurung Rinpoche, Venerable Karma Wangchuk. The monastery's serene environment, combined with its cultural importance to the Gurung community, makes it a peaceful and significant site in the region.dhist heritage."
+  },
+  {
+    "id": 25,
+    "name": "Chorten Monastery",
+    "coords": "27.312965392479505, 88.60570563996176",
+    "map_url": "https://maps.app.goo.gl/kzkvrnSoUACWVETg7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757349681746!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREpwTkQ3emdF!2m2!1d27.31284146711967!2d88.60483660425811!3f4.613090015320381!4f-18.24006517329741!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Do Drul Chorten is a prominent Buddhist stupa in Gangtok, known for its religious and historical significance. Built in 1945 by the head of the Nyingmapa sect, Trulshik Rinpoche, it was constructed to drive away evil spirits that were believed to haunt the area. The stupa is marked by a distinctive golden dome, which can be seen from various parts of Gangtok. The complex is a sacred pilgrimage site, with 108 Mani Lhakor, or prayer wheels, surrounding the main stupa. Devotees circumambulate the stupa, spinning the wheels while chanting \"Om Mani Padme Hum.\" Inside, a complete set of holy books, mantras, and other religious objects are enshrined. The Do Drul Chorten is an active center of learning and worship, with a monastery and a dharma preaching center that accommodates a large number of monks. Located near the Namgyal Institute of Tibetology, it is a serene and beautiful place that offers a glimpse into the rich traditions of Tibetan Buddhism and provides a tranquil space for contemplation."
+  },
+  {
+    "id": 31,
+    "name": "Deorali Monastery",
+    "coords": "27.314978451435586, 88.60488686130468",
+    "map_url": "https://maps.app.goo.gl/V6CrJ4jZAEz9iyG68",
+    "embed_link": "--",
+    "l_desc": "The Deoarali Monastery, located in the Deorali area of Gangtok, is one of the most significant and popular Buddhist stupas in Sikkim. Built in 1945 by Trulshik Rinpoche, the head of the Nyingmapa sect, it was constructed to ward off the evil spirits believed to be haunting the area. The stupa is distinguished by its golden dome and is encircled by 108 Mani Lhakor, or prayer wheels, which devotees spin while chanting \"Om Mani Padme Hum.\" Inside, the stupa houses a complete set of holy books, mantras, and other religious objects. Adjacent to the chorten is a monastery where young lamas are trained, and a dharma preaching center."
+  },
+  {
+    "id": 32,
+    "name": "Arithang Gyaltsen Tshogpo's Mani Lhakhang",
+    "coords": "27.331474336762227, 88.61067073393366",
+    "map_url": "https://maps.app.goo.gl/1VNyBSX2yVzYgGkz8",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757395346837!6m8!1m7!1saTESCKeOh3YHAiGM8drbsQ!2m2!1d27.33137683723895!2d88.61013998129197!3f58.54922283518873!4f20.996333153316456!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Arithang Gyaltsen Tshogpo's Mani Lhakhang is a Buddhist prayer hall located in Sikkim, likely situated in the Arithang locality of Gangtok. The term \"Mani Lhakhang\" signifies a building specifically dedicated to prayer and spiritual practices, often housing prayer wheels (Mani Lhakor) and statues of deities. The \"Gyaltsen Tshogpo\" portion of the name suggests it is maintained and managed by a Buddhist association or community group, likely to be called \"Arithang Gyaltsen Tshogpo.\" This type of community-run prayer hall serves as a vital spiritual hub for local devotees, providing a place for daily rituals, a venue for gatherings, and a center for preserving Buddhist traditions at a grassroots level. The lhakhang's existence underscores the deep-rooted faith of the local population and their commitment to preserving their cultural and religious heritage."
+  },
+  {
+    "id": 36,
+    "name": "Dodak Tamu Monastery",
+    "coords": "27.172135271150925, 88.17282564555339",
+    "map_url": "https://maps.app.goo.gl/7MQropmr82thmm9h8",
+    "embed_link": "--",
+    "l_desc": "The Dodak Buddhist Monastery, also known as Dodak Tamu Monastery, is a modern and beautiful spiritual center situated on the road between Soreng and Buriakhop in West Sikkim. Established in 2005, the monastery was founded by a collective effort of the Gurung Buddhist followers in the locality, making it a significant community-driven project. It belongs to the Nyingmapa sect, the oldest school of Tibetan Buddhism. The monastery's appearance is considered one of the most beautiful built by the Gurung devotees in the region. It serves as a place for religious studies and practices, currently accommodating a number of novice monks under the guidance of a senior monk. The monastery's existence is a testament to the local community's devotion and its efforts to preserve and pass on their religious and cultural heritage."
+  },
+  {
+    "id": 39,
+    "name": "Doling Monastery",
+    "coords": "27.288321318077536, 88.34652145232567",
+    "map_url": "https://maps.app.goo.gl/SxzxDupqGYyJrmhQ6",
+    "embed_link": "--",
+    "l_desc": "Doling Monastery, also known as Doling Gompa, is a serene and historically significant spiritual center in the picturesque town of Ravangla in South Sikkim. Founded in 1718 AD by Lama Rigdzin Longyang, who fled Tibet during the Mongol invasion, it is affiliated with the Nyingmapa sect, the oldest school of Tibetan Buddhism. The monastery, rebuilt several times due to earthquakes, is a testament to the enduring faith of the local community. It is a place of profound spiritual importance, housing a stone with the sacred footprints of Lama Dorjelingpa and the horse of the deity Khangchendzonga, left after a legendary confrontation. Nestled on a small hillock, the monastery offers a tranquil atmosphere for meditation, with beautiful views of the surrounding lush forests and majestic mountains. It is a functioning monastic center, providing a home and a place of learning for monks who perform daily rituals and maintain the site's rich heritage."
+  },
+  {
+    "id": 42,
+    "name": "Dubdi Monastery",
+    "coords": "27.36689588767079, 88.23060373948775",
+    "map_url": "https://maps.app.goo.gl/2je1eoRY1Pp6Rsmb7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757397033843!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRFVpdHkxNndF!2m2!1d27.36655288826205!2d88.22999220879571!3f76.77742440222156!4f5.193502760013288!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Dubdi Buddhist Monastery, located near Yuksom in the West Sikkim district of India, is a historically and spiritually significant site. Founded in 1701 by Lhatsun Namkha Jigme, it is the oldest monastery in the state and is sometimes called the \"Hermit's Cell\" due to its serene, secluded location. It holds a pivotal place in Sikkim's history as it is associated with the consecration of Phuntsog Namgyal as the first Chogyal (king) of Sikkim in 1642. The monastery is a two-story stone structure with an elaborately painted interior that houses images of divinities, saints, and a collection of manuscripts and religious texts. The trek to the monastery is part of a larger Buddhist pilgrimage circuit in Sikkim"
+  },
+  {
+    "id": 47,
+    "name": "Enchey Monastery",
+    "coords": "27.336089265694568, 88.6194233637337",
+    "map_url": "https://maps.app.goo.gl/Ed6opZWCMDkTZjM47",
+    "embed_link": "https://maps.app.goo.gl/Ed6opZWCMDkTZjM47",
+    "l_desc": "The Enchey Monastery is a prominent and historically significant spiritual center in Gangtok, the capital of Sikkim. Belonging to the Nyingmapa sect of Vajrayana Buddhism, its name means \"the solitary temple,\" referring to the legend that it was built on the site blessed by Lama Druptob Karpo, a saint renowned for his flying abilities. The monastery was originally established in the 1840s and later reconstructed in 1909 under the reign of the Chogyal of Sikkim. It serves as a vital hub for religious activities, with monks regularly performing rituals and prayers. The monastery is particularly famous for its annual 'Chaam' dance festival, where lamas perform masked dances to appease the deities. Located on a hillock, the monastery offers a serene environment and is adorned with numerous images of gods and goddesses, making it a key pilgrimage and tourist destination in the region."
+  },
+  {
+    "id": 52,
+    "name": "Nathang Monastery",
+    "coords": "27.29855642407193, 88.81739865169786",
+    "map_url": "https://maps.app.goo.gl/6NDYiRMHvpzkFPTp9",
+    "embed_link": "--",
+    "l_desc": "The Nathang Monastery, also known as Gnathang Monastery, is a serene spiritual site located in the Nathang Valley of East Sikkim. It is a small but historically significant monastery, approximately 100 years old, belonging to the Gelugpa sect of Tibetan Buddhism, which is the school associated with the Dalai Lama. The monastery is situated in one of the highest and most remote Tibetan habitations in the Eastern Himalayas, along the historic Old Silk Route. Despite its size, it serves as a vital center of worship for the local community, which largely consists of former yak herders from Tibet. The monastery, with its intricate murals and peaceful ambiance, is a quiet haven for those traveling the rugged and scenic Silk Route."
+  },
+  {
+    "id": 53,
+    "name": "Gonjang Monastery",
+    "coords": "27.369185262946008, 88.613888071478",
+    "map_url": "https://maps.app.goo.gl/zngTHwAGav4wBK776",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757399029370!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1VwcWV5aHdF!2m2!1d27.36907092833192!2d88.61323361249131!3f1.4085461402340798!4f18.74770449913059!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Gonjang Monastery is a relatively modern Buddhist monastery located in the beautiful surroundings of Gangtok, East Sikkim. It was established in 1981 by a renowned spiritual figure, H.E. Tingkye Gonjang Rinpoche. The monastery belongs to the Nyingmapa school of Tibetan Buddhism. Situated on a serene hilltop, it offers a tranquil environment for monks and visitors alike. It is particularly known for its close proximity to the famous Tashi Viewpoint, providing a vantage point to see the majestic Kanchenjunga range and the picturesque valleys below. The monastery's tranquil atmosphere, combined with its beautiful architecture and vibrant murals, makes it a popular stop for tourists and a place of deep reverence for devotees. It serves as a center for Buddhist rituals and studies, contributing to the rich religious heritage of the region."
+  },
+  {
+    "id": 55,
+    "name": "Pemayangtse Monastery",
+    "coords": "27.31983150253756, 88.42460046520848",
+    "map_url": "https://maps.app.goo.gl/wowBYb2dbnVYjDu16",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757399459615!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVoSlhucEFF!2m2!1d27.30518919282202!2d88.25156580066201!3f188.64457032099432!4f14.992337162675128!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Pemayangtse Monastery is a historically and spiritually significant Buddhist monastery located near Pelling in West Sikkim. Founded by Lama Lhatsun Chempo in 1705, it is one of the oldest and most prominent monasteries in the state, belonging to the Nyingma sect of Tibetan Buddhism. Its name translates to \"Perfect Sublime Lotus,\" symbolizing its spiritual purity. The monastery was built exclusively for \"pure monks\" (ta-tshang), who are celibate and have no physical deformities. It is a stunning three-story structure adorned with intricate murals, sculptures, and a notable seven-tiered wooden model of Guru Rinpoche's heavenly abode. Pemayangtse Monastery holds a special place in Sikkimese history as its head lama had the unique privilege of anointing the Chogyals (monarchs) of the erstwhile kingdom. The monastery also hosts the famous annual Cham dance festival, where monks perform ritualistic dances to ward off evil spirits."
+  },
+  {
+    "id": 57,
+    "name": "Hanuman Tok",
+    "coords": "27.347958647589707, 88.62964016555834",
+    "map_url": "https://maps.app.goo.gl/b1VoPnWy4swqyytx9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757399636323!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDR2SmFuNVFF!2m2!1d27.34783476133961!2d88.62869602800377!3f206.4047903131602!4f7.341946823537413!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Hanuman Tok is a highly revered Hindu temple dedicated to Lord Hanuman, situated at an altitude of approximately 7,200 feet near Gangtok in East Sikkim. The temple holds great religious significance for both locals and tourists, who believe that wishes made here are granted. According to legend, the site is where Lord Hanuman briefly rested while carrying the Sanjeevani herb to Lanka to save Lord Lakshmana. The temple is meticulously maintained by the Indian Army, which ensures its cleanliness and tranquility. It is one of the most serene and well-kept religious sites in the region. The temple's hilltop location offers a stunning panoramic view of the majestic Kanchenjunga mountain range and the lush green valleys of Sikkim, making it a popular destination for spiritual solace and scenic beauty."
+  },
+  {
+    "id": 59,
+    "name": "Hee Gyathang Monastery",
+    "coords": "27.476054949744103, 88.50206004896049",
+    "map_url": "https://maps.app.goo.gl/o8chZF8CkYsYJEda9",
+    "embed_link": "--",
+    "l_desc": "The Hee Gyathang Monastery is a historically significant spiritual site located in Upper Dzongu, a restricted area in North Sikkim. It was originally established in 1914 by a hermit named Abi Putso Rangdrol, who sought to create a place of worship for the local Buddhist devotees. The monastery belongs to the Nyingmapa sect, the oldest school of Tibetan Buddhism, and caters to the spiritual needs of the local community. It is a testament to the strong religious traditions of the Lepcha people. Due to its remote and challenging location, the monastery is a truly serene and secluded retreat, accessible by a one-hour hike through dense forests. The monastery has a history of withstanding earthquakes and has since been rebuilt and restored, continuing to be a vital center for Buddhist rituals and practices in the region."
+  },
+  {
+    "id": 61,
+    "name": "Hunghri Monastery",
+    "coords": "27.352500715805526, 88.25430576268855",
+    "map_url": "https://maps.app.goo.gl/sgSQ978BRtyPvo5Z8",
+    "embed_link": "--",
+    "l_desc": "The Hunghri Monastery, also known as Hungri Gompa, is a historic and architecturally unique spiritual site in West Sikkim, located between Silnon and Yuksom. Its establishment dates back to 1922 when it was built as a branch monastery of the renowned Pemayangtse Monastery by Tamatam Lama, a Ponlob (master) deputed from Pemayangtse. The monastery belongs to the Nyingmapa sect of Tibetan Buddhism, following the Minling lineage. What sets this monastery apart is its original stone walls, which are a rarity among the few surviving gompas of this style. An interesting feature is a small stone altar on its exterior dedicated to the serpent god, Lunag Thana Tenzing. The monastery currently houses about 60 monks and 18 novices who study there, and it holds a significant place in the local community's religious life."
+  },
+  {
+    "id": 64,
+    "name": "Kabi Monastery",
+    "coords": "27.400927279436413, 88.61052973970321",
+    "map_url": "https://maps.app.goo.gl/cEtWdK9FsEL5Pape8",
+    "embed_link": "--",
+    "l_desc": "The Kabi Monastery, located at Kabi Lungchok in North Sikkim, is a site of immense historical and cultural significance. It is not just a monastery but a sacred place commemorating the legendary treaty of brotherhood signed between the Lepcha chief Thekong Tek and the Tibetan leader Khye Bumsa in the 13th century. This treaty, symbolized by a stone pillar, laid the foundation for the co-existence and the subsequent formation of the Sikkimese kingdom. The monastery itself belongs to the Nyingmapa sect of Tibetan Buddhism. The site is characterized by a serene and spiritual atmosphere, nestled within a sacred forest. A small monastery was built here to honor the historic pact, serving as a constant reminder of the peaceful co-existence between the communities."
+  },
+  {
+    "id": 70,
+    "name": "Karma Rabtenling Monastery",
+    "coords": "27.326082992780588, 88.32707962197027",
+    "map_url": "https://maps.app.goo.gl/CAG4tL5nUbsA7twF9",
+    "embed_link": "--",
+    "l_desc": "The Karma Rabtenling Monastery is a relatively modern and serene spiritual center located in the peaceful surroundings of Martam, near Gangtok in East Sikkim. Founded in 1989, it belongs to the Karma Kagyu school of Tibetan Buddhism. The monastery was established to cater to the spiritual needs of the local community, and it has since grown to become a significant center for learning and practicing Buddhist traditions. It houses a number of young monks who are provided with an education in Buddhist scriptures and rituals. The monastery's tranquil environment, away from the bustling city, provides a perfect setting for meditation and spiritual contemplation. It serves as a testament to the enduring faith and efforts of the local community to preserve and propagate their religious heritage. The monastery's serene location and beautiful surroundings make it a peaceful retreat for devotees and visitors alike."
+  },
+  {
+    "id": 73,
+    "name": "Kartok Monastery",
+    "coords": "27.240866348786902, 88.5886058106473",
+    "map_url": "https://maps.app.goo.gl/dhSJMiz89PGXXraN8",
+    "embed_link": "--",
+    "l_desc": "The Kartok Monastery is a historically significant and serene Buddhist monastery located in the town of Yuksom, West Sikkim. It is one of the three most important monasteries in Yuksom, alongside Dubdi and Sangachoeling, and belongs to the Nyingmapa sect. The monastery is situated beside the Kartok Lake, also known as Kathok Lake, which is considered a sacred pilgrimage site. According to local belief, the monastery and the lake are blessed by Guru Padmasambhava, who is said to have purified the lake with his spiritual powers. The monastery itself is a beautiful structure adorned with traditional Tibetan architecture, intricate murals, and statues of various deities. It serves as an active place of worship for the local community and is a testament to the region's rich spiritual heritage, providing a tranquil atmosphere for prayer and contemplation."
+  },
+  {
+    "id": 77,
+    "name": "Kewzing Monastery",
+    "coords": "27.284397068861416, 88.32377820662545",
+    "map_url": "https://maps.app.goo.gl/Npk7uHyRYbvjScy17",
+    "embed_link": "--",
+    "l_desc": "The Kewzing Monastery is a prominent and historically significant spiritual center situated in the tranquil village of Kewzing in South Sikkim. It is an important monastery belonging to the Nyingmapa sect, the oldest school of Tibetan Buddhism. The monastery serves as a vital hub for religious activities and is a place where monks are trained and Buddhist rituals are performed. The monastery's serene environment, surrounded by lush green hills and a peaceful atmosphere, makes it an ideal place for spiritual retreat and meditation. It plays a significant role in the cultural and religious life of the local community. The monastery is particularly known for its architectural beauty and the sense of calm it imparts to both devotees and visitors."
+  },
+  {
+    "id": 81,
+    "name": "Khangchendzonga Monastery",
+    "coords": "27.682761482295582, 88.37532751882152",
+    "map_url": "https://www.google.com/maps/place/Kanchenjunga+National+Park/@27.6572205,88.3176493,10z/data=!3m1!4b1!4m6!3m5!1s0x39e65813ee7f2dbb:0x8325c1d198e4ecaa!8m2!3d27.6672446!4d88.3245556!16zL20vMDhfdHJ3?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D",
+    "embed_link": "",
+    "l_desc": "Khangchendzonga National Park, located in Sikkim, India, is a UNESCO Mixed World Heritage Site, recognized for its dual significance as a natural and cultural treasure. Named after the world's third-highest peak, Mount Khangchendzonga, the park spans a vast altitudinal range, from lush subtropical forests to towering alpine deserts, and is home to one of the largest glaciers in the Himalayas. This pristine landscape supports a rich biodiversity, including several endangered species like the Snow Leopard and Red Panda, alongside a remarkable variety of flora. Culturally, the park holds deep spiritual importance for the local communities, who revere the mountain and its natural features as sacred, embodying a unique syncretic belief system that integrates Buddhist and indigenous traditions."
+  },
+  {
+    "id": 83,
+    "name": "Khatek Pema Choling Monastery",
+    "coords": "27.175950488244077, 88.53105929560705",
+    "map_url": "https://www.google.com/maps/place/Pema+Choling+Monastery/@27.1757119,88.5284844,17z/data=!3m1!4b1!4m6!3m5!1s0x39e6a09a182d9b3d:0x6ce485c917ef2011!8m2!3d27.1757119!4d88.5310593!16s%2Fg%2F11f3n1nc2v?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D",
+    "embed_link": "",
+    "l_desc": "This is a small Karma Kagyupa Monastery located in Asam Lingzey village, East Sikkim. It was built in the year 1985 with Government aid and is supported by public contribution. The place was simply a hermitage site earlier where Monks go for retreat courses.Later, people of the area, faced difficulty fetching Lamas from far off places, for their religious services. Thus they unanimously decided to build a Monastery at this holy site. After completion of the monastery the management Committee engaged one Master Lama, who has been deputed from Rumtek Monastery, for recruiting the young monks to study & practice Buddhist rituals. At present, the monastery has more than 30 monks and functions like other monasteries."
+  },
+  {
+    "id": 84,
+    "name": "Khecheopalri Monastery",
+    "coords": "27.349440180528493, 88.1882767997004",
+    "map_url": "https://www.google.com/maps/place/Khecheopalri+Monastery/@27.349221,88.1837707,17z/data=!4m10!1m2!2m1!1sKhecheopalri+Monastery!3m6!1s0x39e687003b78d35f:0xedfa71a9ef24432f!8m2!3d27.349221!4d88.1882768!15sChZLaGVjaGVvcGFscmkgTW9uYXN0ZXJ5kgEQcGxhY2Vfb2Zfd29yc2hpcKoBTRABKg0iCW1vbmFzdGVyeSgAMh4QASIaHpeIITC-4b_3mZ2YDpbEEKLwaGDSrz6HUm8yGhACIhZraGVjaGVvcGFscmkgbW9uYXN0ZXJ54AEA!16s%2Fg%2F11yhs_7gxs?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D",
+    "embed_link": "",
+    "l_desc": "Khecheopalri Monastery in Sikkim is an important Buddhist pilgrimage site, intrinsically linked to the nearby sacred Khecheopalri Lake. Often visited together, the monastery and the lake are part of a major Buddhist religious circuit in Sikkim. The name \"Khecheopalri\" itself means \"the heaven of Padmasambhava,\" and it is believed that Guru Padmasambhava, a revered Buddhist master, preached here. The monastery is a center for spiritual practice, with monks living and meditating there. It provides a tranquil atmosphere for pilgrims and visitors, who are drawn by its religious significance and the stunning natural beauty of the surrounding lush forests and the revered \"wish-fulfilling\" lake. The lake is considered holy by both Buddhists and Hindus and is a place of deep spiritual reverence, with many local legends and beliefs associated with it, including the famous story that birds meticulously clear the lake of any fallen leaves to preserve its purity."
+  },
+  {
+    "id": 85,
+    "name": "Narayane Manilakhang Gumpha",
+    "coords": "27.26310228976712, 88.2322418563646",
+    "map_url": "https://maps.app.goo.gl/N1kx1ShTKv9shYx46",
+    "embed_link": "--",
+    "l_desc": "The Narayane Manikhalang Gumpha is a sacred and serene Buddhist monastery located in the Melli Bazaar area of South Sikkim. It serves as a vital spiritual center for the local Buddhist community, providing a space for religious practices and rituals. While it may not be as well-known as some of the larger, more historically prominent monasteries in the state, it holds significant importance for local devotees. The monastery is situated in a picturesque setting, offering a peaceful environment for meditation and spiritual contemplation. It is an active place of worship where daily prayers are performed, contributing to the rich religious tapestry of the region. The existence of such a monastery highlights the deep-rooted faith and devotion of the people in this area of Sikkim."
+  },
+  {
+    "id": 91,
+    "name": "Labrang Monastery",
+    "coords": "27.41812391775046, 88.58078925098931",
+    "map_url": "https://maps.app.goo.gl/95d8jNi8rkvTsqQb7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757405019646!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2szZEwzbUFF!2m2!1d27.41800011005887!2d88.57945887534423!3f267.75526100447206!4f4.5641601294801575!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Labrang Manilakhang is a serene and culturally significant Buddhist prayer hall located in the Pelling area of West Sikkim. The term 'Manilakhang' translates to 'prayer wheel hall,' indicating its primary function as a place of worship and spiritual practice. This particular prayer hall is a vital part of the local community's religious life, providing a peaceful space for devotees to perform their daily rituals, such as circumambulating the sacred structure while spinning the prayer wheels. While it may not be as grand as some of the larger, more famous monasteries, its importance lies in its role as a spiritual hub for the villages in its vicinity. The lhakang's simple yet beautiful architecture and its tranquil setting amidst the lush greenery of Sikkim make it a haven for contemplation."
+  },
+  {
+    "id": 93,
+    "name": "Lachen Monastery",
+    "coords": "27.716913618483197, 88.55859740293887",
+    "map_url": "https://maps.app.goo.gl/vuqXT4Votfj7ScUp7",
+    "embed_link": "--",
+    "l_desc": "The Lachen Monastery, also known as the Lachen Gompa, is a revered spiritual site located in the beautiful town of Lachen in North Sikkim. It is one of the oldest monasteries in the region, established in 1858 by the Ngodrub family, and is affiliated with the Nyingmapa sect of Tibetan Buddhism. The monastery holds a significant place in the religious life of the local community, which is comprised mostly of the Lachenpas. The Lachen Monastery serves as a focal point for important religious ceremonies and community gatherings. Its tranquil location, set against the backdrop of the mighty Himalayas, provides a serene environment for meditation and spiritual contemplation."
+  },
+  {
+    "id": 98,
+    "name": "Lachung Monastery",
+    "coords": "27.689328742332478, 88.749956919582",
+    "map_url": "https://maps.app.goo.gl/zndbkRCwn1fb8Q9TA",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757405417959!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDBsN19VbndF!2m2!1d27.68868272875449!2d88.74875528996708!3f103.37090566554289!4f8.390888071647879!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Lachung Monastery is a significant and revered Buddhist monastery located in the picturesque village of Lachung in North Sikkim. This historic monastery, situated on a hillock opposite the town, offers a serene environment and stunning views of the surrounding mountains and valleys. It is a vital spiritual center for the local Lachungpa community and belongs to the Nyingmapa sect of Tibetan Buddhism. The monastery plays a crucial role in preserving the region's cultural and religious heritage, with monks regularly performing prayers and rituals. The monastery's serene location and traditional architecture make it a popular stop for tourists and a peaceful sanctuary for devotees."
+  },
+  {
+    "id": 105,
+    "name": "Lingdum Monastery",
+    "coords": "27.331319581258636, 88.57888849281353",
+    "map_url": "https://maps.app.goo.gl/TcetnTLsRCvEmvHv7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757395360601!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ011T2JkcmdF!2m2!1d27.33118603686677!2d88.5790941249777!3f301.2059042377756!4f-0.8551933418270323!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Lingtam Monastery"
+  },
+  {
+    "id": 107,
+    "name": "Linge Phagyal Monastery",
+    "coords": "27.370580041520114, 88.45919782698736",
+    "map_url": "https://maps.app.goo.gl/zVR2zNZiaryRQAFCA",
+    "embed_link": "-",
+    "l_desc": "Linge Phagyal Monastery, founded in 1862 by Lama Phagyal, is a spiritual home for the Nyingmapa Sect, with a dedicated following from the Lepcha community. Located in South Sikkim, the monastery's original vernacular name was \"Fadiie\" or \"hphago rgyal.\" This historic site holds and performs all its ceremonies throughout the year, serving as a significant cultural and religious center. It stands as a testament to the region's deep-rooted Buddhist heritage, preserving ancient traditions and providing a place of worship and community for its followers."
+  },
+  {
+    "id": 108,
+    "name": "Lingmoo Monastery",
+    "coords": "27.335677188468992, 88.47753393807577",
+    "map_url": "https://maps.app.goo.gl/meLRyfS2XS74nFEZ9",
+    "embed_link": "-",
+    "l_desc": "Lingmoo Monastery, more commonly referred to as Lingdum or Ranka Monastery, is a tranquil sanctuary situated about 20 kilometers from Gangtok. Completed in 1999, it follows the Zurmang Kagyu tradition of Tibetan Buddhism and is a training center for young monks. The monastery complex, spread over 21 acres, is praised for its scenic beauty amidst lush forests. Its main prayer hall features a magnificent five-meter-tall gilded statue of Lord Buddha, alongside a smaller one of Guru Padmasambhava. The walls are adorned with intricate thangka paintings, and the monastery is known for hosting impressive masked dances during the Gutor and Lhosar festivals."
+  },
+  {
+    "id": 109,
+    "name": "Lingtam Monastery",
+    "coords": "27.227789890378567, 88.73972187486068",
+    "map_url": "https://maps.app.goo.gl/UV9zPU6ECjsP4pkK9",
+    "embed_link": "-",
+    "l_desc": "Lingtam is a serene village and the first with a checkpoint after Rongli on the Old Silk Route. Surrounded by hills and guarded by the Bakhuter Khola river, this village is home to two monasteries. The older monastery is notable for its intricate wall paintings, while the newer one offers a more spacious layout and a grand meditation hall. Lingtam is a favored stopping point for travelers journeying to higher-altitude destinations, offering a tranquil environment and a pleasant climate. Its monasteries serve as a peaceful retreat and a glimpse into the spiritual life of the region."
+  },
+  {
+    "id": 123,
+    "name": "Tashi Choling Monastery",
+    "coords": "27.253647824579442, 88.16547065506693",
+    "map_url": "https://maps.app.goo.gl/QD5Na8DG2FDNnVgF9",
+    "embed_link": "-",
+    "l_desc": "Tashi Choling Monastery (བཀྲ་ཤིས་ཆོས་གླིང་), meaning \"Auspicious Dharma Land,\" is not a single entity but a name used by several distinct Buddhist monasteries across the Himalayas. Each monastery has its own unique history and lineage.\n\nThe most historically significant is Mardo Tashi Chöling in Tibet, a major Nyingma school monastery that was the seat of the great treasure-revealer Dudjom Lingpa. It remains a vital center for monastic education and practice."
+  },
+  {
+    "id": 126,
+    "name": "Labrang Monastery",
+    "coords": "27.445015666036504, 88.56389716727587",
+    "map_url": "https://maps.app.goo.gl/jUeuTTjRsifKxM6J9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757397489916!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2szZEwzbUFF!2m2!1d27.418000110058866!2d88.57945887534423!3f114.68343!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Labrang Monastery is a historically significant Buddhist monastery situated near Phodong in North Sikkim. Established in 1814 A.D., it belongs to the Nyingmapa sect and was built to commemorate the visit of the revered Lama Lhatsun Chenpo to Phodong. The monastery is known for its peaceful ambiance and its intricate traditional architecture, which reflects the rich cultural and spiritual heritage of the region. As a branch of Phodong Monastery, it holds a special place for local devotees and provides a serene retreat for those seeking to learn about Sikkim's deep-rooted Buddhist traditions."
+  },
+  {
+    "id": 127,
+    "name": "Martam Namdzong",
+    "coords": "27.287275550063846, 88.5428266500743",
+    "map_url": "https://maps.app.goo.gl/PthPEX8qJJzFB5y8A",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757397571907!6m8!1m7!1sxmTsMwVxI17YVlTGJZR7XQ!2m2!1d27.28136049286539!2d88.5390568782742!3f283.2302996311718!4f2.7494580194535985!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Martam Namdzong is a revered Buddhist monastery located in the scenic East Sikkim district. The monastery is known for its elegant traditional architecture and peaceful ambiance, nestled amidst the lush green hills of the region. It serves as a sacred place for local devotees and is a quiet retreat for those seeking a tranquil environment for meditation and spiritual contemplation. Visitors are often drawn to its serene atmosphere and the beautiful views of the surrounding landscape, which makes it an ideal spot for a peaceful escape from the hustle and bustle of city life."
+  },
+  {
+    "id": 128,
+    "name": "Martam Tsangkhar Monastery",
+    "coords": "27.33792306366609, 88.61839548356942",
+    "map_url": "https://maps.app.goo.gl/FTSa2wBwwWq1gFNWA",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757406791008!6m8!1m7!1sEPQJffAmE8DMLZqJNuBvww!2m2!1d27.32581459802226!2d88.61421032737204!3f6.251165527701183!4f-5.451178427104793!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Martam Tsangkhar Monastery is a sacred Buddhist monastery nestled in the picturesque Martam village of East Sikkim. Located on a peaceful hillside, this monastery is known for its beautiful and serene ambiance, providing a quiet retreat for spiritual contemplation. It is an important religious center for the local Nyingma Buddhist community, where various ceremonies and daily prayers are conducted. The monastery's tranquil setting, surrounded by lush greenery and the majestic Himalayan landscape, makes it an ideal place to experience the deep-rooted Buddhist culture of the region."
+  },
+  {
+    "id": 129,
+    "name": "Martam Village Monastery",
+    "coords": "27.26194706975714, 88.55544804879737",
+    "map_url": "https://maps.app.goo.gl/Lu4iBFyPzUvH5edy6",
+    "embed_link": "-",
+    "l_desc": "Martam is a picturesque village in East Sikkim, situated amidst lush green forests and terraced fields. The village is known for its peaceful environment and serves as a gateway to several smaller, lesser-known monasteries. While not a monastery itself, the village is a popular stop for travelers seeking a tranquil escape and a closer look at local life in Sikkim. Its serene atmosphere and proximity to other cultural and religious sites make it a key location for those exploring the spiritual landscape of the region."
+  },
+  {
+    "id": 132,
+    "name": "Samdong Mintokgang Monastery.",
+    "coords": "27.364005501361277, 88.50300916767507",
+    "map_url": "https://maps.app.goo.gl/fDLSbe5wZRWw3NPa9",
+    "embed_link": "-",
+    "l_desc": "Samdong Mintokgang Monastery, located in the Tathangchen Ward of East Sikkim, was originally established in 1913 A.D. as a branch monastery of Labrang Gonpa. The monastery holds a special significance due to a Buddha statue gifted by Chogyal Palden Thondup Namgyal, which is believed to have cured prevailing illnesses in the area upon its installation. It was later rebuilt with government assistance in 1989. The monastery now stands as an independent religious center where its own lamas are capable of conducting all religious ceremonies, and it continues to be a sacred site for the local community."
+  },
+  {
+    "id": 136,
+    "name": "Namchi Central Monastery",
+    "coords": "27.197812264413468, 88.38143267328392",
+    "map_url": "https://maps.app.goo.gl/UcpXTFgCNP6SDZVg8",
+    "embed_link": "-",
+    "l_desc": "In Namchi, Sikkim, the term \"Central Monastery\" generally refers to the town's two primary spiritual landmarks. The most prominent is Samdruptse Hill, renowned for its magnificent 135-foot-tall statue of Guru Padmasambhava, which offers stunning panoramic views and serves as a major modern pilgrimage site. Complementing this is the historic Ngadak Monastery, one of the oldest monastic institutions in the region, dating back to the 17th century. Together, these sites represent the rich blend of contemporary spiritual grandeur and ancient Buddhist heritage that defines Namchi."
+  },
+  {
+    "id": 138,
+    "name": "Norbu Choeling Monastery",
+    "coords": "27.169480120429384, 88.46855290226151",
+    "map_url": "https://maps.app.goo.gl/QaeYwoXHyPEpgkL88",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757398418592!6m8!1m7!1s39OMlEhthjONFqS8OJ9-Vw!2m2!1d27.16873031471009!2d88.47262421550741!3f348.9272325620661!4f-10.74275921690682!5f0.4000000000000002\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Norbu Choeling Monastery, also known as Namthang Norbu Tsholing Monastery, is located in the Nagi village above Namthang Bazaar in South Sikkim, India.\n\nIt was originally a temporary dwelling for a local landlord before being donated in 1914 for the construction of a monastery to serve the local community. The initial small monastery was later expanded in 1933 to accommodate more monks."
+  },
+  {
+    "id": 139,
+    "name": "Norbu Yangdup Choling Monastery",
+    "coords": "27.38011663508914, 88.60809036827942",
+    "map_url": "https://maps.app.goo.gl/ZAfCfxNhUAZhf49x5",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757398576028!6m8!1m7!1sUrLUiw89cl5dKH0swkoRvw!2m2!1d27.234918157251574!2d88.3778379522474!3f93.40280049409334!4f-3.858911330538504!5f0.4000000000000002\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Norbu Yangdup Choling Monastery is a significant Buddhist monastery located in the Damthang region of Sikkim. This spiritual center is known for its peaceful and serene ambiance, nestled amidst the lush green hills of the region. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location offers a quiet retreat for meditation and contemplation, attracting devotees and visitors alike who seek a deeper connection to the Buddhist traditions of Sikkim."
+  },
+  {
+    "id": 141,
+    "name": "Ngadak Thupten Shedup Dhargey Choeling, Monastery",
+    "coords": "27.767840123033665, 88.56838112993043",
+    "map_url": "https://maps.app.goo.gl/vffgVQ2BANVq1DT96",
+    "embed_link": "-",
+    "l_desc": "Samdong Mintokgang Monastery, located in the Tathangchen Ward of East Sikkim, was originally established in 1913 A.D. as a branch monastery of Labrang Gonpa. The monastery holds a special significance due to a Buddha statue gifted by Chogyal Palden Thondup Namgyal, which is believed to have cured prevailing illnesses in the area upon its installation. It was later rebuilt with government assistance in 1989. The monastery now stands as an independent religious center where its own lamas are capable of conducting all religious ceremonies, and it continues to be a sacred site for the local community."
+  },
+  {
+    "id": 142,
+    "name": "Nathang Valley Monastery",
+    "coords": "27.325274447443075, 88.81983316449251",
+    "map_url": "https://maps.app.goo.gl/Rb36vGdhjYKJKNQs7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757398914828!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V4ZnF0WUE.!2m2!1d27.29727037301646!2d88.81656059063067!3f227.4284698721998!4f5.056119849252738!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Nathang Valley Monastery is a small and revered Buddhist monastery situated in the picturesque Nathang Valley of East Sikkim. Located at an altitude of over 13,000 feet, the monastery is a sacred site for the local community and the visiting pilgrims. Due to its location in the high-altitude plateau, the monastery is often surrounded by snow for a large part of the year, adding to its serene and mystical appeal. It is a quiet place for spiritual contemplation, offering a peaceful retreat amidst the breathtaking landscapes of the Nathang Valley."
+  },
+  {
+    "id": 145,
+    "name": "Nimachen Monastery",
+    "coords": "27.23719912006012, 88.76221998753172",
+    "map_url": "https://maps.app.goo.gl/27L4Dz1KVvGKiF7C9",
+    "embed_link": "-",
+    "l_desc": "Nimachen Monastery is a revered Buddhist monastery located in the picturesque landscapes of Sikkim. The monastery is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. It serves as an important spiritual center for the local community, where various ceremonies and religious practices are conducted. The tranquil setting of the monastery, nestled amidst the beautiful landscapes, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 148,
+    "name": "Bermiok Monastery",
+    "coords": "27.249674361864393, 88.46676198797509",
+    "map_url": "https://maps.app.goo.gl/V6L8qK24g2Sp7gEc9",
+    "embed_link": "-",
+    "l_desc": "Bermiok Norbu Gang Monastery is a significant religious site located above the Burmiok Thangshing Village in South Sikkim. Established in 1957 A.D. by Lama Dawa Norbu, the monastery belongs to the Nyingmapa sect and serves as a vital spiritual hub for Sherpa devotees in the area. It is a peaceful place where all major Buddhist ceremonies are performed throughout the year, upholding the rich cultural and religious traditions of the community"
+  },
+  {
+    "id": 150,
+    "name": "Perbing Samtenling Monastery",
+    "coords": "27.17613090453314, 88.40937992995401",
+    "map_url": "https://maps.app.goo.gl/sSGC4ubbjHZess899",
+    "embed_link": "--",
+    "l_desc": "Perbing Samtenling Monastery is a revered Buddhist monastery located in the Perbing region of Sikkim. This spiritual center is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location, nestled amidst the beautiful landscapes of Sikkim, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 151,
+    "name": "Old Rumtek Monastery",
+    "coords": "27.360563595104875, 88.38590227588512",
+    "map_url": "https://maps.app.goo.gl/A5oTgCUbQ1PEJBB56",
+    "embed_link": "--",
+    "l_desc": "The Rumtek Monastery, also known as the Dharma Chakra Centre, is a prominent and one of the largest monasteries in Sikkim. Located near Gangtok, it is the official seat of the 16th Gyalwa Karmapa, the head of the Karma Kagyu school of Tibetan Buddhism. The monastery was built in the mid-1960s after the 16th Karmapa fled Tibet. It is a stunning example of traditional Tibetan architecture and is surrounded by serene landscapes. The complex includes the main shrine temple, a college (shedra), and a retreat center. Rumtek is a major pilgrimage site for Buddhists worldwide and a key center for the study and practice of the Karma Kagyu lineage. Its strategic importance and beautiful surroundings make it a must-visit destination."
+  },
+  {
+    "id": 152,
+    "name": "Pabyuk Monastery",
+    "coords": "27.29953395230081, 88.62811543007089",
+    "map_url": "https://maps.app.goo.gl/27v6Wm7fD8T5ZyfV8",
+    "embed_link": "--",
+    "l_desc": "Pabyuk Monastery is a lesser-known but significant religious site located in the village of Pabyuk in Sikkim. This monastery serves as a peaceful hub for the local community, providing a space for daily prayers and religious practices. While detailed historical records are not widely available, the monastery is a testament to the deep-rooted Buddhist traditions of the region. Its quiet and secluded location offers a tranquil environment for spiritual contemplation, providing a serene escape for those seeking to connect with the local culture and faith."
+  },
+  {
+    "id": 157,
+    "name": "Tashi Palden Monastery",
+    "coords": "27.20994567283148, 88.54142216683107",
+    "map_url": "https://maps.app.goo.gl/rAkpD6ehjp2GxLXV7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757399960685!6m8!1m7!1s7mxycuWc_2h6Zmx5qcKs9g!2m2!1d27.21069785183856!2d88.53984954532282!3f115.95775649240312!4f-7.898053190232972!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Pandam Monastery, more formally known as Tashi Palden Monastery, is a significant Buddhist monastery situated in the Central Pandam area of East Sikkim. Established in 1955 A.D. by the local public, this monastery serves as a branch of the renowned Rumtek Monastery and follows the Karma Kagyupa sect. It is a vital spiritual center for the community, where all religious ceremonies are performed throughout the year. The monastery's tranquil setting and historical connection to one of Sikkim's most important monasteries make it a revered site for devotees."
+  },
+  {
+    "id": 160,
+    "name": "Machong Gumpa",
+    "coords": "27.22791273684134, 88.66809048315336",
+    "map_url": "https://maps.app.goo.gl/UHXFPC3uVUZ9iRQw8",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757400590746!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRC01WTJneWdF!2m2!1d27.22769614198259!2d88.6676427935114!3f263.44853444832063!4f1.1266751078188548!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Pathing Matsang Monastery, also known as Machong Gumpa, is a historically significant Buddhist monastery located in the Matsang village of East Sikkim. Originally established in Lingkoed village, it was re-established at its present site in 1860 A.D. by Lama Lharib Dawa. The monastery follows the Nyingmapa sect and is considered one of the major monasteries in East Sikkim. It was damaged by an earthquake in 1982 and subsequently reconstructed, showcasing its resilience. The monastery serves as a vital spiritual hub for the community and is known for its annual mask dance festival, which attracts many visitors."
+  },
+  {
+    "id": 162,
+    "name": "Pema Choling Monastery",
+    "coords": "27.17592185486566, 88.53103783954559",
+    "map_url": "https://maps.app.goo.gl/GgQ8NNbCDgTVsNff9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757400716860!6m8!1m7!1sjosRUP2GZtv4k5ybm3ysIA!2m2!1d27.17563085417214!2d88.53106136764477!3f175.36334772841107!4f-6.067017964526627!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Pema Choling Monastery is a revered Buddhist monastery located in the town of Rangpo in East Sikkim. This spiritual center is known for its tranquil and serene ambiance, providing a quiet retreat for both devotees and visitors. It serves as an important hub for religious practices and teachings, playing a vital role in the spiritual life of the local community."
+  },
+  {
+    "id": 164,
+    "name": "Pemayangste Monastery",
+    "coords": "27.305603065473044, 88.25513216418064",
+    "map_url": "https://maps.app.goo.gl/jwyb9Aa6oorKRysM7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757400651782!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVoSlhucEFF!2m2!1d27.30518919282202!2d88.25156580066201!3f13.439312988177527!4f-2.126606220039349!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Pemayangtse Monastery is one of the oldest and most revered monasteries in Sikkim, dating back to 1705 A.D. Located on a hilltop in West Sikkim, it is the head monastery of the Nyingmapa sect. The monastery is known for its intricate wood carvings, ancient manuscripts, and a magnificent seven-tiered painted wooden model of Guru Rinpoche’s celestial abode, which is a masterpiece of art. This sacred site has a long history of serving as a center for religious rituals and education, and it continues to be a pivotal pilgrimage destination for Buddhists."
+  },
+  {
+    "id": 167,
+    "name": "Phagyal Monastery",
+    "coords": "27.370727721694042, 88.45940167486577",
+    "map_url": "https://maps.app.goo.gl/C97sT5K75Lxg9P5n9",
+    "embed_link": "-",
+    "l_desc": "Phagyal Monastery, also known as Linge Phagyal Monastery, is a significant spiritual site located in South Sikkim. It was founded in 1862 A.D. by the revered Lama Phagyal and belongs to the Nyingmapa sect, one of the oldest schools of Tibetan Buddhism. The monastery is a vital center for the local community, especially for the Lepcha people, and all its ceremonies are performed here throughout the year. Nestled amidst the beautiful landscapes of the region, the monastery provides a tranquil retreat for devotees and visitors, serving as a testament to Sikkim's deep-rooted spiritual heritage."
+  },
+  {
+    "id": 169,
+    "name": "Phensang Monastery",
+    "coords": "27.420732499786837, 88.61079478530039",
+    "map_url": "https://maps.app.goo.gl/LjaemNefzWjwA71r8",
+    "embed_link": "-",
+    "l_desc": "Phensang Monastery is one of the six most important monasteries in Sikkim, located on a scenic ridge between Mangan and Gangtok. The original monastery was built in 1721 AD during the reign of the third Chogyal of Sikkim. It was later rebuilt in 1948 after being destroyed by fire. The monastery is a center for the Nyingmapa sect and hosts the annual sacred mask dance festival called 'Khenpa.' The stunning views from the monastery, combined with its historical and cultural significance, make it a key spiritual and tourist destination."
+  },
+  {
+    "id": 171,
+    "name": "Phodong Monastery",
+    "coords": "27.413214344000462, 88.58412090488206",
+    "map_url": "https://maps.app.goo.gl/QNPSbqJb8ZXSJVtp6",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757400946343!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGg0OURqV3c.!2m2!1d27.41303405816734!2d88.58375766744783!3f87.13431518922812!4f1.9996789956034178!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Phodong Monastery is a significant Buddhist monastery located about 28 kilometers from Gangtok in North Sikkim. It was founded in the early 18th century and is one of the six most important monasteries in the state. Belonging to the Karma Kagyu sect, the monastery houses a large collection of ancient wall paintings, murals, and religious scriptures. The original monastery was renovated in the 1970s and remains a vibrant spiritual center, known for its annual 'Cham' dance festival, which attracts many visitors."
+  },
+  {
+    "id": 175,
+    "name": "Mane Choekhorling Gompa (Ravangla Monastery)",
+    "coords": "27.30931653627722, 88.36406714905885",
+    "map_url": "https://maps.app.goo.gl/DYUN3t1uiA9KiJSH6",
+    "embed_link": "-",
+    "l_desc": "Mane Choekhorling Gompa, commonly known as Ravangla Monastery, is a prominent Buddhist monastery located in Ravangla, South Sikkim. This monastery is part of a larger complex that includes a meditation center and a large, colorful stupa. The monastery serves as a peaceful spiritual center for the local community and is a popular destination for visitors seeking a serene environment for prayer and reflection. It is an ideal place to experience the deep-rooted Buddhist culture of the region while enjoying the beautiful mountain views."
+  },
+  {
+    "id": 176,
+    "name": "Ralong Monastery",
+    "coords": "27.328501455161554, 88.35621079892633",
+    "map_url": "https://maps.app.goo.gl/h7gxdJh3my6obDqd6",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757401122449!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRFN2cVR4bEFF!2m2!1d27.32881196804839!2d88.3356471262584!3f95.93781!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Ralong Monastery, officially known as Ralong Palchen Choling Monastery, is a prominent Buddhist monastery of the Kagyu sect, located in Sikkim. It is one of the most important monasteries in the state, known for its grand architecture and peaceful surroundings. The monastery hosts an annual festival called Pang Lhabsol, which worships Mount Kangchenjunga. The original monastery was built in 1768, and a new one was consecrated in 1995, making it a significant center of Buddhist tradition."
+  },
+  {
+    "id": 179,
+    "name": "Rangang Manilakhang",
+    "coords": "27.305485267498124, 88.42381671623268",
+    "map_url": "https://maps.app.goo.gl/XE6snjBghqcYX5J79",
+    "embed_link": "-",
+    "l_desc": "Rangang Manilakhang is a revered Buddhist Manilakhang situated on a ridge in the Rangang village of West Sikkim. Established in 1968 A.D. by a local lama, this spiritual site belongs to the Nyingmapa sect. The Manilakhang serves as a vital religious center for the local community, where various ceremonies and daily prayers are conducted. Its serene location amidst the tranquil landscapes of the region makes it a peaceful retreat for devotees and visitors who seek to connect with the deep-rooted Buddhist traditions of Sikkim."
+  },
+  {
+    "id": 180,
+    "name": "Rangpo Monastery",
+    "coords": "27.176657364418364, 88.53222007974254",
+    "map_url": "https://maps.app.goo.gl/YcqnqeEdibu2txkF6",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757401295686!6m8!1m7!1suPUQLEE1NONK1iOx0yreSg!2m2!1d27.17635253353357!2d88.53174704886385!3f33.983944!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Rangpo Monastery, also known as Pema Choling Monastery, is a revered Buddhist monastery located in the town of Rangpo in East Sikkim. This spiritual center is known for its tranquil and serene ambiance, providing a quiet retreat for both devotees and visitors. It serves as an important hub for religious practices and teachings, playing a vital role in the spiritual life of the local community. The monastery's location amidst the picturesque landscapes of Sikkim makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 182,
+    "name": "Ranka Monastery",
+    "coords": "27.331395830323647, 88.58007939455244",
+    "map_url": "https://maps.app.goo.gl/jZuKqpzjP6DAKt4C9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757401344276!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ011T2JkcmdF!2m2!1d27.33118603686677!2d88.5790941249777!3f281.10345!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Ranka Monastery, officially named Pal Karma Zurmang Shedup Chokhor Ling Lingdum Monastery, is a modern and beautiful monastery situated near Gangtok in Sikkim. Completed in 1999, it belongs to the Zurmang Kagyu lineage of Tibetan Buddhism and is a major learning center for young monks. The monastery is known for its vibrant Tibetan architecture, colorful murals, and the magnificent five-meter-tall gilded statue of Lord Buddha inside its main prayer hall. It provides a serene and scenic environment, attracting visitors and filmmakers alike."
+  },
+  {
+    "id": 183,
+    "name": "Ravangla Central Monastery",
+    "coords": "27.319015562327387, 88.40230139081598",
+    "map_url": "https://maps.app.goo.gl/TMXSr8BCpzknHicj7",
+    "embed_link": "-",
+    "l_desc": "Ravangla Central Monastery, also known as Ravangla Monastery, is a significant Buddhist monastery located in Ravangla, South Sikkim. The monastery is situated amidst the serene landscapes of the region, offering a peaceful and tranquil environment for worship and meditation. It serves as an important spiritual center for the local community, where various religious ceremonies and daily prayers are conducted. The monastery's beautiful architecture and serene setting make it a popular destination for those seeking to experience the deep-rooted Buddhist culture of Sikkim."
+  },
+  {
+    "id": 187,
+    "name": "Rhenock Central Monastery",
+    "coords": "27.18450831368793, 88.67873624481763",
+    "map_url": "https://maps.app.goo.gl/Qkjk1xKWBmYyuhju8",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757401537918!6m8!1m7!1sFzA9DFtXTlCVdt411MbMTw!2m2!1d27.18403058563559!2d88.67762756321363!3f52.60809!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Rhenock Central Monastery, officially known as Rhenock Gumpa, is a historically significant Buddhist monastery located on a hilltop near the town of Rhenock in East Sikkim. Established in 1883 A.D. by Lhatsun Nyingpo, this monastery belongs to the Nyingmapa sect, one of the oldest schools of Tibetan Buddhism. Its location on a scenic hilltop provides a tranquil environment for both devotees and visitors, offering beautiful views of the surrounding area. The monastery is a vital center for the local community, upholding ancient religious and cultural traditions."
+  },
+  {
+    "id": 190,
+    "name": "Rinchen Choling Tamu Monastery",
+    "coords": "27.2433603407737, 88.27117107576778",
+    "map_url": "https://maps.app.goo.gl/YWKzSF3JYk65qL5Z7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404204643!6m8!1m7!1szygGDdJNnf-dHcv5-ZDzXg!2m2!1d27.2431810951169!2d88.27109407783493!3f42.75392456494828!4f-16.176298856446422!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Rinchen Choling Tamu Monastery, also known as Rinak Monastery, is a historically significant Buddhist monastery located on a hilltop in the Rinak area of East Sikkim. The monastery was established in 1913 A.D. by Lama Dawa, a follower of the Nyingmapa sect. It serves as a vital spiritual hub for the local community, providing a space for daily prayers and religious practices. The monastery's serene location amidst the lush landscapes offers a peaceful environment for devotees and visitors alike, reflecting the deep-rooted Buddhist traditions of the region."
+  },
+  {
+    "id": 191,
+    "name": "Rinchenpong Monastery",
+    "coords": "27.235736101872323, 88.26848320545673",
+    "map_url": "https://maps.app.goo.gl/Zd7WLg8k6ajGWZt67",
+    "embed_link": "-",
+    "l_desc": "Rinchenpong Monastery is a historic Buddhist monastery perched on a serene hilltop above the Rinchenpong village in West Sikkim. Dating back to the 18th century, it is the third oldest monastery in the state. The monastery is renowned for its rare and revered statue of Ati Buddha, which is depicted in the Yab-Yum position, symbolizing the unity of wisdom and compassion. The location offers a breathtaking panoramic view of the Kanchenjunga mountain range and the surrounding valleys, making it a place of both spiritual significance and natural beauty."
+  },
+  {
+    "id": 193,
+    "name": "Ringyim Monastery",
+    "coords": "27.49541044625489, 88.54657399111336",
+    "map_url": "https://maps.app.goo.gl/WRu6etg5kNPCSVuD6",
+    "embed_link": "-",
+    "l_desc": "Ringyim Monastery is an alternative spelling for Rimbi Monastery, which is a small and peaceful Buddhist monastery located in West Sikkim, near the scenic Rimbi River. While not as historically prominent as some of the other larger monasteries in the region, it holds spiritual significance for the local community. It is part of the popular tourist circuit, as the area is known for its beautiful surroundings, including a river park and a hydro-electric project. The monastery offers a tranquil space for quiet contemplation and a glimpse into the local religious traditions"
+  },
+  {
+    "id": 195,
+    "name": "Suiram Risung Monastery",
+    "coords": "27.229356648422367, 88.27015007422013",
+    "map_url": "Reesum Monestry",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404411736!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ3Mtb2ZMYnc.!2m2!1d27.22888187435567!2d88.27006640219635!3f129.05717!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Suiram Risung Monastery is a small but significant Gurung Buddhist monastery located on the road between Namchi and Namthang in South Sikkim. It was established in 1995 A.D. with fund contributions from the local Gurung devotees, serving as a vital spiritual center for the community. The monastery is a peaceful place for prayers and religious practices, reflecting the deep-rooted Buddhist traditions of the Gurung people in the region."
+  },
+  {
+    "id": 198,
+    "name": "Rumtek Dharma Chakra Centre",
+    "coords": "27.288976639452635, 88.56205178531019",
+    "map_url": "https://maps.app.goo.gl/njDwWK4SKBqz3het9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404504835!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2t2ZXZVaXdF!2m2!1d27.28884361783851!2d88.56089980788117!3f110.08452169099616!4f16.69874097561714!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Rumtek Dharma Chakra Centre is the largest and most famous monastery in Sikkim, situated about 24 kilometers from Gangtok. It was established in the mid-1960s by the 16th Karmapa, Rangjung Rigpe Dorje, as the main seat of the Karma Kagyu lineage of Tibetan Buddhism in exile. The monastery is a masterpiece of traditional Tibetan architecture, a replica of the Tsurphu Monastery in Tibet. It is a major pilgrimage and tourist destination, housing a vast collection of sacred art, ancient manuscripts, and the Golden Stupa that contains the relics of the 16th Karmapa."
+  },
+  {
+    "id": 199,
+    "name": "Rumtek Gompa",
+    "coords": "27.28880124200876, 88.56178711809828",
+    "map_url": "https://maps.app.goo.gl/JE6465vs2ukCTh6Z7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404630933!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0VndFRIUmc.!2m2!1d27.28862027053181!2d88.56148053028257!3f53.577487234142794!4f-4.44707585466135!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Rumtek Gompa, or Rumtek Dharma Chakra Centre, is the largest and most famous monastery in Sikkim, situated about 24 kilometers from Gangtok. It was established in the mid-1960s by the 16th Karmapa, Rangjung Rigpe Dorje, as the main seat of the Karma Kagyu lineage of Tibetan Buddhism in exile. The monastery is a masterpiece of traditional Tibetan architecture, a replica of the Tsurphu Monastery in Tibet. It is a major pilgrimage and tourist destination, housing a vast collection of sacred art, ancient manuscripts, and the Golden Stupa that contains the relics of the 16th Karmapa."
+  },
+  {
+    "id": 200,
+    "name": "Simik Monastery",
+    "coords": "27.289788451040195, 88.47600806969129",
+    "map_url": "https://maps.app.goo.gl/aQDcsWvJkwVqWsE96",
+    "embed_link": "-",
+    "l_desc": "Simik Monastery is a significant Buddhist monastery located in North Sikkim, near the Lachen region. It serves as a vital spiritual and cultural center for the local community, particularly for the Lachenpas. The monastery is known for its peaceful and serene ambiance, which provides a quiet retreat for both monks and visitors. Its location amidst the stunning Himalayan landscape offers a picturesque setting for prayers and meditation, reflecting the deep-rooted Buddhist traditions of the area."
+  },
+  {
+    "id": 201,
+    "name": "Samdong Mintokgang Monastery",
+    "coords": "27.363938803061714, 88.50305208372508",
+    "map_url": "https://maps.app.goo.gl/gLoK4X412W8269uL7",
+    "embed_link": "-",
+    "l_desc": "Samdong Mintokgang Monastery, located in the Tathangchen Ward of East Sikkim, was originally established in 1913 A.D. as a branch monastery of Labrang Gonpa. The monastery holds a special significance due to a Buddha statue gifted by Chogyal Palden Thondup Namgyal, which is believed to have cured prevailing illnesses in the area upon its installation. It was later rebuilt with government assistance in 1989. The monastery now stands as an independent religious center where its own lamas are capable of conducting all religious ceremonies, and it continues to be a sacred site for the local community."
+  },
+  {
+    "id": 202,
+    "name": "Samten Choling Monastery",
+    "coords": "27.688863180376853, 88.74877675489597",
+    "map_url": "https://maps.app.goo.gl/Nm9LpmL2titkEiMr5",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404745812!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDBsN19VbndF!2m2!1d27.68868272875449!2d88.74875528996708!3f91.57295958063258!4f-3.298136613235158!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Samten Choling Monastery, more commonly known as Lachung Monastery, is a historically significant Buddhist monastery located in the picturesque village of Lachung, North Sikkim. Established in 1850 A.D., it belongs to the Nyingma sect of Tibetan Buddhism and serves as a vital spiritual and cultural hub for the local community. The monastery is renowned for its traditional Tibetan architecture, which features vibrant murals and intricate religious artifacts that tell stories of Buddhist mythology. Visitors can witness daily rituals performed by the resident monks, making it an immersive cultural experience that connects you with the profound spiritual heritage of the region."
+  },
+  {
+    "id": 203,
+    "name": "Sang Choelling Monastery",
+    "coords": "27.29968135397677, 88.22153688010404",
+    "map_url": "https://maps.app.goo.gl/WuTxGAWaVE6KwAMY6",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404800517!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVnS3p0dlFF!2m2!1d27.29775170700695!2d88.22168671699492!3f245.1103!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Sang Choelling Monastery, also known as Sanghak Choeling or Sanga Choeling, is one of the oldest and most revered monasteries in Sikkim. Established in 1697, it is located on a serene hilltop overlooking the town of Pelling. The name \"Sang Choelling\" translates to \"the island of secret spells,\" a reference to its affiliation with the Nyingma sect of Tibetan Buddhism, which is known for its mystical and esoteric teachings. The monastery is accessible via a steep, 4-kilometer uphill hike that winds through a dense forest, offering a tranquil and meditative journey. The monastery itself houses ancient clay statues and murals, and it provides a panoramic view of the surrounding valleys and the Himalayan mountain range."
+  },
+  {
+    "id": 205,
+    "name": "Sa Ngor Chotshog Center",
+    "coords": "27.342222392539618, 88.64414591132858",
+    "map_url": "https://maps.app.goo.gl/vt9GuxEeNqhpnny19",
+    "embed_link": "-",
+    "l_desc": "Sa Ngor Chotshog Center, also known as Sang-Ngor Monastery, is a prominent Buddhist monastery of the Sakya sect, located in Sikkim. It is an important center for the study and practice of the Sakya tradition, providing a peaceful environment for monks and devotees. The monastery plays a vital role in preserving and promoting the teachings of the Sakya lineage. Its serene location and beautiful traditional architecture make it a significant spiritual landmark and a place of deep contemplation."
+  },
+  {
+    "id": 207,
+    "name": "Gonjang Monastery",
+    "coords": "27.369627856028128, 88.61513514092879",
+    "map_url": "https://maps.app.goo.gl/VPDvj1ximn8bSmGb7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404902196!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ1VwcWV5aHdF!2m2!1d27.369038512999676!2d88.61320069409064!3f15.11804890725437!4f0.28696076724550323!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Gonjang Monastery is a relatively modern but significant monastery located near Gangtok, Sikkim. Established in 1981, it is part of the Nyingmapa sect and is a center for the study of the Buddhist teachings. The monastery is known for its beautiful golden statues and its colorful traditional architecture. Its location on a hilltop offers panoramic views of the surrounding mountains and valleys, making it a popular destination for tourists and devotees alike."
+  },
+  {
+    "id": 208,
+    "name": "Sanga Chelling Monastery",
+    "coords": "27.29802816270394, 88.22218022363775",
+    "map_url": "https://maps.app.goo.gl/wRVr4YnQLnQLp1oV7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757404990546!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVnS3p0dlFF!2m2!1d27.29775170700695!2d88.22168671699492!3f217.352377206166!4f-11.161524126367226!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Sanga Chelling Monastery is an alternative spelling for Sang Choelling Monastery, one of the oldest and most revered monasteries in Sikkim. Established in 1697, it is located on a serene hilltop overlooking the town of Pelling. The monastery houses ancient clay statues and murals and offers a panoramic view of the surrounding valleys and the Himalayan mountain range. It is a vital center for the Nyingma sect of Tibetan Buddhism and is a popular destination for both pilgrims and tourists."
+  },
+  {
+    "id": 211,
+    "name": "Serdup Choling Monastery",
+    "coords": "27.16177480133473, 88.35487614323822",
+    "map_url": "https://maps.app.goo.gl/dQVnSXhDpzUiVzQ69",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757405057095!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzRxN0xOUmc.!2m2!1d27.161365298044334!2d88.35424723388128!3f313.0813840471858!4f13.241043182063748!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Serdup Choling Monastery is a sacred Buddhist monastery located in the picturesque landscapes of Sikkim. This spiritual center is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location, nestled amidst the beautiful landscapes of Sikkim, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 217,
+    "name": "Pemayangtse Monastery",
+    "coords": "27.41081696425257, 88.3595887052683",
+    "map_url": "https://maps.app.goo.gl/ty8dU1qZ2vUrsnur9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757405785458!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVoSlhucEFF!2m2!1d27.30518919282202!2d88.25156580066201!3f329.44573406332364!4f-4.805280676311895!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Pemayangtse Monastery, which translates to \"Perfect Sublime Lotus,\" is a historic and revered Buddhist monastery located on a hilltop in West Sikkim. Founded in 1705 A.D., it is the head monastery of the Nyingma order and one of the most significant spiritual centers in the state. The monastery is renowned for its intricate wood carvings, ancient manuscripts, and a magnificent seven-tiered painted wooden model of Guru Rinpoche’s celestial abode, which is considered a masterpiece of art. This sacred site has a long history of serving as a center for religious rituals and education, and it continues to be a pivotal pilgrimage destination for Buddhists."
+  },
+  {
+    "id": 218,
+    "name": "Sinon Monastery",
+    "coords": "27.342518229103153, 88.29033050460482",
+    "map_url": "https://maps.app.goo.gl/5n6wTW6WDo2tagye7",
+    "embed_link": "-",
+    "l_desc": "inon Monastery is a historically significant Buddhist monastery located in the picturesque landscapes of Sikkim. Situated on a serene hilltop, it is one of the oldest monasteries in the state, with its history deeply intertwined with the spiritual and cultural heritage of the region. The monastery is known for its beautiful traditional architecture and its vibrant murals, which depict scenes from Buddhist mythology and the lives of revered lamas"
+  },
+  {
+    "id": 219,
+    "name": "Simik Monastery",
+    "coords": "27.293250212478846, 88.47816829922743",
+    "map_url": "https://maps.app.goo.gl/ZqLAUm4hDL4zwFsXA",
+    "embed_link": "-",
+    "l_desc": "Simik Monastery, also known as Simik Gompa, is a significant Buddhist monastery located in the picturesque landscapes of Sikkim. This spiritual center is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location, nestled amidst the beautiful landscapes of Sikkim, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 223,
+    "name": "Singchit Ngadag Monastery",
+    "coords": "27.21028488030104, 88.51870775722955",
+    "map_url": "https://maps.app.goo.gl/u4PN8ef3ZnkXaN8e9",
+    "embed_link": "-",
+    "l_desc": "Singchit Ngadag Monastery is a historically significant Buddhist monastery located in the Singhik region of North Sikkim. It was established in 1890 A.D. by followers of Ngadag Rinchen Gon on a site he had previously blessed. The monastery holds a special significance as its location was divinely revealed to him when a serpent maiden took his walking stick and deposited it at the present site. The monastery has a history of renovation, and it continues to serve as a vital spiritual center for the local community, hosting major Buddhist ceremonies."
+  },
+  {
+    "id": 225,
+    "name": "Singtam Monastery",
+    "coords": "27.234319544846514, 88.5033169781833",
+    "map_url": "https://maps.app.goo.gl/XJnV8uVVmyp6BB3eA",
+    "embed_link": "-",
+    "l_desc": "Singtam Monastery is a revered Buddhist monastery located in the picturesque landscapes of Sikkim. This spiritual center is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location, nestled amidst the beautiful landscapes of Sikkim, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 227,
+    "name": "Tensong Monastery singhik",
+    "coords": "27.513712830823593, 88.55703702424681",
+    "map_url": "https://maps.app.goo.gl/YEGmcAMtaHQUkzU37",
+    "embed_link": "-",
+    "l_desc": "Tensong Monastery is a significant Buddhist monastery located in the Singhik region of North Sikkim. This spiritual center is known for its peaceful and serene ambiance, providing a quiet retreat for both devotees and visitors. The monastery plays a vital role in the spiritual life of the local community, serving as a place for daily prayers, ceremonies, and religious teachings. Its tranquil location, nestled amidst the beautiful landscapes of Sikkim, makes it an ideal place for spiritual contemplation and a deeper connection to the Buddhist traditions of the region."
+  },
+  {
+    "id": 230,
+    "name": "Palyul Dechen Gaweling Monastery",
+    "coords": "27.21782574488956, 88.20597828551898",
+    "map_url": "https://maps.app.goo.gl/o3ZXPUGMuyotjrLK6",
+    "embed_link": "-",
+    "l_desc": "Palyul Dechen Gaweling Monastery is a serene Nyingma Buddhist monastery located in the Sribadam village of West Sikkim. This spiritual center is a significant hub for the local community and is particularly known for hosting traditional Buddhist festivals like the \"Phurpa Tordo Puja\" and \"Cham Dance.\" Nestled within a newly discovered village, the monastery offers a peaceful and traditional environment, allowing visitors to experience the authentic Sikkimese life. The area is surrounded by lush forests, making it a perfect spot for those seeking a spiritual retreat combined with a connection to nature"
+  },
+  {
+    "id": 234,
+    "name": "Tashiding Monastery",
+    "coords": "27.313201529271744, 88.30233779383238",
+    "map_url": "https://maps.app.goo.gl/BFFn18rdnEwLg33y6",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757407419995!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6c08zSWc.!2m2!1d27.30891943909927!2d88.29787983128344!3f216.06743963158505!4f-2.078005740788768!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Tashiding Monastery is one of the most sacred and revered monasteries in Sikkim, dating back to 1641 A.D. and belonging to the Nyingma sect. It is located on a heart-shaped hill above the confluence of two holy rivers, the Rathong Chu and Rangeet, offering a stunning backdrop of Mt. Kanchenjunga. The monastery is famous for its \"Bumchu\" festival, a sacred water ceremony held annually that is believed to foretell the fortunes of Sikkim. The serene and divine atmosphere of Tashiding, combined with its rich history and legends, makes it a pivotal pilgrimage destination."
+  },
+  {
+    "id": 238,
+    "name": "Tashi Choling Monastery",
+    "coords": "27.354523834982775, 88.22269192549186",
+    "map_url": "https://maps.app.goo.gl/A5vJet5gjdoy7sy1A",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757407521672!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRFV3WVAzRUE.!2m2!1d27.34944796399301!2d88.19144197395178!3f306.3797516514928!4f9.57499255800657!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Tashi Choling Monastery is the religious name for Pabyuk Monastery, a historically significant monastery located in the Pabyuk village of East Sikkim. Founded in 1875 A.D., it follows the Drukpa Kagyu sect. The monastery is known for its resilience and its unique artifacts, including a bell said to have been brought from Tibet and a statue of Buddha that miraculously sweated profusely to absorb a disease and save the local people. It is a vital spiritual center for the community, housing 35 monks and 30 novice monks who perform daily prayers and host an annual mask dance in winter."
+  },
+  {
+    "id": 241,
+    "name": "Tashi Palden Monastery",
+    "coords": "27.215447232545568, 88.54334771777499",
+    "map_url": "https://maps.app.goo.gl/hJpGybWRJ3oHNHer5",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757407564358!6m8!1m7!1s7mxycuWc_2h6Zmx5qcKs9g!2m2!1d27.21069785183856!2d88.53984954532282!3f125.78545!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Tashi Palden Monastery, also known as Pandam Monastery, is a significant Buddhist monastery situated in the Central Pandam area of East Sikkim. Established in 1955 A.D., this monastery is a branch of the renowned Rumtek Monastery and follows the Karma Kagyupa sect. It is a vital spiritual center for the community, where all religious ceremonies are performed throughout the year. The monastery's tranquil setting and historical connection to one of Sikkim's most important monasteries make it a revered site for devotees."
+  },
+  {
+    "id": 243,
+    "name": "Tashiding Monastery",
+    "coords": "27.309142181012135, 88.29841626647396",
+    "map_url": "https://maps.app.goo.gl/Ru6rojARavDThzVc9",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757407621794!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6c08zSWc.!2m2!1d27.30891943909927!2d88.29787983128344!3f183.95307100716218!4f17.0997274491136!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Tashiding Monastery is one of the most sacred and revered monasteries in Sikkim, dating back to 1641 A.D. and belonging to the Nyingma sect. It is located on a heart-shaped hill above the confluence of two holy rivers, the Rathong Chu and Rangeet, offering a stunning backdrop of Mt. Kanchenjunga. The monastery is famous for its \"Bumchu\" festival, a sacred water ceremony held annually that is believed to foretell the fortunes of Sikkim. The serene and divine atmosphere of Tashiding, combined with its rich history and legends, makes it a pivotal pilgrimage destination."
+  },
+  {
+    "id": 244,
+    "name": "Thukchen Lhakhang Monastery",
+    "coords": "27.526799315312463, 88.5146529672926",
+    "map_url": "https://maps.app.goo.gl/Ud4YM2ogxHo7eAPu8",
+    "embed_link": "-",
+    "l_desc": "Thukchen Lhakhang is not a monastery in itself but refers to the main prayer hall of several major monasteries. The term is used for the main assembly hall of Lachen Monastery and Lachung Monastery in North Sikkim. Both of these monasteries are significant spiritual centers, known for their beautiful murals and traditional architecture. The Thukchen Lhakhang serves as the primary location for monks' prayers and spiritual gatherings within these monastic complexes."
+  },
+  {
+    "id": 249,
+    "name": "Thangu Gompa",
+    "coords": "27.901509907630903, 88.55868043903676",
+    "map_url": "https://maps.app.goo.gl/YBdHfJGCb5dW6os39",
+    "embed_link": "-",
+    "l_desc": "Thangu Gompa, located in the high-altitude Thangu Valley of North Sikkim, is a sacred Buddhist monastery that serves the local community. The monastery itself is not a major landmark but holds significant spiritual importance, providing a peaceful and tranquil environment for worship and meditation. The Thangu Valley is a scenic region, and the monastery offers a serene glimpse into the spiritual life of the area."
+  },
+  {
+    "id": 251,
+    "name": "Tholung Monastery",
+    "coords": "27.637025996822786, 88.4620454853323",
+    "map_url": "https://maps.app.goo.gl/uGp52uskHXNbgvZs8",
+    "embed_link": "--",
+    "l_desc": "The Tholung Monastery is a highly revered and secluded spiritual site located in the Dzongu region of North Sikkim. As a Nyingmapa monastery, it holds immense importance, particularly for the Lepcha community. The monastery's most unique feature is its role as a repository for valuable and sacred religious artifacts and manuscripts from other monasteries across the state. These relics are periodically displayed to the public during the annual Kagyad dance festival. The monastery is situated within a restricted area and is nestled in a rich biodiversity zone, adding to its sacred and mystical aura. Its isolation and the fact that it houses such a vast collection of religious treasures make it a significant pilgrimage site for Buddhists."
+  },
+  {
+    "id": 254,
+    "name": "Tingvong Monastery",
+    "coords": "27.55691601634132, 88.47780219314264",
+    "map_url": "https://maps.app.goo.gl/Rmy8Wnzp5P1MyhNQ6",
+    "embed_link": "--",
+    "l_desc": "he Tingvong Monastery is a serene and historically significant spiritual center located in the beautiful and restricted Dzongu region of North Sikkim. As a key site for the local Lepcha community, it plays a vital role in their religious and cultural life. The monastery belongs to the Nyingmapa sect, the oldest school of Tibetan Buddhism. Situated in a remote and peaceful environment, it provides a quiet sanctuary for monks to live, study, and conduct traditional Buddhist rituals. The monastery is a testament to the deep-rooted faith of the Lepcha people and their efforts to preserve their unique heritage. Due to its location in a special area, a permit is required for visitors, which helps in maintaining its untouched natural and spiritual ambiance."
+  },
+  {
+    "id": 262,
+    "name": "Tsuklakhang Palace Monastery",
+    "coords": "27.326224456512072, 88.61548705883787",
+    "map_url": "https://maps.app.goo.gl/pvWyth3Ea78xEW6k7",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757407755224!6m8!1m7!1sEPQJffAmE8DMLZqJNuBvww!2m2!1d27.32581459802226!2d88.61421032737204!3f317.47224456272886!4f-5.234070154868846!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "The Tsukhalang Palace Monastery is a significant and historically important spiritual center located within the Tsukhalang Palace grounds in Gangtok, Sikkim. It is the personal monastery of the former royal family of Sikkim and is a key site for state-sponsored rituals and ceremonies. As the private chapel of the Chogyals (the erstwhile monarchs), it holds immense cultural and religious importance, particularly for the Nyingmapa sect of Tibetan Buddhism to which the royal family belonged. The monastery is known for its beautiful traditional architecture and serene environment. It houses sacred artifacts and serves as a place for the royal family to conduct private prayers and rites. The monastery's existence and maintenance are a testament to the deep-rooted spiritual traditions of the former Sikkimese monarchy."
+  },
+  {
+    "id": 265,
+    "name": "Tharpa Manilakhang",
+    "coords": "27.329121151682703, 88.62465558262485",
+    "map_url": "https://maps.app.goo.gl/Eya4GAHssg6yawWq5",
+    "embed_link": "",
+    "l_desc": "he Tharpa Manilakhang is a sacred and serene Buddhist prayer hall located in the village of Tharpu in West Sikkim. As its name suggests, 'Manilakhang' refers to a building primarily dedicated to prayer, typically housing a large prayer wheel and other religious artifacts. It serves as a vital spiritual hub for the local community, providing a space for daily rituals and collective worship. The lhakang's presence underscores the deep-rooted faith and devotion of the people in this tranquil part of Sikkim. Situated in a picturesque setting, the prayer hall offers a peaceful environment for meditation and spiritual contemplation. These community-run religious sites are essential for preserving Buddhist traditions and fostering a sense of shared heritage."
+  },
+  {
+    "id": 275,
+    "name": "Tashi Gyan Palden Monastery",
+    "coords": "27.288861792110637, 88.41445101326993",
+    "map_url": "https://maps.app.goo.gl/WzqucPncL8pfP98R8",
+    "embed_link": "-",
+    "l_desc": "Tashi Gyan Palden Monastery is a historically significant Buddhist monastery located in the Upper Yangang area of South Sikkim. The original monastery was founded by Vth Lhatsun Pema Dechhen Gyatso in 1787 A.D. and rebuilt in 1841. After being damaged by a major earthquake, the old structure was reconstructed in 1982 and has been recently renovated. The monastery follows the Nyingmapa sect and serves as a vital spiritual center for the local community, upholding ancient religious and cultural traditions. A small statue of Drubchen Thangtong Gyalpo, brought from Tibet, is a notable artifact housed here. The monastery overlooks a lake called 'Tigdey Tsho,' which is considered a sacred dwelling place of a local deity."
+  },
+  {
+    "id": 277,
+    "name": "Ralang New Monastery",
+    "coords": "27.32986891020546, 88.33868092701789",
+    "map_url": "https://maps.app.goo.gl/zLbmsdFTspEBcBYKA",
+    "embed_link": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757408425799!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDh5NUc4RGc.!2m2!1d27.3284964274141!2d88.33524768412993!3f152.78369!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "l_desc": "Ralang New Monastery, also known as Palchen Choeling Monastic Institute, is located in Ravangla, South Sikkim. It's a key destination for Buddhist pilgrims, particularly for the Kagyu sect. It's believed that the site was blessed by the 9th Karmapa, Wangchuk Dorje, and the monastery's inauguration was blessed by the 17th Karmapa, Ogyen Trinley Dorje, in 1995."
+  },
+  {
+    "id": 288,
+    "name": "Ngadak Thupten Shedup Dhargey Choeling, Monastery",
+    "coords": "27.181312972018535, 88.39017701962392",
+    "map_url": "https://maps.app.goo.gl/pDypoGWXTtZ5KfAb8",
+    "embed_link": "-",
+    "l_desc": "Ngadak Thupten Shedup Dhargey Choeling Monastery, also called Ngadak Monastery, is one of the oldest monasteries in Namchi, South Sikkim, with a history dating back to the 17th century. The name \"Ngadak\" means \"promise,\" and it is believed that anyone who visits the monastery should make a promise to return. The monastery was originally built as a palace for Her Highness Pendi Ongmu before being converted into a monastery."
+  }
+]

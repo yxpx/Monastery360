@@ -1,109 +1,59 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ChevronLeft, ChevronRight, CalendarIcon } from "lucide-react"
 
-interface Festival {
+interface Event {
   id: number
   name: string
   date: string
-  type: "major" | "minor" | "seasonal"
-  description: string
-  monastery?: string
-  significance: string
+  l_desc: string
 }
 
-const sikkimFestivals: Festival[] = [
-  {
-    id: 1,
-    name: "Losar",
-    date: "2024-02-10",
-    type: "major",
-    description: "Tibetan New Year celebration marking the beginning of the lunar calendar",
-    monastery: "All monasteries",
-    significance: "Most important festival in Tibetan Buddhism",
-  },
-  {
-    id: 2,
-    name: "Saga Dawa",
-    date: "2024-05-23",
-    type: "major",
-    description: "Celebrates Buddha's birth, enlightenment, and death anniversary",
-    monastery: "All monasteries",
-    significance: "Triple blessed day in Buddhist calendar",
-  },
-  {
-    id: 3,
-    name: "Pang Lhabsol",
-    date: "2024-08-15",
-    type: "major",
-    description: "Guardian deity of Sikkim celebration with traditional dances",
-    monastery: "Tashiding, Pemayangtse",
-    significance: "Unique to Sikkim, honors Mount Khangchendzonga",
-  },
-  {
-    id: 4,
-    name: "Drupka Teshi",
-    date: "2024-07-04",
-    type: "major",
-    description: "First sermon of Buddha at Sarnath",
-    monastery: "Rumtek, Enchey",
-    significance: "Turning of the Wheel of Dharma",
-  },
-  {
-    id: 5,
-    name: "Lhabab Duchen",
-    date: "2024-11-15",
-    type: "major",
-    description: "Buddha's descent from heaven after teaching his mother",
-    monastery: "All monasteries",
-    significance: "One of the four great holy days",
-  },
-  {
-    id: 6,
-    name: "Bumchu",
-    date: "2024-03-15",
-    type: "minor",
-    description: "Sacred water ceremony at Tashiding Monastery",
-    monastery: "Tashiding",
-    significance: "Predicts the coming year's fortune",
-  },
-]
-
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
 ]
 
 export function FestivalCalendar() {
+  const [events, setEvents] = useState<Event[]>([])
   const [currentDate, setCurrentDate] = useState(new Date())
-  const [selectedFestival, setSelectedFestival] = useState<Festival | null>(null)
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
 
   const currentMonth = currentDate.getMonth()
   const currentYear = currentDate.getFullYear()
+
+  // Load events data
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('/data/events.json')
+        const data = await response.json()
+        setEvents(data)
+      } catch (error) {
+        console.error('Error loading events:', error)
+      }
+    }
+    fetchEvents()
+  }, [])
 
   // Get first day of month and number of days
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay()
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate()
 
-  // Get festivals for current month
-  const monthFestivals = sikkimFestivals.filter((festival) => {
-    const festivalDate = new Date(festival.date)
-    return festivalDate.getMonth() === currentMonth && festivalDate.getFullYear() === currentYear
+  // Get events for current month
+  const monthEvents = events.filter((event) => {
+    const eventDate = new Date(event.date)
+    return eventDate.getMonth() === currentMonth
   })
+
+  // Use all events sorted by date
+  const sortedEvents = events
+    .slice()
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
   const navigateMonth = (direction: "prev" | "next") => {
     setCurrentDate((prev) => {
@@ -117,164 +67,151 @@ export function FestivalCalendar() {
     })
   }
 
-  const getFestivalForDate = (day: number) => {
-    return monthFestivals.find((festival) => {
-      const festivalDate = new Date(festival.date)
-      return festivalDate.getDate() === day
+  const getEventForDate = (day: number) => {
+    return monthEvents.find((event) => {
+      const eventDate = new Date(event.date)
+      return eventDate.getDate() === day
     })
   }
 
-  const getFestivalTypeColor = (type: string) => {
-    switch (type) {
-      case "major":
-        return "bg-primary text-primary-foreground"
-      case "minor":
-        return "bg-secondary text-secondary-foreground"
-      case "seasonal":
-        return "bg-accent text-accent-foreground"
-      default:
-        return "bg-muted text-muted-foreground"
+  const formatEventDate = (dateStr: string) => {
+    // Handle various date formats from the JSON
+    if (dateStr.includes('(')) {
+      return dateStr.split('(')[0].trim()
     }
+    return dateStr
   }
 
   return (
-    <div className="h-full flex flex-col">
-      {/* Calendar Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <CalendarIcon className="w-6 h-6 text-primary" />
-          <h2 className="text-2xl font-bold text-foreground">
-            {months[currentMonth]} {currentYear}
-          </h2>
+    <div className="h-full flex gap-4">
+      {/* Left Panel - Upcoming Events */}
+      <Card className="w-80 p-4 bg-card/95 backdrop-blur-sm border border-border">
+        <div className="flex items-center gap-2 mb-4">
+          <CalendarIcon className="w-5 h-5 text-primary" />
+          <h3 className="font-semibold text-foreground">Events</h3>
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={() => navigateMonth("prev")}>
-            <ChevronLeft className="w-4 h-4" />
-          </Button>
-          <Button variant="outline" size="sm" onClick={() => setCurrentDate(new Date())}>
-            Today
-          </Button>
-          <Button variant="outline" size="sm" onClick={() => navigateMonth("next")}>
-            <ChevronRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-
-      {/* Calendar Grid */}
-      <Card className="flex-1 p-4 bg-card border border-border rounded-lg">
-        {/* Day Headers */}
-        <div className="grid grid-cols-7 gap-1 mb-2">
-          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-            <div key={day} className="p-2 text-center text-sm font-medium text-muted-foreground">
-              {day}
+        <div className="flex-1 space-y-3 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40">
+          {sortedEvents.map((event) => (
+            <div
+              key={event.id}
+              className="p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 cursor-pointer transition-colors border border-border/50"
+              onClick={() => setSelectedEvent(event)}
+            >
+              <h4 className="font-medium text-sm text-foreground mb-1 line-clamp-2">{event.name}</h4>
+              <p className="text-xs text-muted-foreground">{formatEventDate(event.date)}</p>
             </div>
           ))}
-        </div>
-
-        {/* Calendar Days */}
-        <div className="grid grid-cols-7 gap-1">
-          {/* Empty cells for days before month starts */}
-          {Array.from({ length: firstDayOfMonth }, (_, i) => (
-            <div key={`empty-${i}`} className="p-2 h-16" />
-          ))}
-
-          {/* Days of the month */}
-          {Array.from({ length: daysInMonth }, (_, i) => {
-            const day = i + 1
-            const festival = getFestivalForDate(day)
-            const isToday = new Date().toDateString() === new Date(currentYear, currentMonth, day).toDateString()
-
-            return (
-              <div
-                key={day}
-                className={`p-2 h-16 border border-border rounded-lg cursor-pointer transition-colors hover:bg-secondary/50 ${
-                  isToday ? "bg-primary/10 border-primary" : ""
-                } ${festival ? "bg-accent/20" : ""}`}
-                onClick={() => festival && setSelectedFestival(festival)}
-              >
-                <div className="flex flex-col h-full">
-                  <span className={`text-sm font-medium ${isToday ? "text-primary" : "text-foreground"}`}>{day}</span>
-                  {festival && (
-                    <div className="flex-1 flex items-center justify-center">
-                      <div className={`w-2 h-2 rounded-full ${getFestivalTypeColor(festival.type)}`} />
-                    </div>
-                  )}
-                </div>
-              </div>
-            )
-          })}
         </div>
       </Card>
 
-      {/* Festival Legend */}
-      <div className="mt-4 flex items-center gap-4 text-sm">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Major Festivals</span>
+      {/* Main Panel - Calendar with Event Details */}
+  <div className="flex-1 flex flex-col min-h-0">
+        {/* Calendar Header */}
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold text-foreground">
+            {months[currentMonth]} {currentYear}
+          </h2>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => navigateMonth("prev")}>
+              <ChevronLeft className="w-4 h-4" />
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => setCurrentDate(new Date())}>
+              Today
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => navigateMonth("next")}>
+              <ChevronRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">Minor Festivals</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-accent" />
-          <span className="text-muted-foreground">Seasonal Events</span>
-        </div>
-      </div>
 
-      {/* Selected Festival Modal */}
-      {selectedFestival && (
-        <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-          onClick={() => setSelectedFestival(null)}
-        >
-          <Card
-            className="max-w-md w-full m-4 p-6 bg-card border border-border rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{selectedFestival.name}</h3>
-                <Badge className={getFestivalTypeColor(selectedFestival.type)}>{selectedFestival.type} festival</Badge>
-              </div>
-              <Button variant="ghost" size="sm" onClick={() => setSelectedFestival(null)}>
-                ×
-              </Button>
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm text-muted-foreground mb-2">Date</p>
-                <p className="font-medium">
-                  {new Date(selectedFestival.date).toLocaleDateString("en-US", {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-              </div>
-
-              <div>
-                <p className="text-sm text-muted-foreground mb-2">Description</p>
-                <p className="text-sm leading-relaxed">{selectedFestival.description}</p>
-              </div>
-
-              {selectedFestival.monastery && (
-                <div>
-                  <p className="text-sm text-muted-foreground mb-2">Celebrated at</p>
-                  <p className="text-sm font-medium">{selectedFestival.monastery}</p>
+  <div className="flex gap-4 flex-1 min-h-0">
+          {/* Calendar Grid */}
+          <Card className="flex-1 p-3 bg-card/95 backdrop-blur-sm border border-border flex flex-col min-h-0">
+            {/* Day Headers */}
+            <div className="grid grid-cols-7 gap-1 mb-2">
+              {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+                <div key={day} className="p-2 text-center text-xs font-medium text-muted-foreground">
+                  {day}
                 </div>
-              )}
-
-              <div>
-                <p className="text-sm text-muted-foreground mb-2">Significance</p>
-                <p className="text-sm leading-relaxed">{selectedFestival.significance}</p>
-              </div>
+              ))}
+            </div>
+            {/* Calendar Dates */}
+            <div className="grid grid-cols-7 gap-1 flex-1 overflow-auto">
+              {/* Empty slots before first day */}
+              {Array.from({ length: firstDayOfMonth }).map((_, idx) => (
+                <div key={`empty-${idx}`} className="p-2" />
+              ))}
+              {/* Days of the month */}
+              {Array.from({ length: daysInMonth }).map((_, idx) => {
+                const day = idx + 1
+                const evt = getEventForDate(day)
+                return (
+                  <div
+                    key={day}
+                    className={`p-2 text-center text-sm rounded-lg ${evt ? 'bg-secondary/30 hover:bg-secondary/50 cursor-pointer' : ''}`}
+                    onClick={() => evt && setSelectedEvent(evt)}
+                  >
+                    <div>{day}</div>
+                    {evt && <div className="mt-1 h-1 w-1 mx-auto bg-primary rounded-full" />}
+                  </div>
+                )
+              })}
             </div>
           </Card>
+
+          {/* Event Details Panel */}
+          <Card className="w-96 p-4 bg-card/95 backdrop-blur-sm border border-border flex flex-col h-full">
+              <h3 className="font-semibold text-foreground mb-4">Event Details</h3>
+              {selectedEvent ? (
+                <>
+                  <div className="flex-1 flex flex-col overflow-hidden">
+                    {/* Image or Placeholder */}
+                    <div className="aspect-video mb-4 bg-muted rounded-lg overflow-hidden">
+                      <img
+                        key={selectedEvent.id}
+                        src={`/data/events/${selectedEvent.id}.png`}
+                        alt={selectedEvent.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const t = e.target as HTMLImageElement
+                          t.style.display = 'none'
+                          t.nextElementSibling?.classList.remove('invisible')
+                        }}
+                      />
+                      <div className="invisible w-full h-full flex items-center justify-center text-muted-foreground text-sm">
+                        <CalendarIcon className="w-8 h-8 mb-2" />
+                      </div>
+                    </div>
+                    <div className="mb-2">
+                      <h4 className="font-medium text-foreground mb-1">{selectedEvent.name}</h4>
+                      <Badge variant="secondary" className="text-xs">{formatEventDate(selectedEvent.date)}</Badge>
+                    </div>
+                    <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40 pr-2">
+                      <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
+                        {selectedEvent.l_desc}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex-shrink-0">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      onClick={() => setSelectedEvent(null)}
+                    >
+                      Close Details
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <div className="text-center text-muted-foreground text-sm flex-1 flex flex-col items-center justify-center">
+                  <CalendarIcon className="w-12 h-12 mb-3 opacity-50" />
+                  <p>Select an event from the calendar or events to view details</p>
+                </div>
+              )}
+            </Card>
         </div>
-      )}
+      </div>
     </div>
   )
 }
