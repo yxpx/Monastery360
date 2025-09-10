@@ -1,14 +1,17 @@
 "use client"
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 import { Calendar, Route, Download, HelpCircle, Github } from "lucide-react"
+import { useState } from "react";
 import { LanguageSelector } from "./language-selector"
+import TranslateWidgetToggle from "./translate-widget-toggle";
 import Image from "next/image"
 
 interface NavigationHeaderProps {
-  activeView: string
-  onViewChange: (view: string) => void
-  currentLanguage: string
-  onLanguageChange: (language: string) => void
+  activeView: string;
+  onViewChange: (view: string) => void;
+  currentLanguage: string;
+  onLanguageChange: (language: string) => void;
 }
 
 export function NavigationHeader({
@@ -17,6 +20,7 @@ export function NavigationHeader({
   currentLanguage,
   onLanguageChange,
 }: NavigationHeaderProps) {
+  const [showTranslate, setShowTranslate] = useState(false);
   const handleDownload = () => {
     if ("serviceWorker" in navigator) {
       // Trigger PWA install prompt or download app info
@@ -38,11 +42,11 @@ export function NavigationHeader({
 
   return (
     <header
-      className="w-full bg-card border-b border-border p-6 flex-shrink-0"
+      className="w-full bg-card border-b border-border px-2 py-6 flex-shrink-0"
       role="banner"
       aria-label="Main navigation"
     >
-      <div className="flex items-center justify-between">
+  <div className="flex items-center justify-between" style={{marginLeft: -24}}>
         <div
           className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
           onClick={handleLogoClick}
@@ -68,6 +72,16 @@ export function NavigationHeader({
         </div>
 
         <nav className="flex items-center gap-2 relative" role="navigation" aria-label="Main navigation menu">
+          <Link href="/monastery-tour/youtube-page" passHref legacyBehavior>
+            <Button
+              variant="outline"
+              size="default"
+              className="px-6 py-3 text-base font-medium rounded-lg transition-colors flex items-center gap-2"
+              aria-label="360° YouTube Tour"
+            >
+              360° Video Tour
+            </Button>
+          </Link>
           <Button
             variant={activeView === "calendar" ? "default" : "outline"}
             size="default"
@@ -102,7 +116,13 @@ export function NavigationHeader({
           </Button>
           
           <div className="relative z-50">
-            <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            <LanguageSelector
+              currentLanguage={currentLanguage}
+              onLanguageChange={onLanguageChange}
+              onToggleTranslate={() => setShowTranslate((prev) => !prev)}
+              translateActive={showTranslate}
+            />
+            <TranslateWidgetToggle show={showTranslate} />
           </div>
 
           <Button
