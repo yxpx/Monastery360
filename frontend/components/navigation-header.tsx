@@ -1,7 +1,8 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Calendar, Route, Download, HelpCircle, Github } from "lucide-react"
+import { Calendar, Route, Download, HelpCircle, Github, Smartphone, Check } from "lucide-react"
 import { LanguageSelector } from "./language-selector"
+import { usePWAInstall } from "@/hooks/use-pwa-install"
 import Image from "next/image"
 
 interface NavigationHeaderProps {
@@ -9,6 +10,8 @@ interface NavigationHeaderProps {
   onViewChange: (view: string) => void
   currentLanguage: string
   onLanguageChange: (language: string) => void
+  translateActive?: boolean
+  onToggleTranslate?: () => void
 }
 
 export function NavigationHeader({
@@ -16,11 +19,33 @@ export function NavigationHeader({
   onViewChange,
   currentLanguage,
   onLanguageChange,
+  translateActive,
+  onToggleTranslate,
 }: NavigationHeaderProps) {
-  const handleDownload = () => {
-    if ("serviceWorker" in navigator) {
-      // Trigger PWA install prompt or download app info
-      console.log("[Download/Install PWA triggered")
+  const { 
+    isInstallable, 
+    isInstalled, 
+    canInstall, 
+    installApp, 
+    showInstallInstructions 
+  } = usePWAInstall()
+
+  const handleDownload = async () => {
+    if (isInstalled) {
+      // App is already installed, show success message or open app
+      alert("Monastery360 is already installed! You can find it in your app drawer or home screen.")
+      return
+    }
+
+    if (canInstall) {
+      // Browser supports native install prompt
+      await installApp()
+    } else if (isInstallable) {
+      // Show manual installation instructions
+      showInstallInstructions()
+    } else {
+      // Service worker not supported
+      alert("Your browser doesn't support app installation. Please use a modern browser like Chrome, Firefox, or Safari.")
     }
   }
 
@@ -33,7 +58,7 @@ export function NavigationHeader({
   }
 
   const handleLogoClick = () => {
-    onViewChange("map")
+    onViewChange("landing")
   }
 
   return (
@@ -91,18 +116,37 @@ export function NavigationHeader({
           </Button>
 
           <Button
-            variant="outline"
+            variant={isInstalled ? "default" : "outline"}
             size="default"
             onClick={handleDownload}
             className="px-6 py-3 text-base font-medium rounded-lg transition-colors hidden sm:flex items-center gap-2"
-            aria-label="Download or install Monastery360 app"
+            aria-label={
+              isInstalled 
+                ? "Monastery360 is installed" 
+                : canInstall 
+                  ? "Install Monastery360 app" 
+                  : "Download or install Monastery360 app"
+            }
           >
-            <Download className="w-5 h-5" aria-hidden="true" />
-            <span className="hidden md:inline">Download</span>
+            {isInstalled ? (
+              <Check className="w-5 h-5" aria-hidden="true" />
+            ) : canInstall ? (
+              <Smartphone className="w-5 h-5" aria-hidden="true" />
+            ) : (
+              <Download className="w-5 h-5" aria-hidden="true" />
+            )}
+            <span className="hidden md:inline">
+              {isInstalled ? "Installed" : canInstall ? "Install" : "Download"}
+            </span>
           </Button>
           
           <div className="relative z-50">
-            <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            <LanguageSelector
+              currentLanguage={currentLanguage}
+              onLanguageChange={onLanguageChange}
+              translateActive={!!translateActive}
+              onToggleTranslate={onToggleTranslate}
+            />
           </div>
 
           <Button
@@ -172,13 +216,26 @@ export function NavigationHeader({
           Q&A
         </Button>
         <Button
-          variant="outline"
+          variant={isInstalled ? "default" : "outline"}
           size="default"
           onClick={handleDownload}
-          className="flex-shrink-0 px-4 py-2"
-          aria-label="Download app"
+          className="flex-shrink-0 px-4 py-2 flex items-center gap-2"
+          aria-label={
+            isInstalled 
+              ? "Monastery360 is installed" 
+              : canInstall 
+                ? "Install Monastery360 app" 
+                : "Download or install Monastery360 app"
+          }
         >
-          Download
+          {isInstalled ? (
+            <Check className="w-4 h-4" aria-hidden="true" />
+          ) : canInstall ? (
+            <Smartphone className="w-4 h-4" aria-hidden="true" />
+          ) : (
+            <Download className="w-4 h-4" aria-hidden="true" />
+          )}
+          {isInstalled ? "Installed" : canInstall ? "Install" : "Download"}
         </Button>
       </nav>
     </header>

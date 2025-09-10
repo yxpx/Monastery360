@@ -51,21 +51,21 @@ export function TripPlanner({ onPlanGenerated }: TripPlannerProps) {
   }
 
   return (
-  <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div className="md:h-full md:min-h-0 min-h-[100dvh] grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Left Panel: Forms */}
-  <div className="h-full min-h-0 bg-white border border-black/10 rounded p-4 flex flex-col">
+  <div className="md:h-full md:min-h-0 h-auto bg-white border border-black/10 rounded p-3 md:p-4 flex flex-col">
         {/* Header with back arrow and title */}
         <div className="flex items-center mb-4">
           <h2 className="text-xl font-bold">Forms</h2>
         </div>
-  <div className="flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40 space-y-6">
+  <div className="md:flex-1 md:min-h-0 md:overflow-y-auto overflow-visible scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40 space-y-6">
           {/* Form title */}
           <div className="text-center">
             <h3 className="text-lg font-semibold text-foreground mb-2">Plan Your Sikkim Journey</h3>
             <p className="text-muted-foreground">Let AI create a personalized itinerary for your Sikkim adventure</p>
           </div>
           {/* Form fields grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {/* Budget */}
             <div className="space-y-2">
               <Label htmlFor="budget" className="flex items-center gap-2">
@@ -119,7 +119,7 @@ export function TripPlanner({ onPlanGenerated }: TripPlannerProps) {
                 Accommodation Type
               </Label>
               <Select onValueChange={(value) => handleInputChange("accommodation", value)}>
-                <SelectTrigger className="bg-black/5 border-border">
+                <SelectTrigger className="bg-black/5 border-border w-full md:w-auto">
                   <SelectValue placeholder="Select accommodation" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border-border">
@@ -150,7 +150,7 @@ export function TripPlanner({ onPlanGenerated }: TripPlannerProps) {
           <Button
             onClick={generateTripPlan}
             disabled={isGenerating || !formData.budget || !formData.days}
-            className="w-full mt-4"
+            className="w-full mt-2 md:mt-4"
             size="lg"
           >
             {isGenerating ? (
@@ -168,11 +168,11 @@ export function TripPlanner({ onPlanGenerated }: TripPlannerProps) {
         </div>
       </div>
   {/* Right Panel: Output */}
-  <div className="h-full min-h-0 bg-white border border-black/10 rounded p-4 flex flex-col">
+    <div className="md:h-full md:min-h-0 h-auto bg-white border border-black/10 rounded p-3 md:p-4 flex flex-col">
         <div className="mb-4">
-          <h2 className="text-xl font-bold">GEMINI TRIP GUIDE OUTPUT</h2>
+          <h2 className="text-xl font-bold">TRIP ITINERARY</h2>
         </div>
-  <div className="flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40">
+    <div className="md:flex-1 md:min-h-0 md:overflow-y-auto overflow-visible scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40">
           {!generatedPlan ? (
             <div className="h-full flex items-center justify-center text-muted-foreground">
               <div className="text-center">

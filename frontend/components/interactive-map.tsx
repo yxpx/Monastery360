@@ -28,6 +28,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
   const [servicesData, setServicesData] = useState<any[]>([])
   const dataProcessedRef = useRef(false) // Track if data has been processed
   const [interiorIds, setInteriorIds] = useState<number[]>([])
+  const monasteryLayerRef = useRef<any>(null)
 
   // Cleanup function
   const cleanupMap = () => {
@@ -146,7 +147,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       window: typeof window !== "undefined",
       mapRef: !!mapRef.current,
       monasteryDataLength: monasteryData.length,
-      dataProcessed: dataProcessedRef.current
+  dataProcessed: dataProcessedRef.current,
+  interiorIdsCount: interiorIds.length
     })
     
     if (typeof window === "undefined" || !mapRef.current || monasteryData.length === 0) {
@@ -154,15 +156,15 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       return
     }
 
-    // Prevent multiple initializations
-    if (isMapInitializedRef.current && dataProcessedRef.current) {
-      console.log('InteractiveMap: Map already initialized, skipping')
+    // If already initialized, don't tear down/rebuild the map; marker updates happen in another effect
+    if (isMapInitializedRef.current && mapInstance) {
+      console.log('InteractiveMap: Map already initialized; skip full init')
       return
     }
 
     // Dynamically import Leaflet to avoid SSR issues
     const initMap = async () => {
-      console.log('InteractiveMap: Initializing map with', monasteryData.length, 'monasteries')
+  console.log('InteractiveMap: Initializing map with', monasteryData.length, 'monasteries')
       
       // Double check container exists and is attached to DOM
       const container = mapRef.current
@@ -318,19 +320,22 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
                      .trim()
         }
 
-        // Add monastery markers
-    monasteryData.forEach((monastery) => {
+        // Create and add a layer group for monastery markers
+        const monasteryLayer = L.layerGroup().addTo(map)
+        monasteryLayerRef.current = monasteryLayer
+
+        // Initial draw of monastery markers
+        monasteryData.forEach((monastery) => {
           const [lat, lng] = monastery.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
           if (!isNaN(lat) && !isNaN(lng)) {
             const cleanName = cleanMonasteryName(monastery.name)
-      const isInterior = interiorIds.includes(Number(monastery.id))
-      const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
-              .addTo(map)
+            const isInterior = interiorIds.includes(Number(monastery.id))
+            const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
               .bindPopup(`
                 <div class="p-2 min-w-[200px]">
                   <h3 class="font-semibold text-sm mb-1">${cleanName}</h3>
                   <p class="text-xs text-gray-600 mb-2">${monastery.s_desc}</p>
-          ${isInterior ? '<span class="text-[10px] text-red-600 font-semibold">(Interior)</span>' : ''}
+                  ${isInterior ? '<span class="text-[10px] text-black font-semibold">(Interior)</span>' : ''}
                 </div>
               `)
               .bindTooltip(cleanName, {
@@ -344,6 +349,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
               setSelectedMonastery({...monastery, name: cleanName})
               onMonasterySelect?.({...monastery, name: cleanName})
             })
+
+            marker.addTo(monasteryLayer)
           }
         })
 
@@ -396,8 +403,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         // Invalidate size to ensure Leaflet recalculates container dimensions
         map.invalidateSize()
         setMapInstance(map)
-        isMapInitializedRef.current = true
-        dataProcessedRef.current = true
+  isMapInitializedRef.current = true
+  dataProcessedRef.current = true
         onMapReady?.(map)
 
       } catch (error) {
@@ -421,14 +428,79 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       console.log('InteractiveMap: Cleanup function called')
       cleanupMap()
     }
-  }, [monasteryData, archiveData, servicesData]) // Add all data dependencies
+  }, [monasteryData, archiveData, servicesData])
 
-  // Expose the location function after map is ready
+  // Update monastery markers when interior ids or monastery data change (without reinitializing the map)
+  useEffect(() => {
+    const updateMonasteryMarkers = async () => {
+      if (!mapInstance || !monasteryLayerRef.current) return
+      const L = (await import("leaflet")).default
+      // Recreate icons (same styles as init)
+      const monasteryIcon = L.divIcon({
+        html: `<div class="w-4 h-4 bg-orange-600 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                 <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                   <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                 </svg>
+               </div>`,
+        className: "monastery-marker",
+        iconSize: [16, 16],
+        iconAnchor: [8, 8],
+      })
+      const interiorIcon = L.divIcon({
+        html: `<div class="w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                 <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                   <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                 </svg>
+               </div>`,
+        className: "interior-marker",
+        iconSize: [16, 16],
+        iconAnchor: [8, 8],
+      })
+
+      const layer: any = monasteryLayerRef.current
+      layer.clearLayers()
+      // Function to clean monastery name
+      const cleanMonasteryName = (name: string) => name
+        .replace(/\s+(North|South|East|West)\s+Sikkim$/, '')
+        .replace(/\s+Sikkim$/, '')
+        .trim()
+
+      monasteryData.forEach((monastery) => {
+        const [lat, lng] = monastery.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
+        if (isNaN(lat) || isNaN(lng)) return
+        const cleanName = cleanMonasteryName(monastery.name)
+        const isInterior = interiorIds.includes(Number(monastery.id))
+        const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
+          .bindPopup(`
+            <div class="p-2 min-w-[200px]">
+              <h3 class="font-semibold text-sm mb-1">${cleanName}</h3>
+              <p class="text-xs text-gray-600 mb-2">${monastery.s_desc}</p>
+              ${isInterior ? '<span class="text-[10px] text-black font-semibold">(Interior)</span>' : ''}
+            </div>
+          `)
+          .bindTooltip(cleanName, {
+            permanent: false,
+            direction: 'top',
+            offset: [0, -8],
+            className: 'monastery-tooltip'
+          })
+        marker.on("click", () => {
+          setSelectedMonastery({...monastery, name: cleanName})
+          onMonasterySelect?.({...monastery, name: cleanName})
+        })
+        marker.addTo(layer)
+      })
+    }
+    updateMonasteryMarkers().catch(console.error)
+  }, [interiorIds, monasteryData, mapInstance])
+
+  // Expose the location function after map is ready (run once when mapInstance initializes)
   useEffect(() => {
     if (mapInstance && onLocationFunctionReady) {
       onLocationFunctionReady(handleUserLocation)
     }
-  }, [mapInstance, onLocationFunctionReady])
+    // Only depend on mapInstance to prevent loops if onLocationFunctionReady is unstable
+  }, [mapInstance])
 
   // Component cleanup effect
   useEffect(() => {

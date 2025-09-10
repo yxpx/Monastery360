@@ -210,38 +210,40 @@ export function MonasteryList({
               tabIndex={0}
               aria-label={`${activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}`}
             >
-              <div className="flex items-center justify-between">
-                <div
-                  className="flex-1 cursor-pointer"
-                  onClick={() => {
-                    if (activeCategory === 'Monastery') {
-                      onMonasteryZoom(item)
-                    } else {
+                <div className="flex items-center justify-between">
+                  <div
+                    className="flex-1 cursor-pointer"
+                    onClick={() => {
+                      if (activeCategory === 'Monastery') {
+                        onMonasteryZoom(item)
+                      } else {
+                        onItemSelect(item, activeCategory)
+                      }
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault()
+                        onMonasteryZoom(item)
+                      }
+                    }}
+                  >
+                    <p className="text-sm font-medium text-foreground">
+                      {activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}
+                    </p>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="p-1 h-8 w-8 opacity-60 group-hover:opacity-100 transition-opacity"
+                    onClick={(e) => {
+                      e.stopPropagation()
                       onItemSelect(item, activeCategory)
-                    }
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault()
-                      onMonasteryZoom(item)
-                    }
-                  }}
-                >
-                  <p className="text-sm font-medium text-foreground">{activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}</p>
+                    }}
+                    aria-label={`Open 360 view of ${item.name}`}
+                  >
+                    <ChevronRight className="w-4 h-4" aria-hidden="true" />
+                  </Button>
                 </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="p-1 h-8 w-8 opacity-60 group-hover:opacity-100 transition-opacity"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    onItemSelect(item, activeCategory)
-                  }}
-                  aria-label={`Open 360 view of ${item.name}`}
-                >
-                  <ChevronRight className="w-4 h-4" aria-hidden="true" />
-                </Button>
-              </div>
             </Card>
           ))
         )}

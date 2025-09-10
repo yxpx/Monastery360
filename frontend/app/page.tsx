@@ -1,31 +1,43 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { NavigationHeader } from "@/components/navigation-header"
+import TranslateHeaderWithWidget from "@/components/translate-header-with-widget"
 import { MainContent } from "@/components/main-content"
+import { LandingPage } from "@/components/landing-page"
 
 export default function Home() {
-  const [activeView, setActiveView] = useState("map")
-  const [currentLanguage, setCurrentLanguage] = useState("en")
+  const [activeView, setActiveView] = useState("landing")
+  const [showLanding, setShowLanding] = useState(true)
 
-  useEffect(() => {
-    // In a real implementation, this would load language resources
-    console.log("Language changed to:", currentLanguage)
-    document.documentElement.lang = currentLanguage
-  }, [currentLanguage])
+  const handleStartExploring = () => {
+    setShowLanding(false)
+    setActiveView("map")
+  }
+
+  const handleViewChange = (view: string) => {
+    if (view === "landing") {
+      setShowLanding(true)
+    } else {
+      setShowLanding(false)
+    }
+    setActiveView(view)
+  }
 
   // Service worker would be added in production build with proper PWA setup
 
+  if (showLanding) {
+    return (
+      <div className="h-screen bg-background flex flex-col overflow-hidden">
+        <TranslateHeaderWithWidget activeView={activeView} onViewChange={handleViewChange} />
+        <LandingPage onStartExploring={handleStartExploring} />
+      </div>
+    )
+  }
+
   return (
     <div className="h-screen bg-background flex flex-col overflow-hidden">
-      <NavigationHeader
-        activeView={activeView}
-        onViewChange={setActiveView}
-        currentLanguage={currentLanguage}
-        onLanguageChange={setCurrentLanguage}
-      />
-
-      <MainContent activeView={activeView} onViewChange={setActiveView} />
+      <TranslateHeaderWithWidget activeView={activeView} onViewChange={handleViewChange} />
+      <MainContent activeView={activeView} onViewChange={handleViewChange} />
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Volume2 } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
+import AudioGuideTTS from "@/components/audio-guide"
 
 export interface ArchiveDetailViewProps {
   archive: any
@@ -43,7 +44,7 @@ export function ArchiveDetailView({ archive, onBack }: ArchiveDetailViewProps) {
         {/* Description Panel */}
         <div className="w-80 flex-shrink-0 flex flex-col gap-4 min-h-0">
           <Card className="flex-1 p-4 bg-card border border-border rounded-lg overflow-y-auto">
-            <div className="text-sm text-foreground whitespace-pre-wrap break-words">
+            <div className="text-sm text-foreground whitespace-pre-wrap break-words" id="archive-desc">
               {archive.l_desc.split(/(https?:\/\/[^\s]+)/g).map((part: string, idx: number) =>
                 part.match(/^https?:\/\//) ? (
                   <a key={idx} href={part} target="_blank" rel="noreferrer" className="text-blue-600 underline">
@@ -56,15 +57,7 @@ export function ArchiveDetailView({ archive, onBack }: ArchiveDetailViewProps) {
             </div>
           </Card>
           <Card className="p-4 bg-card border border-border rounded-lg flex-shrink-0">
-            <Button
-              variant="default"
-              size="lg"
-              className="w-full flex items-center justify-center gap-2"
-              onClick={() => console.log("Audio stream started for archive", archive.name)}
-            >
-              <Volume2 className="w-5 h-5" />
-              Play Audio Guide
-            </Button>
+            <AudioGuideTTS text={archive.l_desc || archive.s_desc} selector="#archive-desc" />
           </Card>
         </div>
       </div>

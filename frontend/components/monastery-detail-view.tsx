@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, MapPin, ExternalLink, Image as ImageIcon, Map, Volume2 } from "lucide-react"
 import Image from "next/image"
+import AudioGuideTTS from "@/components/audio-guide"
 
 interface Monastery {
   id: number
@@ -125,7 +126,7 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
           className="flex items-center gap-2"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to Map
+          <span className="notranslate" translate="no">Back to Map</span>
         </Button>
         <div className="flex-1">
           <h1 className="text-xl font-semibold text-foreground">{monastery.name}</h1>
@@ -271,7 +272,7 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
           <Card className="flex-1 p-4 bg-card border border-border rounded-lg flex flex-col min-h-0">
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40 pr-2 min-h-0">
               {monastery.l_desc ? (
-                <div className="text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                <div className="text-sm text-foreground leading-relaxed whitespace-pre-wrap" id="monastery-desc">
                   {monastery.l_desc}
                 </div>
               ) : (
@@ -284,19 +285,7 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
 
           {/* Audio Stream Section */}
           <Card className="p-4 bg-card border border-border rounded-lg flex-shrink-0">
-            <div className="space-y-3">
-              <Button
-                variant="default"
-                size="lg"
-                className="w-full flex items-center justify-center gap-2"
-                onClick={() => {
-                  console.log("Audio stream started for", monastery.name)
-                }}
-              >
-                <Volume2 className="w-5 h-5" />
-                Play Audio Guide
-              </Button>
-            </div>
+            <AudioGuideTTS text={monastery.l_desc || monastery.s_desc} selector="#monastery-desc" />
           </Card>
         </div>
       </div>

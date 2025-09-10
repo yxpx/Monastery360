@@ -39,10 +39,10 @@ export function WebsiteInfo() {
   ]
 
   const stats = [
-    { label: "Monasteries Featured", value: "5+" },
-    { label: "Languages Supported", value: "3" },
-    { label: "Cultural Festivals", value: "12+" },
-    { label: "Audio Guides", value: "15+" },
+    { label: "Monasteries Featured", value: "100+" },
+    { label: "Languages Supported", value: "10+" },
+    { label: "Cultural Festivals", value: "20+" },
+    { label: "Audio Guides", value: "100+" },
   ]
 
   return (
