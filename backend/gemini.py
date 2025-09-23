@@ -114,6 +114,9 @@ Make the content engaging, informative, and well-organized with proper spacing, 
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Use the PORT environment variable when running on Render or other platforms
+    # that provide the port via env; fall back to 8000 for local development.
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 
