@@ -57,7 +57,7 @@ export function LandingPage({ onStartExploring }: LandingPageProps) {
                   <span className="text-sm font-medium text-primary">✨ Spiritual Journey Awaits</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground heading-luxe leading-tight bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold heading-luxe leading-tight bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
                   Monastery360
                 </h1>
                 
@@ -85,18 +85,18 @@ export function LandingPage({ onStartExploring }: LandingPageProps) {
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center">
-                    <span className="text-sm font-bold text-secondary-foreground">360°</span>
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                    <span className="text-sm font-bold text-foreground">360°</span>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-foreground">Virtual Tours</div>
-                    <div className="text-xs text-muted-foreground">Immersive</div>
+                    <div className="text-xs text-muted-foreground">Immersive view</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
-                    <span className="text-sm font-bold text-accent-foreground">24/7</span>
+                    <span className="text-sm font-bold text-foreground">24/7</span>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-foreground">Audio Guides</div>
@@ -181,9 +181,9 @@ export function LandingPage({ onStartExploring }: LandingPageProps) {
             {/* Bottom Feature Highlight */}
             <div className="mt-4 p-4 lg:p-5 rounded-2xl bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border border-primary/10 backdrop-blur-sm">
               <div className="text-center space-y-2">
-                <div className="text-xs lg:text-sm font-medium text-primary">🏔️ Himalayan Experience</div>
+                <h3 className="text-xs lg:text-sm font-medium text-primary">Accessibility</h3>
                 <p className="text-xs lg:text-sm text-muted-foreground">
-                  From Rumtek to Pemayangtse, explore centuries of wisdom through cutting-edge technology
+                  Designed following WCAG 2.1 AA best practices — semantic HTML structure, keyboard navigability, and ARIA used where appropriate.
                 </p>
               </div>
             </div>

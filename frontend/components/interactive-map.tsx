@@ -311,6 +311,18 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           iconSize: [16, 16],
           iconAnchor: [8, 8],
         })
+        
+        // Icon for 360° view monasteries
+        const view360Icon = L.divIcon({
+          html: `<div class="w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                   <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                     <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                   </svg>
+                 </div>`,
+          className: "view360-marker",
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+        })
 
         // Function to clean monastery name (remove location suffixes)
         const cleanMonasteryName = (name: string) => {
@@ -329,13 +341,18 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
           const [lat, lng] = monastery.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
           if (!isNaN(lat) && !isNaN(lng)) {
             const cleanName = cleanMonasteryName(monastery.name)
+            // Determine if monastery has a 360° embed, interior, or default
+            const embed = monastery.embed_link || ''
+            // detect 360° view by presence of an iframe embed
+            const has360 = embed.includes('<iframe')
             const isInterior = interiorIds.includes(Number(monastery.id))
-            const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
+            const icon = has360 ? view360Icon : monasteryIcon
+            const marker = L.marker([lat, lng], { icon })
               .bindPopup(`
                 <div class="p-2 min-w-[200px]">
                   <h3 class="font-semibold text-sm mb-1">${cleanName}</h3>
                   <p class="text-xs text-gray-600 mb-2">${monastery.s_desc}</p>
-                  ${isInterior ? '<span class="text-[10px] text-black font-semibold">(Interior)</span>' : ''}
+                  ${has360 ? '<span class="text-[10px] text-yellow-800 font-semibold">(360° view)</span>' : ''}
                 </div>
               `)
               .bindTooltip(cleanName, {
@@ -436,7 +453,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
       if (!mapInstance || !monasteryLayerRef.current) return
       const L = (await import("leaflet")).default
       // Recreate icons (same styles as init)
-      const monasteryIcon = L.divIcon({
+  const monasteryIcon = L.divIcon({
         html: `<div class="w-4 h-4 bg-orange-600 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
                  <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
                    <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
@@ -446,7 +463,7 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         iconSize: [16, 16],
         iconAnchor: [8, 8],
       })
-      const interiorIcon = L.divIcon({
+  const interiorIcon = L.divIcon({
         html: `<div class="w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg flex items-center justify-center">
                  <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
                    <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
@@ -457,6 +474,17 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         iconAnchor: [8, 8],
       })
 
+      // Add view360Icon in update context
+      const view360Icon = L.divIcon({
+        html: `<div class="w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                 <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                   <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                 </svg>
+               </div>`,
+        className: "view360-marker",
+        iconSize: [16, 16],
+        iconAnchor: [8, 8],
+      })
       const layer: any = monasteryLayerRef.current
       layer.clearLayers()
       // Function to clean monastery name
@@ -469,13 +497,15 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
         const [lat, lng] = monastery.coords.split(',').map((coord: string) => parseFloat(coord.trim()))
         if (isNaN(lat) || isNaN(lng)) return
         const cleanName = cleanMonasteryName(monastery.name)
-        const isInterior = interiorIds.includes(Number(monastery.id))
-        const marker = L.marker([lat, lng], { icon: isInterior ? interiorIcon : monasteryIcon })
+  const embed = monastery.embed_link || ''
+  const has360 = embed.includes('<iframe')
+  const icon = has360 ? view360Icon : monasteryIcon
+  const marker = L.marker([lat, lng], { icon })
           .bindPopup(`
             <div class="p-2 min-w-[200px]">
               <h3 class="font-semibold text-sm mb-1">${cleanName}</h3>
               <p class="text-xs text-gray-600 mb-2">${monastery.s_desc}</p>
-              ${isInterior ? '<span class="text-[10px] text-black font-semibold">(Interior)</span>' : ''}
+              ${has360 ? '<span class="text-[10px] text-yellow-800 font-semibold">(360° view)</span>' : ''}
             </div>
           `)
           .bindTooltip(cleanName, {
@@ -739,8 +769,8 @@ export function InteractiveMap({ onMonasterySelect, onMapReady, onLocationReques
               <span className="text-xs text-foreground">Monasteries</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-black rounded-full border border-white shadow-sm"></div>
-              <span className="text-xs text-foreground">Monasteries (Interior)</span>
+              <div className="w-3 h-3 bg-yellow-400 rounded-full border border-white shadow-sm"></div>
+              <span className="text-xs text-foreground">Monasteries (360° view)</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-blue-600 rounded-full border border-white shadow-sm"></div>

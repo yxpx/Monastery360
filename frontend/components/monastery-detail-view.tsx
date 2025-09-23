@@ -130,7 +130,6 @@ export function MonasteryDetailView({ monastery, onBack }: MonasteryDetailViewPr
         </Button>
         <div className="flex-1">
           <h1 className="text-xl font-semibold text-foreground">{monastery.name}</h1>
-          <p className="text-sm text-muted-foreground">{getLocationFromCoords(monastery.coords)}</p>
         </div>
         {monastery.map_url && monastery.map_url !== "" && (
           <Button

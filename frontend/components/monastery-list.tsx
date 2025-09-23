@@ -211,25 +211,23 @@ export function MonasteryList({
               aria-label={`${activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}`}
             >
                 <div className="flex items-center justify-between">
-                  <div
-                    className="flex-1 cursor-pointer"
-                    onClick={() => {
-                      if (activeCategory === 'Monastery') {
-                        onMonasteryZoom(item)
-                      } else {
-                        onItemSelect(item, activeCategory)
-                      }
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault()
-                        onMonasteryZoom(item)
-                      }
-                    }}
-                  >
-                    <p className="text-sm font-medium text-foreground">
-                      {activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}
-                    </p>
+                  <div className="flex-1">
+                    <button
+                      type="button"
+                      className="w-full text-left bg-transparent border-0 p-0 cursor-pointer"
+                      onClick={() => {
+                        if (activeCategory === 'Monastery') {
+                          onMonasteryZoom(item)
+                        } else {
+                          onItemSelect(item, activeCategory)
+                        }
+                      }}
+                      aria-label={activeCategory === "Monastery" ? `Zoom to ${cleanMonasteryName(item.name)}` : `Select ${item.name}`}
+                    >
+                      <p className="text-sm font-medium text-foreground">
+                        {activeCategory === "Monastery" ? cleanMonasteryName(item.name) : item.name}
+                      </p>
+                    </button>
                   </div>
                   <Button
                     variant="ghost"

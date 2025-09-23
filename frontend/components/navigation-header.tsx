@@ -68,18 +68,11 @@ export function NavigationHeader({
       aria-label="Main navigation"
     >
       <div className="flex items-center justify-between">
-        <div
-          className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+        <button
+          type="button"
+          className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0 p-0"
           onClick={handleLogoClick}
-          role="button"
-          tabIndex={0}
           aria-label="Go to home page"
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault()
-              handleLogoClick()
-            }
-          }}
         >
           <Image
             src="/logo.svg"
@@ -90,7 +83,7 @@ export function NavigationHeader({
             priority
           />
           <h1 className="text-2xl leading-none font-semibold text-foreground heading-luxe">Monastery360</h1>
-        </div>
+  </button>
 
         <nav className="flex items-center gap-2 relative" role="navigation" aria-label="Main navigation menu">
           <Button
