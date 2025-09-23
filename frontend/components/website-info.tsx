@@ -77,22 +77,6 @@ export function WebsiteInfo() {
           </Card>
         ))}
       </div>
-
-      <Card className="p-6 border border-border">
-        <h3 className="font-semibold text-foreground mb-4">About Team Led Zeppelin</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Developed by Team Led Zeppelin for hackathon competition, this project addresses the lack of centralized
-          digital platforms for Sikkim's monasteries. Our solution combines modern web technologies with cultural
-          preservation goals.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="secondary">Next.js</Badge>
-          <Badge variant="secondary">Leaflet.js</Badge>
-          <Badge variant="secondary">Progressive Web App</Badge>
-          <Badge variant="secondary">Offline-First</Badge>
-          <Badge variant="secondary">WCAG Compliant</Badge>
-        </div>
-      </Card>
     </div>
   )
 }
