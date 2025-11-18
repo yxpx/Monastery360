@@ -1,16 +1,21 @@
-Features:
+**Monastery360**
+- **Description**: A web app showcasing monastery and travel information for Sikkim.
 
-PWA with Offline Functionality: Implement a Service Worker
-WCAG compliant with semantic html and aria 
+**Demo**: https://www.youtube.com/watch?v=EHAq3YKuGMo
 
-Multilingual
-Maps
-Monasteries (Booking) (Audio) 
-Archives (Audio)
-Calendar (Events)
+**Quick Start**
+- **Backend**: Install Python dependencies and run the FastAPI server:
+	- `python -m venv .venv`
+	- `pip install -r backend/requirements.txt`
+	- `uvicorn backend.gemini:app --reload --port 8000`
+- **Frontend**: From `frontend/` install and run:
+	- `pnpm install`
+	- `pnpm dev`
 
-Walkthrough 
-Trip Planner
-local transport and tourism services
-Location-based audio guides
-Tour
+**Environment**
+- **Required**: `GEMINI_API_KEY` (the Google Gemini API key) set in `backend/.env` or the environment.
+- Example `backend/.env` (DO NOT COMMIT this file):
+	- `GEMINI_API_KEY=your_real_key_here`
+
+
+
