@@ -14,8 +14,7 @@
 
 **Environment**
 - **Required**: `GEMINI_API_KEY` (the Google Gemini API key) set in `backend/.env` or the environment.
-- Example `backend/.env` (DO NOT COMMIT this file):
-	- `GEMINI_API_KEY=your_real_key_here`
+
 
 
 
